@@ -75,7 +75,7 @@
         <section class="mb-12">
             <article class="featured-post flex flex-col md:flex-row bg-white shadow-xl rounded-2xl overflow-hidden">
                 <div class="relative w-full md:w-1/2">
-                    <img class="w-full h-full object-cover" src="https://source.unsplash.com/random/1200x800?technology" alt="Featured Image" loading="lazy">
+                    <img class="w-full h-full object-cover" src="https://fakeimg.pl/600x400" alt="Featured Image 1" loading="lazy">
                     <div class="absolute top-4 left-4">
                         <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Featured</span>
                     </div>
@@ -107,26 +107,18 @@
         </section>
 
         <!-- Category Filters -->
-        <nav class="flex flex-wrap gap-4 mb-12" aria-label="Category Filters" id="categoryNav">
-            <button class="category-btn active px-6 py-3 rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center">
-                <i class="fas fa-border-all mr-2"></i> All Posts
-            </button>
-            <button class="category-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 transition-all duration-300 flex items-center">
-                <i class="fas fa-laptop-code mr-2"></i> Technology
-            </button>
-            <button class="category-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 transition-all duration-300 flex items-center">
-                <i class="fas fa-chart-line mr-2"></i> Business
-            </button>
-            <button class="category-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 transition-all duration-300 flex items-center">
-                <i class="fas fa-palette mr-2"></i> Design
-            </button>
-        </nav>
+        <div class="mb-8 flex flex-wrap gap-4" id="categoryFilters">
+            <button class="category-btn active px-4 py-2 rounded-full bg-gray-200 hover:bg-blue-600 hover:text-white transition-colors duration-300" data-category="all">All</button>
+            <button class="category-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-blue-600 hover:text-white transition-colors duration-300" data-category="technology">Technology</button>
+            <button class="category-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-blue-600 hover:text-white transition-colors duration-300" data-category="design">Design</button>
+            <button class="category-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-blue-600 hover:text-white transition-colors duration-300" data-category="business">Business</button>
+        </div>
 
         <!-- Blog Post Grid -->
         <main>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blogGrid">
                 <!-- Blog Post Card 1 -->
-                <article class="blog-card bg-white shadow-lg rounded-xl overflow-hidden">
+                <article class="blog-card bg-white shadow-lg rounded-xl overflow-hidden" data-category="technology">
                     <div class="relative">
                         <img class="w-full h-48 object-cover" src="https://source.unsplash.com/random/800x600?coding" alt="Blog Image" loading="lazy">
                         <div class="absolute top-4 right-4">
@@ -156,11 +148,11 @@
                 </article>
 
                 <!-- Blog Post Card 2 -->
-                <article class="blog-card bg-white shadow-lg rounded-xl overflow-hidden">
+                <article class="blog-card bg-white shadow-lg rounded-xl overflow-hidden" data-category="design">
                     <div class="relative">
                         <img class="w-full h-48 object-cover" src="https://source.unsplash.com/random/800x600?business" alt="Blog Image" loading="lazy">
                         <div class="absolute top-4 right-4">
-                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Business</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Design</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -186,11 +178,11 @@
                 </article>
 
                 <!-- Blog Post Card 3 -->
-                <article class="blog-card bg-white shadow-lg rounded-xl overflow-hidden">
+                <article class="blog-card bg-white shadow-lg rounded-xl overflow-hidden" data-category="business">
                     <div class="relative">
                         <img class="w-full h-48 object-cover" src="https://source.unsplash.com/random/800x600?design" alt="Blog Image" loading="lazy">
                         <div class="absolute top-4 right-4">
-                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Design</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Business</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -221,25 +213,37 @@
     <script>
         // Dark mode toggle
         const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
         darkModeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark');
+            body.classList.toggle('dark');
         });
 
         // Category filtering
         const categoryButtons = document.querySelectorAll('.category-btn');
+        const blogCards = document.querySelectorAll('.blog-card');
+
         categoryButtons.forEach(button => {
             button.addEventListener('click', () => {
                 // Remove active class from all buttons
                 categoryButtons.forEach(btn => btn.classList.remove('active'));
                 // Add active class to clicked button
                 button.classList.add('active');
-                
-                // Add animation to grid
-                const blogGrid = document.getElementById('blogGrid');
-                blogGrid.style.opacity = '0';
-                setTimeout(() => {
-                    blogGrid.style.opacity = '1';
-                }, 300);
+
+                const selectedCategory = button.getAttribute('data-category');
+
+                blogCards.forEach(card => {
+                    card.classList.remove('fade-in');
+                    
+                    if (selectedCategory === 'all' || card.getAttribute('data-category') === selectedCategory) {
+                        card.style.display = 'block';
+                        // Trigger reflow
+                        void card.offsetWidth;
+                        card.classList.add('fade-in');
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
             });
         });
 
