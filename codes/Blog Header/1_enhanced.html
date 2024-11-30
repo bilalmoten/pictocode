@@ -69,22 +69,22 @@
         </header>
 
         <nav class="mt-12 flex flex-wrap justify-center gap-4" id="categoryNav">
-            <button class="category-btn active flex items-center px-4 py-2 rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300">
+            <button class="category-btn active flex items-center px-4 py-2 rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300" data-category="all">
                 <i class="fas fa-border-all mr-2"></i> All
             </button>
-            <button class="category-btn flex items-center px-4 py-2 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all duration-300">
+            <button class="category-btn flex items-center px-4 py-2 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all duration-300" data-category="technology">
                 <i class="fas fa-laptop-code mr-2"></i> Technology
             </button>
-            <button class="category-btn flex items-center px-4 py-2 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all duration-300">
+            <button class="category-btn flex items-center px-4 py-2 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all duration-300" data-category="business">
                 <i class="fas fa-chart-line mr-2"></i> Business
             </button>
-            <button class="category-btn flex items-center px-4 py-2 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all duration-300">
+            <button class="category-btn flex items-center px-4 py-2 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all duration-300" data-category="design">
                 <i class="fas fa-palette mr-2"></i> Design
             </button>
         </nav>
 
         <div class="mt-12 grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1" id="blogGrid">
-            <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden">
+            <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="technology">
                 <div class="relative">
                     <img src="https://source.unsplash.com/random/800x600?technology" alt="Blog post" class="w-full object-cover h-48 transform hover:scale-105 transition-transform duration-300">
                     <div class="absolute top-4 right-4">
@@ -113,8 +113,7 @@
                 </div>
             </article>
 
-            <!-- More blog cards with similar structure but different content -->
-            <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden">
+            <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="business">
                 <div class="relative">
                     <img src="https://source.unsplash.com/random/800x600?business" alt="Blog post" class="w-full object-cover h-48 transform hover:scale-105 transition-transform duration-300">
                     <div class="absolute top-4 right-4">
@@ -143,7 +142,7 @@
                 </div>
             </article>
 
-            <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden">
+            <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="design">
                 <div class="relative">
                     <img src="https://source.unsplash.com/random/800x600?design" alt="Blog post" class="w-full object-cover h-48 transform hover:scale-105 transition-transform duration-300">
                     <div class="absolute top-4 right-4">
@@ -183,30 +182,39 @@
 
         // Category filtering
         const categoryButtons = document.querySelectorAll('.category-btn');
+        const blogCards = document.querySelectorAll('.blog-card');
+
         categoryButtons.forEach(button => {
             button.addEventListener('click', () => {
                 // Remove active class from all buttons
                 categoryButtons.forEach(btn => btn.classList.remove('active'));
                 // Add active class to clicked button
                 button.classList.add('active');
-                
-                // Add animation to grid
-                const blogGrid = document.getElementById('blogGrid');
-                blogGrid.style.opacity = '0';
-                setTimeout(() => {
-                    blogGrid.style.opacity = '1';
-                }, 300);
+
+                const selectedCategory = button.getAttribute('data-category');
+
+                blogCards.forEach(card => {
+                    card.classList.remove('fade-in');
+                    
+                    if (selectedCategory === 'all' || card.getAttribute('data-category') === selectedCategory) {
+                        card.style.display = 'block';
+                        // Trigger reflow
+                        void card.offsetWidth;
+                        card.classList.add('fade-in');
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
             });
         });
 
-        // Lazy loading images
+        // Lazy loading images with fade-in effect
         document.addEventListener('DOMContentLoaded', () => {
-            const images = document.querySelectorAll('img[data-src]');
+            const images = document.querySelectorAll('img[loading="lazy"]');
             const imageObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const img = entry.target;
-                        img.src = img.dataset.src;
                         img.classList.add('fade-in');
                         observer.unobserve(img);
                     }
