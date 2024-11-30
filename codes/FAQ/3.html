@@ -1,0 +1,64 @@
+<section class="max-w-7xl mx-auto px-4 py-8">
+    <div class="md:flex md:space-x-8">
+        <!-- Left Column -->
+        <header class="md:w-1/3 mb-6 md:mb-0">
+            <h1 class="text-4xl font-bold mb-4 transition-transform transform hover:scale-105">FAQs</h1>
+            <p class="mb-6 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+            <button class="bg-gray-200 text-black py-2 px-4 rounded hover:bg-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400">Contact</button>
+        </header>
+        
+        <!-- Right Column -->
+        <section class="md:w-2/3">
+            <div class="space-y-4">
+                <!-- FAQ Item -->
+                <article class="border-b pb-4">
+                    <button class="w-full text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors" aria-expanded="false" aria-controls="faq1">
+                        <h2 class="text-xl font-semibold">Question text goes here</h2>
+                        <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq1" class="mt-2 hidden">
+                        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
+                    </div>
+                </article>
+                <!-- FAQ Item -->
+                <article class="border-b pb-4">
+                    <button class="w-full text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors" aria-expanded="false" aria-controls="faq2">
+                        <h2 class="text-xl font-semibold">Another question goes here</h2>
+                        <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq2" class="mt-2 hidden">
+                        <p class="text-gray-700">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                    </div>
+                </article>
+                <!-- FAQ Item -->
+                <article class="border-b pb-4">
+                    <button class="w-full text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors" aria-expanded="false" aria-controls="faq3">
+                        <h2 class="text-xl font-semibold">Yet another question</h2>
+                        <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq3" class="mt-2 hidden">
+                        <p class="text-gray-700">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                    </div>
+                </article>
+                <!-- Add more FAQ Items as needed -->
+            </div>
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll('button[aria-controls]').forEach(button => {
+            button.addEventListener('click', () => {
+                const expanded = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', !expanded);
+                const icon = button.querySelector('i');
+                if (!expanded) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+                document.getElementById(button.getAttribute('aria-controls')).classList.toggle('hidden');
+            });
+        });
+    </script>
+</section>

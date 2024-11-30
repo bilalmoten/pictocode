@@ -1,0 +1,24 @@
+<section class="max-w-screen-lg mx-auto p-4">
+  <header class="text-left">
+    <h1 class="text-3xl font-extrabold">Image Gallery</h1>
+    <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </header>
+  <div class="relative mt-6">
+    <figure>
+      <img src="https://placehold.co/600x400/EEE/31343C" alt="Gallery Image" class="w-full h-auto rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-105">
+    </figure>
+    <div class="absolute bottom-4 left-4 flex space-x-2">
+      <button class="w-3 h-3 bg-black rounded-full focus:outline-none focus:ring-2 focus:ring-black" aria-label="Current image"></button>
+      <button class="w-3 h-3 bg-gray-400 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-400" aria-label="Other image"></button>
+      <button class="w-3 h-3 bg-gray-400 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-400" aria-label="Other image"></button>
+    </div>
+    <div class="absolute bottom-4 right-4 flex space-x-2">
+      <button class="w-10 h-10 flex items-center justify-center border border-gray-400 rounded-full bg-white shadow hover:bg-gray-100 transition duration-300 ease-in-out" aria-label="Previous image">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <button class="w-10 h-10 flex items-center justify-center border border-gray-400 rounded-full bg-white shadow hover:bg-gray-100 transition duration-300 ease-in-out" aria-label="Next image">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+</section>

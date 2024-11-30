@@ -1,0 +1,26 @@
+<section class="bg-white py-12">
+  <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center">
+    <div class="w-full lg:w-1/2 relative mb-8 lg:mb-0">
+      <video id="promoVideo" class="w-full rounded-lg shadow-lg transition-transform duration-500 transform" preload="metadata">
+        <source src="https://videos.pexels.com/video-files/6768212/6768212-uhd_1440_2732_30fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <button id="playButton" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-5xl opacity-75 hover:opacity-100 transition-opacity duration-300" aria-label="Play Video">
+        <i class="fas fa-play-circle"></i>
+      </button>
+    </div>
+    <div class="w-full lg:w-1/2 lg:pl-12">
+      <h2 class="text-3xl font-bold mb-4 transition-transform duration-500 transform hover:translate-y-1">Engaging Video Content</h2>
+      <p class="text-gray-700 text-lg leading-relaxed transition-opacity duration-500 hover:opacity-90">
+        Discover our latest video showcasing our services and expertise. Watch now to learn more about what we offer and how we can help you achieve your goals.
+      </p>
+    </div>
+  </div>
+  <script>
+    document.getElementById('playButton').addEventListener('click', function() {
+      var video = document.getElementById('promoVideo');
+      video.play();
+      this.style.display = 'none';
+    });
+  </script>
+</section>

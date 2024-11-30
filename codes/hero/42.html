@@ -1,0 +1,25 @@
+<section class="flex flex-col md:flex-row bg-white">
+  <!-- Text Content -->
+  <article class="bg-white p-8 md:w-1/2 transition-transform duration-300 hover:scale-105">
+    <h1 class="text-4xl font-bold mb-4 transition-colors duration-300 hover:text-gray-800">Medium length hero heading goes here</h1>
+    <p class="mb-6 text-gray-700">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+    </p>
+    <form class="flex mb-4" action="#" method="POST">
+      <label for="email" class="sr-only">Email address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" class="border p-2 flex-grow mr-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow duration-300" required>
+      <button type="submit" class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black transition-colors duration-300">Sign up</button>
+    </form>
+    <p class="text-sm text-gray-600">
+      By clicking Sign Up you're confirming that you agree with our <a href="#" class="underline text-blue-600 hover:text-blue-800 transition-colors duration-300">Terms and Conditions</a>.
+    </p>
+  </article>
+
+  <!-- Video Placeholder -->
+  <div class="bg-gray-700 flex items-center justify-center md:w-1/2 h-64 relative transition-transform duration-300 hover:scale-105">
+    <video class="hidden" id="heroVideo" src="https://videos.pexels.com/video-files/6768212/6768212-uhd_1440_2732_30fps.mp4" controls></video>
+    <button aria-label="Play Video" class="text-white focus:outline-none" onclick="document.getElementById('heroVideo').classList.toggle('hidden')">
+      <i class="fas fa-play-circle text-6xl hover:text-gray-300 transition-colors duration-300"></i>
+    </button>
+  </div>
+</section>

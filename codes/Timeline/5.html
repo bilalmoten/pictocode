@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Timeline</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+    <section class="max-w-4xl mx-auto px-4 py-8">
+        <header class="mb-12">
+            <p class="text-sm uppercase font-medium text-gray-500">Tagline</p>
+            <h2 class="text-3xl font-bold mt-2">Medium length section heading goes here</h2>
+            <p class="mt-4 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+            <div class="mt-4 flex space-x-4">
+                <button class="bg-gray-200 px-4 py-2 rounded transition transform hover:bg-gray-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-400">Button</button>
+                <button class="bg-gray-200 px-4 py-2 rounded transition transform hover:bg-gray-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-400">Button</button>
+            </div>
+        </header>
+        <div class="relative">
+            <div class="absolute left-6 top-0 h-full border-l-2 border-gray-200"></div>
+            <div class="space-y-12">
+                <article class="relative pl-12 animate-fade-in">
+                    <i class="fas fa-briefcase absolute left-3 top-0 text-gray-800 text-xl animate-pulse"></i>
+                    <p class="text-lg font-semibold text-gray-800">Date</p>
+                    <h3 class="text-xl font-medium mt-1">Short heading here</h3>
+                    <p class="mt-2 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    <div class="mt-4 flex space-x-4">
+                        <button class="bg-gray-200 px-4 py-2 rounded transition transform hover:bg-gray-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-400">Button</button>
+                        <button class="bg-gray-200 px-4 py-2 rounded transition transform hover:bg-gray-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-400">Button</button>
+                    </div>
+                </article>
+                <article class="relative pl-12 animate-fade-in">
+                    <i class="fas fa-graduation-cap absolute left-3 top-0 text-gray-800 text-xl animate-pulse"></i>
+                    <p class="text-lg font-semibold text-gray-800">Date</p>
+                    <h3 class="text-xl font-medium mt-1">Short heading here</h3>
+                    <p class="mt-2 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    <div class="mt-4 flex space-x-4">
+                        <button class="bg-gray-200 px-4 py-2 rounded transition transform hover:bg-gray-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-400">Button</button>
+                        <button class="bg-gray-200 px-4 py-2 rounded transition transform hover:bg-gray-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-400">Button</button>
+                    </div>
+                </article>
+                <article class="relative pl-12 animate-fade-in">
+                    <i class="fas fa-award absolute left-3 top-0 text-gray-800 text-xl animate-pulse"></i>
+                    <p class="text-lg font-semibold text-gray-800">Date</p>
+                    <h3 class="text-xl font-medium mt-1">Short heading here</h3>
+                    <p class="mt-2 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    <div class="mt-4 flex space-x-4">
+                        <button class="bg-gray-200 px-4 py-2 rounded transition transform hover:bg-gray-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-400">Button</button>
+                        <button class="bg-gray-200 px-4 py-2 rounded transition transform hover:bg-gray-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-400">Button</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <style>
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fade-in 0.5s ease-out forwards;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .animate-pulse {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</body>
+</html>

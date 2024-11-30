@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Navbar Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-white text-gray-800">
+    <header>
+        <nav class="flex items-center justify-between p-4 shadow-md bg-white fixed w-full z-10">
+            <div class="text-2xl font-bold">
+                <a href="#" class="focus:outline-none focus:ring-2 focus:ring-blue-500">Logo</a>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="relative group text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:text-blue-500">
+                    Link One
+                    <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-500 transition-all duration-200 group-hover:w-full"></span>
+                </a>
+                <a href="#" class="relative group text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:text-blue-500">
+                    Link Two
+                    <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-500 transition-all duration-200 group-hover:w-full"></span>
+                </a>
+                <a href="#" class="relative group text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:text-blue-500">
+                    Link Three
+                    <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-500 transition-all duration-200 group-hover:w-full"></span>
+                </a>
+                <a href="#" class="relative group text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:text-blue-500">
+                    Link Four
+                    <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-500 transition-all duration-200 group-hover:w-full"></span>
+                </a>
+                <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    Button
+                </button>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" class="text-gray-700 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden fixed top-16 left-0 w-full bg-white shadow-lg transition-transform duration-300 transform -translate-y-full">
+            <ul class="flex flex-col space-y-4 p-6">
+                <li>
+                    <a href="#" class="block text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:text-blue-500">
+                        Link One
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:text-blue-500">
+                        Link Two
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:text-blue-500">
+                        Link Three
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:text-blue-500">
+                        Link Four
+                    </a>
+                </li>
+                <li>
+                    <button class="w-full text-left px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        Button
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="mt-20 p-4">
+        <section class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
+            <article class="flex-1 space-y-4">
+                <h2 class="text-xl font-bold">Page Group One</h2>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#" class="text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:text-blue-500">
+                            Page One
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:text-blue-500">
+                            Page Two
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:text-blue-500">
+                            Page Three
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:text-blue-500">
+                            Page Four
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <article class="flex-1 space-y-4">
+                <h2 class="text-xl font-bold">Page Group Two</h2>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#" class="text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:text-blue-500">
+                            Page Five
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:text-blue-500">
+                            Page Six
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:text-blue-500">
+                            Page Seven
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-700 hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:text-blue-500">
+                            Page Eight
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <aside class="flex-1 bg-gray-100 p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                <h2 class="text-xl font-bold mb-4">Featured from Blog</h2>
+                <div class="space-y-6">
+                    <article class="flex items-start space-x-4">
+                        <img src="https://placehold.co/600x400/EEE/31343C" alt="Article Image" class="w-16 h-16 object-cover rounded">
+                        <div>
+                            <h3 class="text-lg font-semibold">Article Title</h3>
+                            <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur elit</p>
+                            <a href="#" class="text-blue-500 hover:underline transition-colors duration-200 focus:outline-none focus:text-blue-700">
+                                Read more
+                            </a>
+                        </div>
+                    </article>
+                    <article class="flex items-start space-x-4">
+                        <img src="https://placehold.co/600x400/EEE/31343C" alt="Article Image" class="w-16 h-16 object-cover rounded">
+                        <div>
+                            <h3 class="text-lg font-semibold">Article Title</h3>
+                            <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur elit</p>
+                            <a href="#" class="text-blue-500 hover:underline transition-colors duration-200 focus:outline-none focus:text-blue-700">
+                                Read more
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <button class="mt-6 w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    Button
+                </button>
+            </aside>
+        </section>
+    </main>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('-translate-y-full');
+            menuToggle.setAttribute('aria-expanded', isHidden);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+    <div class="max-w-4xl mx-auto p-6">
+        <section aria-labelledby="faq-heading" class="mb-12">
+            <header>
+                <h1 id="faq-heading" class="text-3xl font-bold mb-2">FAQs</h1>
+                <p class="text-lg mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+            </header>
+            
+            <div class="space-y-6">
+                <article class="border-b pb-4">
+                    <button class="flex justify-between items-center w-full text-left focus:outline-none transition duration-300 ease-in-out hover:text-gray-700" aria-expanded="false">
+                        <span class="font-semibold text-xl">Question text goes here</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-2 text-base text-gray-600 hidden">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                    </div>
+                </article>
+                
+                <article class="border-b pb-4">
+                    <button class="flex justify-between items-center w-full text-left focus:outline-none transition duration-300 ease-in-out hover:text-gray-700" aria-expanded="false">
+                        <span class="font-semibold text-xl">Question text goes here</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-2 text-base text-gray-600 hidden">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                    </div>
+                </article>
+                
+                <article class="border-b pb-4">
+                    <button class="flex justify-between items-center w-full text-left focus:outline-none transition duration-300 ease-in-out hover:text-gray-700" aria-expanded="false">
+                        <span class="font-semibold text-xl">Question text goes here</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-2 text-base text-gray-600 hidden">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                    </div>
+                </article>
+                
+                <article class="border-b pb-4">
+                    <button class="flex justify-between items-center w-full text-left focus:outline-none transition duration-300 ease-in-out hover:text-gray-700" aria-expanded="false">
+                        <span class="font-semibold text-xl">Question text goes here</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-2 text-base text-gray-600 hidden">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                    </div>
+                </article>
+                
+                <article class="border-b pb-4">
+                    <button class="flex justify-between items-center w-full text-left focus:outline-none transition duration-300 ease-in-out hover:text-gray-700" aria-expanded="false">
+                        <span class="font-semibold text-xl">Question text goes here</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-2 text-base text-gray-600 hidden">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <section class="bg-black text-white p-6 rounded-lg transition duration-300 ease-in-out hover:bg-gray-800">
+            <h2 class="text-2xl font-bold mb-2">Still have questions?</h2>
+            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#contact" class="inline-block bg-white text-black py-2 px-4 font-semibold rounded transition duration-300 ease-in-out hover:bg-gray-200">Contact</a>
+        </section>
+    </div>
+    
+    <script>
+        document.querySelectorAll('button[aria-expanded]').forEach(button => {
+            button.addEventListener('click', () => {
+                const expanded = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', !expanded);
+                button.querySelector('i').classList.toggle('fa-chevron-up', !expanded);
+                button.querySelector('i').classList.toggle('fa-chevron-down', expanded);
+                button.nextElementSibling.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

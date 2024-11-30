@@ -1,0 +1,106 @@
+<nav class="bg-white border-b">
+    <div class="container mx-auto flex justify-between items-center p-4">
+        <a href="#" class="text-xl font-bold transition transform hover:scale-105">Logo</a>
+        <div class="hidden md:flex space-x-6">
+            <a href="#" class="font-semibold text-gray-700 hover:text-gray-900 transition">Link One</a>
+            <a href="#" class="font-semibold text-gray-700 hover:text-gray-900 transition">Link Two</a>
+            <div class="relative group">
+                <button aria-haspopup="true" aria-expanded="false" class="flex items-center font-semibold text-gray-700 hover:text-gray-900 transition focus:outline-none">
+                    Link Three <i class="fas fa-chevron-down ml-1"></i>
+                </button>
+                <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 transform scale-95 group-hover:scale-100 transition ease-out duration-200" role="menu">
+                    <div class="grid grid-cols-2 gap-4 p-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Page group one</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li><a href="#" class="flex items-center text-gray-600 hover:text-gray-800 transition"><i class="fas fa-circle text-xs text-gray-400 mr-2"></i> Page One</a></li>
+                                <li><a href="#" class="flex items-center text-gray-600 hover:text-gray-800 transition"><i class="fas fa-circle text-xs text-gray-400 mr-2"></i> Page Two</a></li>
+                                <li><a href="#" class="flex items-center text-gray-600 hover:text-gray-800 transition"><i class="fas fa-circle text-xs text-gray-400 mr-2"></i> Page Three</a></li>
+                                <li><a href="#" class="flex items-center text-gray-600 hover:text-gray-800 transition"><i class="fas fa-circle text-xs text-gray-400 mr-2"></i> Page Four</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Page group two</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li><a href="#" class="flex items-center text-gray-600 hover:text-gray-800 transition"><i class="fas fa-circle text-xs text-gray-400 mr-2"></i> Page Five</a></li>
+                                <li><a href="#" class="flex items-center text-gray-600 hover:text-gray-800 transition"><i class="fas fa-circle text-xs text-gray-400 mr-2"></i> Page Six</a></li>
+                                <li><a href="#" class="flex items-center text-gray-600 hover:text-gray-800 transition"><i class="fas fa-circle text-xs text-gray-400 mr-2"></i> Page Seven</a></li>
+                                <li><a href="#" class="flex items-center text-gray-600 hover:text-gray-800 transition"><i class="fas fa-circle text-xs text-gray-400 mr-2"></i> Page Eight</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Page group three</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li><a href="#" class="flex items-center text-gray-600 hover:text-gray-800 transition"><i class="fas fa-circle text-xs text-gray-400 mr-2"></i> Page Nine</a></li>
+                                <li><a href="#" class="flex items-center text-gray-600 hover:text-gray-800 transition"><i class="fas fa-circle text-xs text-gray-400 mr-2"></i> Page Ten</a></li>
+                                <li><a href="#" class="flex items-center text-gray-600 hover:text-gray-800 transition"><i class="fas fa-circle text-xs text-gray-400 mr-2"></i> Page Eleven</a></li>
+                                <li><a href="#" class="flex items-center text-gray-600 hover:text-gray-800 transition"><i class="fas fa-circle text-xs text-gray-400 mr-2"></i> Page Twelve</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Page group four</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li><a href="#" class="text-gray-600 hover:text-gray-800 transition">Link one</a></li>
+                                <li><a href="#" class="text-gray-600 hover:text-gray-800 transition">Link two</a></li>
+                                <li><a href="#" class="text-gray-600 hover:text-gray-800 transition">Link three</a></li>
+                                <li><a href="#" class="text-gray-600 hover:text-gray-800 transition">Link four</a></li>
+                                <li><a href="#" class="text-gray-600 hover:text-gray-800 transition">Link five</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="font-semibold text-gray-700 hover:text-gray-900 transition">Link Four</a>
+        </div>
+        <div class="hidden md:flex space-x-3">
+            <button class="px-4 py-2 border border-gray-300 rounded transition hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">Button</button>
+            <button class="px-4 py-2 bg-black text-white rounded transition hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black">Button</button>
+        </div>
+        <button class="md:hidden text-2xl text-gray-700 focus:outline-none" id="menu-btn"><i class="fas fa-bars"></i></button>
+    </div>
+    <div class="md:hidden fixed inset-0 bg-white transform -translate-x-full transition-transform duration-300" id="mobile-menu">
+        <div class="flex justify-between items-center p-4 border-b">
+            <a href="#" class="text-xl font-bold">Logo</a>
+            <button class="text-2xl text-gray-700 focus:outline-none" id="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="p-4">
+            <ul class="space-y-4">
+                <li><a href="#" class="block text-gray-700 font-medium hover:text-gray-900 transition">Link One</a></li>
+                <li><a href="#" class="block text-gray-700 font-medium hover:text-gray-900 transition">Link Two</a></li>
+                <li>
+                    <button class="w-full flex justify-between items-center text-gray-700 font-medium hover:text-gray-900 transition focus:outline-none" aria-expanded="false">
+                        Link Three <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <ul class="pl-4 mt-2 hidden space-y-2">
+                        <li><a href="#" class="block text-gray-600 hover:text-gray-800 transition">Page One</a></li>
+                        <li><a href="#" class="block text-gray-600 hover:text-gray-800 transition">Page Two</a></li>
+                        <li><a href="#" class="block text-gray-600 hover:text-gray-800 transition">Page Three</a></li>
+                        <li><a href="#" class="block text-gray-600 hover:text-gray-800 transition">Page Four</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="block text-gray-700 font-medium hover:text-gray-900 transition">Link Four</a></li>
+            </ul>
+            <div class="mt-6 space-y-3">
+                <button class="w-full px-4 py-2 border border-gray-300 rounded transition hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">Button</button>
+                <button class="w-full px-4 py-2 bg-black text-white rounded transition hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black">Button</button>
+            </div>
+        </nav>
+    </div>
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.remove('-translate-x-full');
+        });
+        document.getElementById('close-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.add('-translate-x-full');
+        });
+        const submenuButtons = document.querySelectorAll('nav button');
+        submenuButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const submenu = button.nextElementSibling;
+                const expanded = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', !expanded);
+                submenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</nav>

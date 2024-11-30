@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQs</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+  <section class="max-w-4xl mx-auto p-6">
+    <header class="text-center mb-8">
+      <h1 class="text-4xl font-bold mb-4">FAQs</h1>
+      <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+    </header>
+    
+    <div class="space-y-4">
+      <article class="border rounded-lg shadow-sm">
+        <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none focus:ring transition duration-300 hover:bg-gray-100" aria-expanded="false">
+          <span class="font-semibold">What is your return policy?</span>
+          <i class="fas fa-chevron-down transition-transform duration-300"></i>
+        </button>
+        <div class="px-4 pb-4 max-h-0 overflow-hidden transition-all duration-500">
+          <p class="text-gray-600">Our return policy lasts 30 days. If 30 days have gone by since your purchase, unfortunately, we can’t offer you a refund or exchange.</p>
+        </div>
+      </article>
+      
+      <article class="border rounded-lg shadow-sm">
+        <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none focus:ring transition duration-300 hover:bg-gray-100" aria-expanded="false">
+          <span class="font-semibold">How do I track my order?</span>
+          <i class="fas fa-chevron-down transition-transform duration-300"></i>
+        </button>
+        <div class="px-4 pb-4 max-h-0 overflow-hidden transition-all duration-500">
+          <p class="text-gray-600">Once your order is shipped, we will send you an email with the tracking number and a link to track it online.</p>
+        </div>
+      </article>
+      
+      <article class="border rounded-lg shadow-sm">
+        <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none focus:ring transition duration-300 hover:bg-gray-100" aria-expanded="false">
+          <span class="font-semibold">Do you offer international shipping?</span>
+          <i class="fas fa-chevron-down transition-transform duration-300"></i>
+        </button>
+        <div class="px-4 pb-4 max-h-0 overflow-hidden transition-all duration-500">
+          <p class="text-gray-600">Yes, we ship to most countries worldwide. Shipping costs will apply, and will be added at checkout.</p>
+        </div>
+      </article>
+      
+      <article class="border rounded-lg shadow-sm">
+        <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none focus:ring transition duration-300 hover:bg-gray-100" aria-expanded="false">
+          <span class="font-semibold">How can I contact customer support?</span>
+          <i class="fas fa-chevron-down transition-transform duration-300"></i>
+        </button>
+        <div class="px-4 pb-4 max-h-0 overflow-hidden transition-all duration-500">
+          <p class="text-gray-600">You can contact our customer support via the Contact button below or by emailing support@example.com.</p>
+        </div>
+      </article>
+    </div>
+    
+    <div class="text-center mt-12 p-6 bg-gray-50 rounded-lg shadow">
+      <h3 class="text-2xl font-bold mb-2">Still have questions?</h3>
+      <p class="mb-4">Our support team is here to help you with any queries you might have.</p>
+      <a href="/contact" class="inline-flex items-center bg-gray-800 text-white py-2 px-6 rounded hover:bg-gray-700 transition duration-300">
+        <i class="fas fa-envelope mr-2"></i> Contact
+      </a>
+    </div>
+  </section>
+  
+  <script>
+    document.querySelectorAll('button[aria-expanded]').forEach(button => {
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !expanded);
+        button.querySelector('i').classList.toggle('fa-chevron-down', expanded);
+        button.querySelector('i').classList.toggle('fa-chevron-up', !expanded);
+        const content = button.nextElementSibling;
+        if (!expanded) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+          content.style.maxHeight = null;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

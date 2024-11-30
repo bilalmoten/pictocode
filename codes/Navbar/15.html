@@ -1,0 +1,77 @@
+<div class="bg-white shadow-md">
+  <nav class="container mx-auto px-4 py-3 flex justify-between items-center" aria-label="Main Navigation">
+    <div class="flex items-center">
+      <div class="text-2xl font-bold mr-4">Logo</div>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#" class="text-gray-700 hover:text-gray-900 transition duration-200">Link One</a></li>
+        <li><a href="#" class="text-gray-700 hover:text-gray-900 transition duration-200">Link Two</a></li>
+        <li><a href="#" class="text-gray-700 hover:text-gray-900 transition duration-200">Link Three</a></li>
+        <li class="relative group">
+          <button 
+            class="flex items-center text-gray-700 hover:text-gray-900 transition duration-200 focus:outline-none"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Link Four <i class="fas fa-chevron-down ml-1"></i>
+          </button>
+          <ul class="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 invisible group-hover:visible">
+            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-200">Link Five</a></li>
+            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-200">Link Six</a></li>
+            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-200">Link Seven</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="flex items-center">
+      <button class="hidden md:block bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition duration-200">Button</button>
+      <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+  </nav>
+  <div id="mobile-menu" class="md:hidden bg-white shadow-lg transform scale-y-0 origin-top transition-transform duration-200 ease-in-out overflow-hidden">
+    <ul class="flex flex-col">
+      <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-200">Link One</a></li>
+      <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-200">Link Two</a></li>
+      <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-200">Link Three</a></li>
+      <li class="relative">
+        <button 
+          class="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-200 flex items-center justify-between focus:outline-none"
+          aria-haspopup="true"
+          aria-expanded="false"
+          onclick="toggleDropdown('mobile-dropdown')"
+        >
+          Link Four <i class="fas fa-chevron-down"></i>
+        </button>
+        <ul id="mobile-dropdown" class="pl-4 hidden flex-col">
+          <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-200">Link Five</a></li>
+          <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-200">Link Six</a></li>
+          <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-200">Link Seven</a></li>
+        </ul>
+      </li>
+      <li class="px-4 py-2">
+        <button class="w-full bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition duration-200">Button</button>
+      </li>
+    </ul>
+  </div>
+</div>
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.contains('scale-y-100');
+    if (isOpen) {
+      mobileMenu.classList.remove('scale-y-100');
+      mobileMenu.classList.add('scale-y-0');
+    } else {
+      mobileMenu.classList.remove('scale-y-0');
+      mobileMenu.classList.add('scale-y-100');
+    }
+  });
+
+  function toggleDropdown(id) {
+    const dropdown = document.getElementById(id);
+    dropdown.classList.toggle('hidden');
+  }
+</script>

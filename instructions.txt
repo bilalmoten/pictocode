@@ -1,0 +1,15 @@
+hi, i need you to build a python file, that takes in images from the sections folder, and then outputs html code for each image in the codes folder.
+
+the sections folder, has multiple folders in it corresponding to different sections of a website, like header, hero, footer, pricing, faq etc.
+
+each sub folder, has images of multiple designs for that section.
+
+all of this is a component library that i have built for my AI website builder.
+
+now i need all of these sections in code, which the website builder will be able to connect together, customise, and publish as a webspage based on user requirements.
+
+can u help??
+
+in order to convert, first i need the image to be sent to gpt 4o model as it is a vision model, then the response from it(html code) should be sent to o1 mini model, to prompt it to improve the code, add some flair to it, make it more professional, add subtle animations if appropriate and additional things to make it better.
+
+then the response would be saved to a new code file in the subsection folder in the codes folder. all to be created.

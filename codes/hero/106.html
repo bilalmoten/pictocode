@@ -1,0 +1,34 @@
+<section class="relative bg-white py-16 px-4 sm:px-6 lg:px-8">
+  <div class="absolute inset-0 flex justify-between items-center">
+    <img src="https://placehold.co/600x400/EEE/31343C" alt="" class="w-1/3 opacity-50 hidden lg:block transition-opacity duration-1000 ease-in-out">
+    <img src="https://placehold.co/600x400/EEE/31343C" alt="" class="w-1/3 opacity-50 hidden lg:block transition-opacity duration-1000 ease-in-out delay-200">
+  </div>
+  <div class="relative z-10 max-w-3xl mx-auto text-center animate-fadeIn">
+    <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl">
+      Medium length hero heading goes here
+    </h1>
+    <p class="mt-4 text-lg text-gray-600">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+    </p>
+    <div class="mt-8 flex justify-center space-x-4">
+      <button class="bg-black text-white px-6 py-3 rounded-md flex items-center transition transform duration-300 hover:bg-gray-800 hover:scale-105">
+        <span>Button</span>
+        <i class="fas fa-arrow-right ml-2"></i>
+      </button>
+      <button class="border border-black text-black px-6 py-3 rounded-md flex items-center transition transform duration-300 hover:bg-black hover:text-white hover:scale-105">
+        <span>Button</span>
+        <i class="fas fa-arrow-right ml-2"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-out forwards;
+  }
+</style>

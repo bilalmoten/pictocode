@@ -1,0 +1,75 @@
+<section class="bg-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+        <header class="text-center">
+            <p class="text-lg font-medium text-gray-500">Tagline</p>
+            <h2 class="text-3xl font-bold text-gray-900 mt-2">Pricing plan</h2>
+            <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="mt-6 flex justify-center items-center space-x-4">
+                <button id="monthly-btn" class="px-4 py-2 bg-black text-white rounded-l-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-black">Monthly</button>
+                <button id="yearly-btn" class="px-4 py-2 bg-white text-black border border-black rounded-r-md transition-colors duration-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black">Yearly</button>
+            </div>
+        </header>
+        <div class="mt-12 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <article class="border p-6 rounded-lg text-center transition transform hover:scale-105 hover:shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Basic plan</h3>
+                <p class="mt-4 text-4xl font-bold text-gray-900">$19<span class="text-lg font-medium">/mo</span></p>
+                <ul class="mt-6 space-y-2 text-gray-600">
+                    <li class="flex items-center justify-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+                    <li class="flex items-center justify-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+                    <li class="flex items-center justify-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+                </ul>
+                <button class="mt-6 w-full py-2 bg-black text-white font-bold rounded-md transition bg-opacity-90 hover:bg-opacity-100 focus:outline-none focus:ring-2 focus:ring-black">Get started</button>
+            </article>
+            <article class="border p-6 rounded-lg text-center transition transform hover:scale-105 hover:shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Business plan</h3>
+                <p class="mt-4 text-4xl font-bold text-gray-900">$29<span class="text-lg font-medium">/mo</span></p>
+                <ul class="mt-6 space-y-2 text-gray-600">
+                    <li class="flex items-center justify-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+                    <li class="flex items-center justify-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+                    <li class="flex items-center justify-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+                    <li class="flex items-center justify-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+                </ul>
+                <button class="mt-6 w-full py-2 bg-black text-white font-bold rounded-md transition bg-opacity-90 hover:bg-opacity-100 focus:outline-none focus:ring-2 focus:ring-black">Get started</button>
+            </article>
+            <article class="border p-6 rounded-lg text-center transition transform hover:scale-105 hover:shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Enterprise plan</h3>
+                <p class="mt-4 text-4xl font-bold text-gray-900">$49<span class="text-lg font-medium">/mo</span></p>
+                <ul class="mt-6 space-y-2 text-gray-600">
+                    <li class="flex items-center justify-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+                    <li class="flex items-center justify-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+                    <li class="flex items-center justify-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+                    <li class="flex items-center justify-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+                    <li class="flex items-center justify-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+                </ul>
+                <button class="mt-6 w-full py-2 bg-black text-white font-bold rounded-md transition bg-opacity-90 hover:bg-opacity-100 focus:outline-none focus:ring-2 focus:ring-black">Get started</button>
+            </article>
+        </div>
+    </div>
+</section>
+<script>
+    const monthlyBtn = document.getElementById('monthly-btn');
+    const yearlyBtn = document.getElementById('yearly-btn');
+    const pricingCards = document.querySelectorAll('article');
+
+    monthlyBtn.addEventListener('click', () => {
+        monthlyBtn.classList.add('bg-black', 'text-white');
+        monthlyBtn.classList.remove('bg-gray-100', 'text-black');
+        yearlyBtn.classList.remove('bg-black', 'text-white');
+        yearlyBtn.classList.add('bg-white', 'text-black');
+        pricingCards.forEach(card => {
+            const price = card.querySelector('p').innerText;
+            card.querySelector('p').innerHTML = price.replace('/mo', '/month');
+        });
+    });
+
+    yearlyBtn.addEventListener('click', () => {
+        yearlyBtn.classList.add('bg-black', 'text-white');
+        yearlyBtn.classList.remove('bg-white', 'text-black');
+        monthlyBtn.classList.remove('bg-black', 'text-white');
+        monthlyBtn.classList.add('bg-white', 'text-black');
+        pricingCards.forEach(card => {
+            const price = card.querySelector('p').innerText;
+            card.querySelector('p').innerHTML = price.replace('/month', '/yr');
+        });
+    });
+</script>

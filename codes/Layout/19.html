@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enhanced Layout</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <section class="bg-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col-reverse md:flex-row items-center">
+        <!-- Image -->
+        <div class="md:w-1/2 mt-8 md:mt-0">
+          <img src="https://placehold.co/600x400/EEE/31343C" alt="Descriptive alt text" class="w-full h-auto rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+        </div>
+        <!-- Text Content -->
+        <article class="md:w-1/2 space-y-6">
+          <p class="text-sm font-light text-gray-600">Tagline</p>
+          <h2 class="text-3xl font-bold text-gray-800 transition-colors duration-300 hover:text-gray-600">Medium length section heading goes here</h2>
+          <p class="text-base text-gray-700">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+          </p>
+          <ul class="list-disc pl-5 space-y-2 text-gray-700">
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          </ul>
+          <div class="flex space-x-4">
+            <button class="border border-black text-black py-2 px-4 rounded transition-colors duration-300 hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black">Button</button>
+            <button class="flex items-center space-x-2 text-black py-2 px-4 rounded border border-transparent bg-gray-100 transition-transform duration-300 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400">
+              <span>Button</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

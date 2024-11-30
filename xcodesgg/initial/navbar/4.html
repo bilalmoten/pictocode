@@ -1,0 +1,42 @@
+```html
+<nav class="flex items-center justify-between p-4 bg-white border-b border-gray-200">
+  <div class="flex items-center">
+    <span class="text-2xl font-bold">Logo</span>
+  </div>
+  <div class="hidden md:flex space-x-6">
+    <a href="#" class="hover:text-gray-700">Link One</a>
+    <a href="#" class="hover:text-gray-700">Link Two</a>
+    <a href="#" class="hover:text-gray-700">Link Three</a>
+    <div class="relative">
+      <button class="hover:text-gray-700 flex items-center">
+        Link Four <i class="fas fa-chevron-down ml-1"></i>
+      </button>
+      <div class="absolute hidden mt-2 py-2 w-48 bg-white border rounded shadow-xl">
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Sub Link 1</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Sub Link 2</a>
+      </div>
+    </div>
+    <a href="#" class="hover:text-gray-700">Link Five</a>
+    <a href="#" class="hover:text-gray-700">Link Six</a>
+    <a href="#" class="hover:text-gray-700">Link Seven</a>
+  </div>
+  <button class="md:hidden flex items-center px-3 py-2 border rounded text-black border-black">
+    <i class="fas fa-bars"></i>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="md:hidden">
+  <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Link One</a>
+    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Link Two</a>
+    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Link Three</a>
+    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Link Four</a>
+    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Link Five</a>
+    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Link Six</a>
+    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Link Seven</a>
+  </div>
+</div>
+```
+
+This code represents a responsive navbar using Tailwind CSS. The desktop version displays links horizontally, while the mobile version uses a dropdown menu. The interactive elements include hover effects and a dropdown for "Link Four".

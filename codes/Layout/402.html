@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enhanced Layout</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <section class="flex flex-col lg:flex-row items-start lg:items-center justify-between p-6 lg:p-12 bg-white">
+    <!-- Tabs Section -->
+    <nav aria-label="Tabs" class="mb-6 lg:mb-0 w-full lg:w-1/2">
+      <ul class="flex space-x-4">
+        <li>
+          <button class="text-gray-700 border-b-2 border-black pb-2 transition duration-300 ease-in-out hover:text-gray-900 focus:outline-none" aria-current="page">Tab One</button>
+        </li>
+        <li>
+          <button class="text-gray-500 transition duration-300 ease-in-out hover:text-gray-700 focus:outline-none">Tab Two</button>
+        </li>
+        <li>
+          <button class="text-gray-500 transition duration-300 ease-in-out hover:text-gray-700 focus:outline-none">Tab Three</button>
+        </li>
+      </ul>
+    </nav>
+    
+    <!-- Content Section -->
+    <article class="lg:w-1/2 space-y-4">
+      <p class="text-sm text-gray-500">Tagline</p>
+      <h2 class="text-3xl font-bold transition transform hover:scale-105">Medium length section heading goes here</h2>
+      <p class="text-gray-700">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+      <div class="flex space-x-4">
+        <button class="px-4 py-2 border border-gray-700 text-gray-700 rounded transition duration-300 ease-in-out hover:bg-gray-700 hover:text-white focus:outline-none">Button</button>
+        <button class="px-4 py-2 border border-gray-700 text-gray-700 rounded flex items-center transition duration-300 ease-in-out hover:bg-gray-700 hover:text-white focus:outline-none">
+          Button <i class="fas fa-arrow-right ml-2"></i>
+        </button>
+      </div>
+    </article>
+    
+    <!-- Image Section -->
+    <div class="lg:w-1/2 mt-6 lg:mt-0">
+      <img src="https://placehold.co/600x400/EEE/31343C" alt="Placeholder Image" class="w-full rounded shadow-lg transition duration-500 ease-in-out transform hover:scale-105">
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-a

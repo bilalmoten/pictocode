@@ -1,0 +1,110 @@
+<section class="max-w-5xl mx-auto p-6 md:flex md:space-x-10">
+  <!-- Contact Information -->
+  <article class="md:w-1/2 space-y-4 animate-fade-in">
+    <h2 class="text-lg font-semibold text-gray-700">Tagline</h2>
+    <h1 class="text-4xl font-bold text-gray-900">Contact Us</h1>
+    <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <address class="space-y-3">
+      <p class="flex items-center text-gray-700 transition transform hover:translate-x-1">
+        <i class="fas fa-envelope mr-2 text-xl text-blue-500"></i> 
+        <a href="mailto:hello@relume.io" class="hover:underline">hello@relume.io</a>
+      </p>
+      <p class="flex items-center text-gray-700 transition transform hover:translate-x-1">
+        <i class="fas fa-phone mr-2 text-xl text-blue-500"></i> 
+        <a href="tel:+15550000000" class="hover:underline">+1 (555) 000-0000</a>
+      </p>
+      <p class="flex items-center text-gray-700 transition transform hover:translate-x-1">
+        <i class="fas fa-map-marker-alt mr-2 text-xl text-blue-500"></i> 
+        123 Sample St, Sydney NSW 2000 AU
+      </p>
+    </address>
+  </article>
+
+  <!-- Contact Form -->
+  <form class="md:w-1/2 space-y-6 animate-fade-in" action="#" method="POST" novalidate>
+    <div class="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
+      <div class="w-full">
+        <label for="first-name" class="block text-sm font-medium text-gray-700">First Name</label>
+        <input type="text" id="first-name" name="first-name" placeholder="First name" class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300 ease-in-out" required />
+      </div>
+      <div class="w-full">
+        <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name</label>
+        <input type="text" id="last-name" name="last-name" placeholder="Last name" class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300 ease-in-out" required />
+      </div>
+    </div>
+    
+    <div>
+      <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+      <input type="email" id="email" name="email" placeholder="Email" class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300 ease-in-out" required />
+    </div>
+    
+    <div>
+      <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Phone number" class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300 ease-in-out" />
+    </div>
+    
+    <div>
+      <label for="topic" class="block text-sm font-medium text-gray-700">Topic</label>
+      <select id="topic" name="topic" class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300 ease-in-out">
+        <option>Choose a topic</option>
+        <option>General Inquiry</option>
+        <option>Support</option>
+        <option>Feedback</option>
+      </select>
+    </div>
+    
+    <fieldset class="space-y-2">
+      <legend class="block text-sm font-medium text-gray-700">Which best describes you?</legend>
+      <div class="flex flex-wrap gap-2">
+        <label class="flex items-center space-x-2">
+          <input type="radio" name="description" value="First choice" class="focus:ring-blue-500" required />
+          <span>First choice</span>
+        </label>
+        <label class="flex items-center space-x-2">
+          <input type="radio" name="description" value="Second choice" class="focus:ring-blue-500" />
+          <span>Second choice</span>
+        </label>
+        <label class="flex items-center space-x-2">
+          <input type="radio" name="description" value="Third choice" class="focus:ring-blue-500" />
+          <span>Third choice</span>
+        </label>
+        <label class="flex items-center space-x-2">
+          <input type="radio" name="description" value="Fourth choice" class="focus:ring-blue-500" />
+          <span>Fourth choice</span>
+        </label>
+        <label class="flex items-center space-x-2">
+          <input type="radio" name="description" value="Fifth choice" class="focus:ring-blue-500" />
+          <span>Fifth choice</span>
+        </label>
+        <label class="flex items-center space-x-2">
+          <input type="radio" name="description" value="Other" class="focus:ring-blue-500" />
+          <span>Other</span>
+        </label>
+      </div>
+    </fieldset>
+    
+    <div>
+      <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+      <textarea id="message" name="message" placeholder="Type your message..." class="mt-1 w-full border border-gray-300 rounded-md p-2 h-24 focus:ring-blue-500 focus:border-blue-500 transition duration-300 ease-in-out"></textarea>
+    </div>
+    
+    <div class="flex items-center space-x-2">
+      <input type="checkbox" id="terms" name="terms" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" required />
+      <label for="terms" class="text-sm text-gray-700">I accept the <a href="#" class="text-blue-500 hover:underline">Terms</a></label>
+    </div>
+    
+    <div>
+      <button type="submit" class="w-full bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition duration-300 ease-in-out">Submit</button>
+    </div>
+  </form>
+</section>
+
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+</style>

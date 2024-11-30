@@ -1,0 +1,42 @@
+<section class="flex flex-col items-center justify-center min-h-screen bg-white px-4 md:px-8 py-8">
+    <div class="text-center max-w-2xl mx-auto animate-fadeIn">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 transition-transform duration-500 hover:scale-105">
+            Medium length hero heading goes here
+        </h1>
+        <p class="text-base md:text-lg mb-6 text-gray-700">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+        </p>
+        <form class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 mb-6" aria-label="Sign up form">
+            <label for="email" class="sr-only">Email address</label>
+            <div class="relative w-full md:w-auto">
+                <input type="email" id="email" placeholder="Enter your email" class="border border-gray-300 p-2 pl-10 rounded w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-black transition duration-300">
+                <i class="fas fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+            </div>
+            <button type="submit" class="bg-black text-white font-bold py-2 px-4 rounded flex items-center justify-center transition duration-300 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black">
+                <i class="fas fa-paper-plane mr-2"></i> Sign Up
+            </button>
+        </form>
+        <p class="text-xs text-gray-600">
+            By clicking Sign Up you're confirming that you agree with our <a href="#" class="underline text-black transition-colors duration-300 hover:text-gray-800">Terms and Conditions</a>.
+        </p>
+    </div>
+    <div class="mt-8 w-full max-w-4xl animate-fadeIn">
+        <video class="w-full h-auto rounded shadow-lg transition-transform duration-500 hover:scale-105" controls>
+            <source src="https://videos.pexels.com/video-files/6768212/6768212-uhd_1440_2732_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+<style>
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.animate-fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-a6lYgc0GZxslT7D0+K0fYfbPtH6k5+fHmR6m52ZkxnDvKv7tBHmJ7Gd1LovRqVw+htLf6DiKj3Y1zXw5q3fuxA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+```

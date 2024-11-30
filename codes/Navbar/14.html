@@ -1,0 +1,95 @@
+<header class="bg-black text-white">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <!-- Logo -->
+    <div class="text-lg font-script">
+      <a href="/" aria-label="Homepage" class="transition duration-300 hover:opacity-75">
+        Logo
+      </a>
+    </div>
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-6 items-center" aria-label="Primary Navigation">
+      <a href="#" class="transition duration-300 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Link One</a>
+      <a href="#" class="transition duration-300 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Link Two</a>
+      <a href="#" class="transition duration-300 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Link Three</a>
+      <div class="relative group">
+        <button class="flex items-center transition duration-300 hover:underline focus:outline-none focus:ring-2 focus:ring-white" aria-haspopup="true" aria-expanded="false">
+          Link Four
+          <i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
+        </button>
+        <ul class="absolute left-0 mt-2 w-40 bg-white text-black rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible" role="menu" aria-label="Link Four Dropdown">
+          <li role="none">
+            <a href="#" class="block px-4 py-2 transition duration-300 hover:bg-gray-200" role="menuitem">Link Five</a>
+          </li>
+          <li role="none">
+            <a href="#" class="block px-4 py-2 transition duration-300 hover:bg-gray-200" role="menuitem">Link Six</a>
+          </li>
+          <li role="none">
+            <a href="#" class="block px-4 py-2 transition duration-300 hover:bg-gray-200" role="menuitem">Link Seven</a>
+          </li>
+        </ul>
+      </div>
+      <button class="border border-white px-4 py-2 transition duration-300 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white">Button</button>
+    </nav>
+    <!-- Mobile Menu Button -->
+    <button id="menu-toggle" class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-white rounded">
+      <i class="fas fa-bars fa-lg" aria-hidden="true"></i>
+      <span class="sr-only">Open menu</span>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-75 hidden md:hidden transition-opacity duration-300" aria-hidden="true">
+    <div class="absolute top-0 right-0 p-4">
+      <button id="menu-close" class="text-white focus:outline-none focus:ring-2 focus:ring-white rounded">
+        <i class="fas fa-times fa-lg" aria-hidden="true"></i>
+        <span class="sr-only">Close menu</span>
+      </button>
+    </div>
+    <nav class="flex flex-col mt-20 space-y-4 p-6" aria-label="Mobile Navigation">
+      <a href="#" class="text-white text-lg transition duration-300 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Link One</a>
+      <a href="#" class="text-white text-lg transition duration-300 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Link Two</a>
+      <a href="#" class="text-white text-lg transition duration-300 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Link Three</a>
+      <div class="relative">
+        <button class="flex items-center text-white text-lg transition duration-300 hover:underline focus:outline-none focus:ring-2 focus:ring-white" aria-haspopup="true" aria-expanded="false">
+          Link Four
+          <i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
+        </button>
+        <ul class="ml-4 mt-2 space-y-2 hidden">
+          <li>
+            <a href="#" class="block text-white transition duration-300 hover:bg-gray-700 px-2 py-1 rounded">Link Five</a>
+          </li>
+          <li>
+            <a href="#" class="block text-white transition duration-300 hover:bg-gray-700 px-2 py-1 rounded">Link Six</a>
+          </li>
+          <li>
+            <a href="#" class="block text-white transition duration-300 hover:bg-gray-700 px-2 py-1 rounded">Link Seven</a>
+          </li>
+        </ul>
+      </div>
+      <button class="border border-white px-4 py-2 transition duration-300 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white">Button</button>
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.remove('hidden');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+  });
+  
+  document.getElementById('menu-close').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.add('hidden');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+  });
+  
+  // Dropdown for mobile menu
+  const mobileDropdownButtons = document.querySelectorAll('#mobile-menu button[aria-haspopup="true"]');
+  
+  mobileDropdownButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const dropdown = button.nextElementSibling;
+      dropdown.classList.toggle('hidden');
+    });
+  });
+</script>

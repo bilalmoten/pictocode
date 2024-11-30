@@ -1,0 +1,62 @@
+<section class="max-w-4xl mx-auto p-6">
+    <header class="text-center mb-8">
+        <p class="text-sm text-gray-500">Tagline</p>
+        <h1 class="text-3xl font-bold animate-fadeIn">Pricing plan</h1>
+        <p class="text-gray-600 mt-2 animate-fadeIn">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </header>
+    <div class="flex justify-center mb-8 space-x-2">
+        <button class="px-4 py-2 bg-gray-200 text-black rounded-l transition duration-300 ease-in-out transform hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400">Monthly</button>
+        <button class="px-4 py-2 bg-gray-100 text-black rounded-r transition duration-300 ease-in-out transform hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400">Yearly</button>
+    </div>
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <article class="border p-6 rounded-lg text-center transition duration-300 ease-in-out transform hover:shadow-lg hover:scale-105">
+            <h2 class="text-2xl font-bold mb-2 flex items-center justify-center">
+                <i class="fas fa-star text-yellow-500 mr-2"></i> Basic plan
+            </h2>
+            <div class="text-4xl font-bold mb-4 animate-bounce">$19<span class="text-lg">/mo</span></div>
+            <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet</p>
+            <hr class="mb-4">
+            <ul class="text-left mb-6 space-y-2">
+                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+            </ul>
+            <button class="px-6 py-3 bg-black text-white rounded transition duration-300 ease-in-out transform hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black">Get started</button>
+        </article>
+        <article class="border p-6 rounded-lg text-center transition duration-300 ease-in-out transform hover:shadow-lg hover:scale-105">
+            <h2 class="text-2xl font-bold mb-2 flex items-center justify-center">
+                <i class="fas fa-briefcase text-blue-500 mr-2"></i> Business plan
+            </h2>
+            <div class="text-4xl font-bold mb-4 animate-bounce">$29<span class="text-lg">/mo</span></div>
+            <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet</p>
+            <hr class="mb-4">
+            <ul class="text-left mb-6 space-y-2">
+                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Feature text goes here</li>
+            </ul>
+            <button class="px-6 py-3 bg-black text-white rounded transition duration-300 ease-in-out transform hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black">Get started</button>
+        </article>
+    </main>
+</section>
+
+<style>
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.animate-fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+</style>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

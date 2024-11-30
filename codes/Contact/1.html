@@ -1,0 +1,41 @@
+<section class="flex items-center justify-center min-h-screen bg-white px-4 sm:px-0">
+    <div class="max-w-md w-full">
+        <header class="text-center mb-8">
+            <h2 class="text-sm uppercase font-light mb-2">Tagline</h2>
+            <h1 class="text-3xl font-bold mb-4">Contact us</h1>
+            <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </header>
+        <form class="space-y-6">
+            <div class="relative">
+                <label for="name" class="block text-sm font-medium mb-1">Name</label>
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <i class="fas fa-user text-gray-400"></i>
+                </div>
+                <input type="text" id="name" class="pl-10 block w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out" placeholder="Your Name">
+            </div>
+            <div class="relative">
+                <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <i class="fas fa-envelope text-gray-400"></i>
+                </div>
+                <input type="email" id="email" class="pl-10 block w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out" placeholder="you@example.com">
+            </div>
+            <div class="relative">
+                <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                <div class="absolute top-0 left-0 pl-3 pt-2 flex items-start pointer-events-none">
+                    <i class="fas fa-comment text-gray-400"></i>
+                </div>
+                <textarea id="message" class="pl-10 block w-full border border-gray-300 rounded-md p-2 pt-8 focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out" rows="4" placeholder="Type your message..."></textarea>
+            </div>
+            <div class="flex items-center">
+                <input type="checkbox" id="terms" class="h-4 w-4 text-black border-gray-300 rounded focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">
+                <label for="terms" class="ml-2 block text-sm">I accept the <a href="#" class="text-blue-500 underline hover:text-blue-700 transition duration-300">Terms</a></label>
+            </div>
+            <div>
+                <button type="submit" class="w-full flex items-center justify-center bg-black text-white py-2 rounded-md hover:bg-gray-800 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-black">
+                    <i class="fas fa-paper-plane mr-2"></i> Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</section>

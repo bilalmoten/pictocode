@@ -1,0 +1,66 @@
+<section class="max-w-4xl mx-auto p-6">
+  <h1 class="text-3xl font-bold mb-4">FAQs</h1>
+  <p class="mb-8 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+  
+  <div class="space-y-4">
+    <article class="border-b">
+      <button class="w-full flex justify-between items-center font-semibold text-lg focus:outline-none transition hover:bg-gray-100 p-4" aria-expanded="false">
+        <span>Question text goes here</span>
+        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+      </button>
+      <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+        <p class="p-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique...</p>
+      </div>
+    </article>
+    <article class="border-b">
+      <button class="w-full flex justify-between items-center font-semibold text-lg focus:outline-none transition hover:bg-gray-100 p-4" aria-expanded="false">
+        <span>Question text goes here</span>
+        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+      </button>
+      <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+        <p class="p-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique...</p>
+      </div>
+    </article>
+    <article class="border-b">
+      <button class="w-full flex justify-between items-center font-semibold text-lg focus:outline-none transition hover:bg-gray-100 p-4" aria-expanded="false">
+        <span>Question text goes here</span>
+        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+      </button>
+      <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+        <p class="p-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique...</p>
+      </div>
+    </article>
+    <article class="border-b">
+      <button class="w-full flex justify-between items-center font-semibold text-lg focus:outline-none transition hover:bg-gray-100 p-4" aria-expanded="false">
+        <span>Question text goes here</span>
+        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+      </button>
+      <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+        <p class="p-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique...</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="mt-8">
+    <h2 class="text-xl font-bold mb-2">Still have questions?</h2>
+    <p class="mb-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <a href="#contact" class="px-4 py-2 bg-blue-600 text-white rounded transition transform hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Contact</a>
+  </div>
+
+  <script>
+    document.querySelectorAll('button').forEach(button => {
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !expanded);
+        const content = button.nextElementSibling;
+        if (!expanded) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          button.querySelector('i').classList.add('rotate-180');
+        } else {
+          content.style.maxHeight = null;
+          button.querySelector('i').classList.remove('rotate-180');
+        }
+      });
+    });
+  </script>
+</section>

@@ -1,0 +1,41 @@
+<section class="flex flex-col md:flex-row items-center justify-between p-8 bg-white animate-fade-in">
+    <div class="w-full md:w-1/2 space-y-6">
+        <p class="text-sm uppercase text-gray-600">Tagline</p>
+        <h2 class="text-3xl font-bold text-gray-800">Contact us</h2>
+        <p class="text-base text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <form class="space-y-6">
+            <div class="relative">
+                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <div class="mt-1 relative">
+                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
+                        <i class="fas fa-user"></i>
+                    </span>
+                    <input type="text" id="name" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" placeholder="Your name">
+                </div>
+            </div>
+            <div class="relative">
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <div class="mt-1 relative">
+                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <input type="email" id="email" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" placeholder="Your email">
+                </div>
+            </div>
+            <div class="relative">
+                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                <textarea id="message" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" rows="4" placeholder="Type your message..."></textarea>
+            </div>
+            <div class="flex items-center">
+                <input type="checkbox" id="terms" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                <label for="terms" class="ml-2 text-sm text-gray-600">I accept the <a href="#" class="text-blue-500 hover:underline">Terms</a></label>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+                Submit
+            </button>
+        </form>
+    </div>
+    <div class="w-full md:w-1/2 mt-8 md:mt-0">
+        <img src="https://placehold.co/600x400/EEE/31343C" alt="Contact illustration" class="w-full h-auto rounded-md shadow-lg transition transform hover:scale-105">
+    </div>
+</section>

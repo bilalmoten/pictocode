@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Section</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/037776171a.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-white text-gray-800">
+
+  <section class="bg-gray-800 text-white flex flex-col items-center justify-center min-h-screen px-6 py-12">
+    <div class="max-w-xl text-center md:text-left animate-fade-in">
+      <h1 class="text-3xl md:text-5xl font-bold mb-6 transition-transform transform hover:scale-105">
+        Medium length hero heading goes here
+      </h1>
+      <p class="text-lg mb-8">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+        Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+      <form
+        class="flex flex-col md:flex-row items-center justify-center md:justify-start space-y-4 md:space-y-0 md:space-x-4"
+        aria-label="Sign up form">
+        <label for="email" class="sr-only">Email address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required
+          class="p-3 text-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 w-full md:w-auto transition duration-300">
+        <button type="submit"
+          class="bg-white text-gray-800 font-semibold p-3 rounded-md hover:bg-gray-200 transition transform hover:scale-105">
+          Sign up
+        </button>
+      </form>
+      <p class="text-sm mt-4">
+        By clicking Sign Up you're confirming that you agree with our <a href="#"
+          class="underline hover:text-gray-400 transition">Terms and Conditions</a>.
+      </p>
+    </div>
+  </section>
+
+</body>
+
+</html>

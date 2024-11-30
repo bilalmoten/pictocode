@@ -1,0 +1,99 @@
+<section class="container mx-auto px-4 py-8">
+    <header class="text-center mb-8 animate-fadeIn">
+        <p class="text-sm font-light text-gray-500">Join Our Team</p>
+        <h1 class="text-4xl font-bold text-gray-800">Job Openings</h1>
+        <p class="mt-2 text-gray-600">Explore the latest opportunities and become a part of our dynamic team.</p>
+    </header>
+    
+    <div class="space-y-8">
+        <article class="border rounded-lg p-6 shadow-md transition transform hover:shadow-xl hover:scale-105 duration-300 ease-in-out relative animate-fadeIn">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-semibold text-gray-700">Engineering Department</h2>
+                <button aria-label="Close Department" class="text-gray-500 hover:text-red-500 transition duration-300 ease-in-out" onclick="this.parentElement.parentElement.style.display='none'">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div class="space-y-6">
+                <div class="border-t pt-4">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
+                        <div>
+                            <h3 class="text-xl font-medium text-gray-800">Senior Software Engineer</h3>
+                            <p class="text-sm text-gray-600">New York, NY</p>
+                        </div>
+                        <button class="mt-2 md:mt-0 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300 ease-in-out flex items-center">
+                            <i class="fas fa-paper-plane mr-2"></i> Apply Now
+                        </button>
+                    </div>
+                    <p class="text-gray-700 mt-2">Join our team to develop cutting-edge software solutions. Collaborate with experts in a fast-paced environment.</p>
+                </div>
+                
+                <div class="border-t pt-4">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
+                        <div>
+                            <h3 class="text-xl font-medium text-gray-800">Frontend Developer</h3>
+                            <p class="text-sm text-gray-600">Remote</p>
+                        </div>
+                        <button class="mt-2 md:mt-0 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300 ease-in-out flex items-center">
+                            <i class="fas fa-paper-plane mr-2"></i> Apply Now
+                        </button>
+                    </div>
+                    <p class="text-gray-700 mt-2">Design and implement user interfaces with a focus on performance and accessibility.</p>
+                </div>
+                <!-- Repeat Job Listing as needed -->
+            </div>
+        </article>
+        <!-- Repeat Job Department as needed -->
+        
+        <article class="border rounded-lg p-6 shadow-md transition transform hover:shadow-xl hover:scale-105 duration-300 ease-in-out relative animate-fadeIn">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-semibold text-gray-700">Marketing Department</h2>
+                <button aria-label="Close Department" class="text-gray-500 hover:text-red-500 transition duration-300 ease-in-out" onclick="this.parentElement.parentElement.style.display='none'">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div class="space-y-6">
+                <div class="border-t pt-4">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
+                        <div>
+                            <h3 class="text-xl font-medium text-gray-800">Marketing Manager</h3>
+                            <p class="text-sm text-gray-600">Chicago, IL</p>
+                        </div>
+                        <button class="mt-2 md:mt-0 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300 ease-in-out flex items-center">
+                            <i class="fas fa-paper-plane mr-2"></i> Apply Now
+                        </button>
+                    </div>
+                    <p class="text-gray-700 mt-2">Lead our marketing strategies and campaigns to drive brand growth and customer engagement.</p>
+                </div>
+                
+                <div class="border-t pt-4">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
+                        <div>
+                            <h3 class="text-xl font-medium text-gray-800">Content Specialist</h3>
+                            <p class="text-sm text-gray-600">Austin, TX</p>
+                        </div>
+                        <button class="mt-2 md:mt-0 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300 ease-in-out flex items-center">
+                            <i class="fas fa-paper-plane mr-2"></i> Apply Now
+                        </button>
+                    </div>
+                    <p class="text-gray-700 mt-2">Create and manage engaging content across various platforms to enhance our online presence.</p>
+                </div>
+                <!-- Repeat Job Listing as needed -->
+            </div>
+        </article>
+        
+        <!-- Additional Job Departments -->
+    </div>
+</section>
+
+<script>
+    // Optional: Add fade-in animation
+    document.querySelectorAll('.animate-fadeIn').forEach(el => {
+        el.style.opacity = 0;
+        el.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            el.style.opacity = 1;
+            el.style.transform = 'translateY(0)';
+        }, 100);
+    });
+</script>

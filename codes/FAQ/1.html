@@ -1,0 +1,58 @@
+<section class="max-w-3xl mx-auto p-6">
+    <div class="text-center">
+        <h2 id="faq-title" class="text-3xl font-bold mb-4">FAQs</h2>
+        <p class="text-gray-600 mb-8">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+        </p>
+    </div>
+    <dl class="space-y-6">
+        <div class="border-b">
+            <dt>
+                <button aria-expanded="false" aria-controls="faq1" class="w-full text-left text-lg font-semibold flex justify-between items-center py-4 focus:outline-none transition ease-in-out duration-300 hover:bg-gray-100">
+                    Question text goes here
+                    <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                </button>
+            </dt>
+            <dd id="faq1" class="hidden px-4 pb-4 text-gray-600 transition-max-height duration-300 overflow-hidden">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+            </dd>
+        </div>
+        <div class="border-b">
+            <dt>
+                <button aria-expanded="false" aria-controls="faq2" class="w-full text-left text-lg font-semibold flex justify-between items-center py-4 focus:outline-none transition ease-in-out duration-300 hover:bg-gray-100">
+                    Another question goes here
+                    <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                </button>
+            </dt>
+            <dd id="faq2" class="hidden px-4 pb-4 text-gray-600 transition-max-height duration-300 overflow-hidden">
+                Another answer text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </dd>
+        </div>
+        <!-- Repeat the above block for each FAQ item -->
+    </dl>
+    <div class="mt-16 text-center">
+        <h3 class="text-2xl font-bold mb-4">Still have questions?</h3>
+        <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button class="px-6 py-2 bg-gray-800 text-white font-semibold rounded transition transform hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500">Contact</button>
+    </div>
+    <script>
+        document.querySelectorAll('button[aria-controls]').forEach(button => {
+            button.addEventListener('click', () => {
+                const expanded = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', !expanded);
+                const panel = document.getElementById(button.getAttribute('aria-controls'));
+                if (!expanded) {
+                    panel.classList.remove('hidden');
+                } else {
+                    panel.classList.add('hidden');
+                }
+                const icon = button.querySelector('i');
+                if (!expanded) {
+                    icon.classList.add('rotate-180');
+                } else {
+                    icon.classList.remove('rotate-180');
+                }
+            });
+        });
+    </script>
+</section>

@@ -1,0 +1,36 @@
+<section class="bg-gray-300 p-8 transition-colors duration-500 ease-in-out hover:bg-gray-400">
+  <div class="container mx-auto flex flex-col lg:flex-row items-center lg:justify-between">
+    <div class="lg:w-1/2 mb-8 lg:mb-0 animate-fadeIn">
+      <h1 class="text-3xl lg:text-5xl font-bold mb-4 text-gray-800 transition-transform duration-700 transform hover:scale-105">
+        Medium length hero heading goes here
+      </h1>
+      <div class="flex space-x-4 mb-8">
+        <button class="flex items-center bg-white text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow transition transform duration-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-500">
+          <i class="fas fa-download mr-2"></i>
+          Button
+        </button>
+        <button class="flex items-center bg-transparent text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded transition transform duration-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-500">
+          <i class="fas fa-info-circle mr-2"></i>
+          Button
+        </button>
+      </div>
+      <img src="https://placehold.co/600x400/EEE/31343C" alt="Placeholder" class="lg:hidden mb-8 rounded shadow-lg transition-transform duration-500 transform hover:scale-105">
+      <p class="text-gray-700 transition-opacity duration-700 opacity-0 animate-fadeIn">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+    </div>
+    <div class="hidden lg:block lg:w-1/2 animate-fadeIn">
+      <img src="https://placehold.co/600x400/EEE/31343C" alt="Placeholder" class="rounded shadow-lg transition-transform duration-500 transform hover:scale-105">
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+</style>

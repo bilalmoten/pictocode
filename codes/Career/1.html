@@ -1,0 +1,99 @@
+<section class="max-w-4xl mx-auto p-6">
+    <header class="text-center mb-10">
+        <p class="text-lg font-medium text-gray-700">Tagline</p>
+        <h1 class="text-4xl font-bold mt-2 text-gray-900">Job Openings</h1>
+        <p class="text-gray-600 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+    </header>
+    <div class="space-y-8">
+        <article class="border rounded-lg shadow-sm overflow-hidden">
+            <button class="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition-colors duration-300 focus:outline-none" aria-expanded="false" aria-controls="department1-jobs">
+                <h2 class="text-2xl font-semibold text-gray-800">Engineering</h2>
+                <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+            </button>
+            <div id="department1-jobs" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                <div class="p-4 space-y-6">
+                    <div class="flex flex-col md:flex-row justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-medium text-gray-800">Software Engineer</h3>
+                            <p class="text-gray-500">New York, NY</p>
+                            <p class="text-gray-600 mt-2">Develop and maintain web applications, collaborate with cross-functional teams.</p>
+                        </div>
+                        <button class="mt-4 md:mt-0 border border-gray-500 text-gray-500 px-4 py-2 rounded hover:bg-gray-500 hover:text-white transition-colors duration-300">Apply Now</button>
+                    </div>
+                    <div class="flex flex-col md:flex-row justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-medium text-gray-800">DevOps Engineer</h3>
+                            <p class="text-gray-500">San Francisco, CA</p>
+                            <p class="text-gray-600 mt-2">Manage infrastructure, automate deployment processes.</p>
+                        </div>
+                        <button class="mt-4 md:mt-0 border border-gray-500 text-gray-500 px-4 py-2 rounded hover:bg-gray-500 hover:text-white transition-colors duration-300">Apply Now</button>
+                    </div>
+                    <div class="flex flex-col md:flex-row justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-medium text-gray-800">Frontend Developer</h3>
+                            <p class="text-gray-500">Austin, TX</p>
+                            <p class="text-gray-600 mt-2">Implement UI components, ensure responsiveness and accessibility.</p>
+                        </div>
+                        <button class="mt-4 md:mt-0 border border-gray-500 text-gray-500 px-4 py-2 rounded hover:bg-gray-500 hover:text-white transition-colors duration-300">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="border rounded-lg shadow-sm overflow-hidden">
+            <button class="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition-colors duration-300 focus:outline-none" aria-expanded="false" aria-controls="department2-jobs">
+                <h2 class="text-2xl font-semibold text-gray-800">Marketing</h2>
+                <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+            </button>
+            <div id="department2-jobs" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                <div class="p-4 space-y-6">
+                    <div class="flex flex-col md:flex-row justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-medium text-gray-800">Content Strategist</h3>
+                            <p class="text-gray-500">Chicago, IL</p>
+                            <p class="text-gray-600 mt-2">Develop content strategies, manage editorial calendars.</p>
+                        </div>
+                        <button class="mt-4 md:mt-0 border border-gray-500 text-gray-500 px-4 py-2 rounded hover:bg-gray-500 hover:text-white transition-colors duration-300">Apply Now</button>
+                    </div>
+                    <div class="flex flex-col md:flex-row justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-medium text-gray-800">SEO Specialist</h3>
+                            <p class="text-gray-500">Seattle, WA</p>
+                            <p class="text-gray-600 mt-2">Optimize website content, analyze performance metrics.</p>
+                        </div>
+                        <button class="mt-4 md:mt-0 border border-gray-500 text-gray-500 px-4 py-2 rounded hover:bg-gray-500 hover:text-white transition-colors duration-300">Apply Now</button>
+                    </div>
+                    <div class="flex flex-col md:flex-row justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-medium text-gray-800">Digital Marketing Manager</h3>
+                            <p class="text-gray-500">Boston, MA</p>
+                            <p class="text-gray-600 mt-2">Lead marketing campaigns, analyze market trends.</p>
+                        </div>
+                        <button class="mt-4 md:mt-0 border border-gray-500 text-gray-500 px-4 py-2 rounded hover:bg-gray-500 hover:text-white transition-colors duration-300">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <script>
+        document.querySelectorAll('article').forEach(article => {
+            const button = article.querySelector('button');
+            const content = article.querySelector('div[id$="-jobs"]');
+            const icon = button.querySelector('i');
+
+            button.addEventListener('click', () => {
+                const expanded = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', !expanded);
+                if (!expanded) {
+                    content.classList.remove('max-h-0');
+                    content.classList.add('max-h-screen');
+                    icon.classList.add('rotate-180');
+                } else {
+                    content.classList.remove('max-h-screen');
+                    content.classList.add('max-h-0');
+                    icon.classList.remove('rotate-180');
+                }
+            });
+        });
+    </script>
+</section>

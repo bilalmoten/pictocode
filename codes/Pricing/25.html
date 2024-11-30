@@ -1,0 +1,98 @@
+<section class="max-w-6xl mx-auto p-6">
+  <header class="text-center mb-8">
+    <p class="text-sm text-gray-500">Tagline</p>
+    <h1 id="pricing-plan" class="text-3xl font-bold">Pricing Plan</h1>
+    <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="inline-flex mt-4" role="group" aria-label="Pricing toggle">
+      <button id="monthly" class="px-4 py-2 bg-black text-white rounded-l transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-black">Monthly</button>
+      <button id="yearly" class="px-4 py-2 border border-gray-300 bg-white text-black rounded-r transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-black">Yearly</button>
+    </div>
+  </header>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <article class="border rounded-lg p-6 shadow-sm hover:shadow-lg transform hover:scale-105 transition duration-300">
+      <h2 class="text-xl font-bold mb-2">Basic Plan</h2>
+      <p class="text-4xl font-bold mb-4 price-yearly">$180/yr</p>
+      <p class="text-4xl font-bold mb-4 price-monthly hidden">$15/mo</p>
+      <button class="w-full py-2 bg-black text-white mb-4 rounded hover:bg-gray-800 transition-colors duration-300" aria-label="Get started with Basic Plan">Get Started</button>
+      <ul class="space-y-2">
+        <li class="flex items-center">
+          <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+          <span>Feature text goes here</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+          <span>Feature text goes here</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+          <span>Feature text goes here</span>
+        </li>
+      </ul>
+    </article>
+    <article class="border rounded-lg p-6 shadow-sm hover:shadow-lg transform hover:scale-105 transition duration-300">
+      <h2 class="text-xl font-bold mb-2">Business Plan</h2>
+      <p class="text-4xl font-bold mb-4 price-yearly">$280/yr</p>
+      <p class="text-4xl font-bold mb-4 price-monthly hidden">$25/mo</p>
+      <button class="w-full py-2 bg-black text-white mb-4 rounded hover:bg-gray-800 transition-colors duration-300" aria-label="Get started with Business Plan">Get Started</button>
+      <ul class="space-y-2">
+        <li class="flex items-center">
+          <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+          <span>Feature text goes here</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+          <span>Feature text goes here</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+          <span>Feature text goes here</span>
+        </li>
+      </ul>
+    </article>
+    <article class="border rounded-lg p-6 shadow-sm hover:shadow-lg transform hover:scale-105 transition duration-300">
+      <h2 class="text-xl font-bold mb-2">Enterprise Plan</h2>
+      <p class="text-4xl font-bold mb-2 price-yearly">$480/yr</p>
+      <p class="text-4xl font-bold mb-2 price-monthly hidden">$40/mo</p>
+      <p class="text-sm text-gray-600 mb-4">Save 20%</p>
+      <button class="w-full py-2 bg-black text-white mb-4 rounded hover:bg-gray-800 transition-colors duration-300" aria-label="Get started with Enterprise Plan">Get Started</button>
+      <ul class="space-y-2">
+        <li class="flex items-center">
+          <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+          <span>Feature text goes here</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+          <span>Feature text goes here</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+          <span>Feature text goes here</span>
+        </li>
+      </ul>
+    </article>
+  </div>
+  <script>
+    const monthlyButton = document.getElementById('monthly');
+    const yearlyButton = document.getElementById('yearly');
+    const priceYearly = document.querySelectorAll('.price-yearly');
+    const priceMonthly = document.querySelectorAll('.price-monthly');
+
+    monthlyButton.addEventListener('click', () => {
+      priceYearly.forEach(price => price.classList.add('hidden'));
+      priceMonthly.forEach(price => price.classList.remove('hidden'));
+      monthlyButton.classList.add('bg-black', 'text-white');
+      monthlyButton.classList.remove('border', 'bg-white', 'text-black');
+      yearlyButton.classList.remove('bg-black', 'text-white');
+      yearlyButton.classList.add('border', 'bg-white', 'text-black');
+    });
+
+    yearlyButton.addEventListener('click', () => {
+      priceYearly.forEach(price => price.classList.remove('hidden'));
+      priceMonthly.forEach(price => price.classList.add('hidden'));
+      yearlyButton.classList.add('bg-black', 'text-white');
+      yearlyButton.classList.remove('border', 'bg-white', 'text-black');
+      monthlyButton.classList.remove('bg-black', 'text-white');
+      monthlyButton.classList.add('border', 'bg-white', 'text-black');
+    });
+  </script>
+</section>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enhanced Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-jQ0GDElR1Ux9Q0ja5M1mw95ZO0nsiKpMsXv2x5w9x1hDkL6r3LJD8U1XfMK5+qY3GCIADwczC1Wy7C2rB2em1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <div class="text-lg font-bold">
+        <span class="font-cursive">Logo</span>
+      </div>
+      <div class="hidden md:flex space-x-6">
+        <a href="#" class="hover:text-gray-700 transition duration-300">Link One</a>
+        <a href="#" class="hover:text-gray-700 transition duration-300">Link Two</a>
+        <a href="#" class="hover:text-gray-700 transition duration-300">Link Three</a>
+        <div class="relative group">
+          <button class="hover:text-gray-700 transition duration-300 flex items-center" aria-haspopup="true" aria-expanded="false">
+            Link Four <i class="fas fa-chevron-down ml-1"></i>
+          </button>
+          <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible" role="menu" aria-label="Link Four submenu">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100" role="menuitem">Page One</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100" role="menuitem">Page Two</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100" role="menuitem">Page Three</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100" role="menuitem">Page Four</a>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:flex space-x-4">
+        <button class="border px-4 py-2 hover:bg-gray-100 transition duration-300">Button</button>
+        <button class="bg-black text-white px-4 py-2 hover:bg-gray-700 transition duration-300">Button</button>
+      </div>
+      <div class="md:hidden">
+        <button class="text-gray-700 focus:outline-none" aria-label="Toggle menu" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <div class="hidden md:flex justify-around bg-gray-100 p-4">
+      <div class="flex items-center space-x-2 transition transform hover:scale-105">
+        <i class="fas fa-cube"></i>
+        <div>
+          <h4 class="font-semibold">Page One</h4>
+          <p class="text-sm">Lorem ipsum dolor sit amet consectetur elit</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-2 transition transform hover:scale-105">
+        <i class="fas fa-cube"></i>
+        <div>
+          <h4 class="font-semibold">Page Two</h4>
+          <p class="text-sm">Lorem ipsum dolor sit amet consectetur elit</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-2 transition transform hover:scale-105">
+        <i class="fas fa-cube"></i>
+        <div>
+          <h4 class="font-semibold">Page Three</h4>
+          <p class="text-sm">Lorem ipsum dolor sit amet consectetur elit</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-2 transition transform hover:scale-105">
+        <i class="fas fa-cube"></i>
+        <div>
+          <h4 class="font-semibold">Page Four</h4>
+          <p class="text-sm">Lorem ipsum dolor sit amet consectetur elit</p>
+        </div>
+      </div>
+    </div>
+    <div class="hidden md:hidden flex-col space-y-4 p-4 bg-gray-100" id="mobile-menu">
+      <a href="#" class="flex items-center p-2 hover:bg-gray-200 transition duration-300">
+        <i class="fas fa-cube mr-2"></i>
+        <span>Page One</span>
+      </a>
+      <a href="#" class="flex items-center p-2 hover:bg-gray-200 transition duration-300">
+        <i class="fas fa-cube mr-2"></i>
+        <span>Page Two</span>
+      </a>
+      <a href="#" class="flex items-center p-2 hover:bg-gray-200 transition duration-300">
+        <i class="fas fa-cube mr-2"></i>
+        <span>Page Three</span>
+      </a>
+      <a href="#" class="flex items-center p-2 hover:bg-gray-200 transition duration-300">
+        <i class="fas fa-cube mr-2"></i>
+        <span>Page Four</span>
+      </a>
+    </div>
+    <div class="bg-gray-200 text-center p-4">
+      <p>Looking for a new career? <a href="#" class="underline hover:text-gray-700 transition duration-300">Get in touch</a></p>
+    </div>
+  </nav>
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

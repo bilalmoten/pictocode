@@ -1,0 +1,26 @@
+<section aria-labelledby="gallery-title" class="max-w-screen-lg mx-auto px-4 py-8">
+    <header class="text-center mb-6">
+        <h2 id="gallery-title" class="text-3xl sm:text-4xl font-bold">Image Gallery</h2>
+        <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </header>
+    <div class="relative group">
+        <figure>
+            <img src="https://placehold.co/600x400/EEE/31343C" alt="Gallery Image" class="w-full h-auto rounded-lg shadow-lg transition-transform duration-500 transform group-hover:scale-105">
+        </figure>
+        <button 
+            class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md transition-transform duration-300 hover:bg-gray-100 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            aria-label="Previous Image">
+            <i class="fas fa-chevron-left text-lg text-gray-700"></i>
+        </button>
+        <button 
+            class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md transition-transform duration-300 hover:bg-gray-100 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            aria-label="Next Image">
+            <i class="fas fa-chevron-right text-lg text-gray-700"></i>
+        </button>
+    </div>
+    <nav class="flex justify-center mt-4" aria-label="Gallery Pagination">
+        <button class="h-3 w-3 bg-black rounded-full mx-1 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-label="Go to image 1"></button>
+        <button class="h-3 w-3 bg-gray-300 rounded-full mx-1 transition-colors duration-300 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-label="Go to image 2"></button>
+        <button class="h-3 w-3 bg-gray-300 rounded-full mx-1 transition-colors duration-300 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-label="Go to image 3"></button>
+    </nav>
+</section>

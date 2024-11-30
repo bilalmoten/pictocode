@@ -1,0 +1,46 @@
+<section class="bg-gray-800 text-white p-8 md:flex md:justify-between animate-fade-in">
+  <!-- Left Section -->
+  <div class="md:w-1/2 mb-6 md:mb-0">
+    <p class="uppercase text-sm mb-2 opacity-75">Tagline</p>
+    <h2 class="text-4xl font-bold mb-4 transition-transform duration-500 hover:scale-105">Medium length section heading goes here</h2>
+  </div>
+  
+  <!-- Right Section -->
+  <div class="md:w-1/2">
+    <p class="mb-6 transition-opacity duration-500 hover:opacity-90">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+    </p>
+    <article class="space-y-6">
+      <div class="flex items-start transition-transform duration-300 hover:translate-x-1">
+        <i class="fas fa-cube text-2xl mr-3" aria-hidden="true"></i>
+        <div>
+          <h3 class="text-xl font-semibold mb-1">Subheading one</h3>
+          <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+        </div>
+      </div>
+      <div class="flex items-start transition-transform duration-300 hover:translate-x-1">
+        <i class="fas fa-cube text-2xl mr-3" aria-hidden="true"></i>
+        <div>
+          <h3 class="text-xl font-semibold mb-1">Subheading two</h3>
+          <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+        </div>
+      </div>
+    </article>
+    <div class="mt-6 flex space-x-4">
+      <button type="button" class="border border-white py-2 px-6 rounded transition-colors duration-300 hover:bg-white hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-white" aria-label="Primary action button">Button</button>
+      <button type="button" class="flex items-center py-2 px-6 rounded bg-transparent border border-white transition-transform duration-300 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-white" aria-label="Secondary action button with arrow">
+        Button <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .animate-fade-in {
+    animation: fade-in 1s ease-in-out;
+  }
+</style>

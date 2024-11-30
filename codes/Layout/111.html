@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Layout</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function playVideo() {
+            // Placeholder for video play functionality
+            window.location.href = "https://videos.pexels.com/video-files/6768212/6768212-uhd_1440_2732_30fps.mp4";
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <section class="max-w-7xl mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between">
+            <header class="mb-6 md:mb-0">
+                <p class="text-sm font-medium text-gray-500">Tagline</p>
+                <h1 class="text-3xl font-bold mt-2 transition-transform duration-300 transform hover:scale-105">Medium length section heading goes here</h1>
+            </header>
+            <article class="md:ml-8">
+                <p class="text-base text-gray-700 mt-4 md:mt-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+                </p>
+                <ul class="list-disc pl-5 mt-4 space-y-2">
+                    <li class="transition-opacity duration-300 hover:opacity-80">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li class="transition-opacity duration-300 hover:opacity-80">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li class="transition-opacity duration-300 hover:opacity-80">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                </ul>
+                <div class="flex space-x-4 mt-4">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded transition bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Primary Button</button>
+                    <button class="flex items-center text-blue-500 px-4 py-2 transition hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        Secondary Button <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </article>
+        </div>
+        <div class="mt-8">
+            <div class="relative w-full h-64 md:h-96 bg-gray-300 flex items-center justify-center rounded-lg shadow-lg transition transform hover:scale-105">
+                <button onclick="playVideo()" class="bg-gray-700 text-white p-4 rounded-full hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500" aria-label="Play Video">
+                    <i class="fas fa-play fa-lg"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

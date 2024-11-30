@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enhanced Content Section</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+  <section class="flex flex-col md:flex-row min-h-screen">
+    <!-- Sidebar for Desktop -->
+    <aside class="hidden md:block md:w-1/4 p-6 bg-gray-100 sticky top-0 transition-transform duration-300 hover:translate-y-0">
+      <h2 class="text-xl font-bold mb-6">Table of Contents</h2>
+      <nav aria-label="Table of contents">
+        <ul class="space-y-4">
+          <li>
+            <a href="#heading2" class="flex items-center text-gray-700 hover:text-blue-500 transition-colors duration-200">
+              <i class="fa fa-chevron-right mr-2"></i> Heading 2
+            </a>
+          </li>
+          <li>
+            <a href="#heading3" class="flex items-center text-gray-700 hover:text-blue-500 transition-colors duration-200">
+              <i class="fa fa-chevron-right mr-2"></i> Heading 3
+            </a>
+          </li>
+          <li>
+            <a href="#heading4" class="flex items-center text-gray-700 hover:text-blue-500 transition-colors duration-200">
+              <i class="fa fa-chevron-right mr-2"></i> Heading 4
+            </a>
+          </li>
+          <li>
+            <a href="#heading5" class="flex items-center text-gray-700 hover:text-blue-500 transition-colors duration-200">
+              <i class="fa fa-chevron-right mr-2"></i> Heading 5
+            </a>
+          </li>
+          <li>
+            <a href="#heading6" class="flex items-center text-gray-700 hover:text-blue-500 transition-colors duration-200">
+              <i class="fa fa-chevron-right mr-2"></i> Heading 6
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="w-full md:w-3/4 p-6">
+      <!-- Table of contents for Mobile -->
+      <div class="md:hidden mb-6">
+        <label for="toc" class="block text-lg font-semibold mb-2">Table of Contents</label>
+        <select id="toc" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+          <option selected disabled>Choose a section</option>
+          <option value="#heading2">Heading 2</option>
+          <option value="#heading3">Heading 3</option>
+          <option value="#heading4">Heading 4</option>
+          <option value="#heading5">Heading 5</option>
+          <option value="#heading6">Heading 6</option>
+        </select>
+      </div>
+
+      <!-- Content Sections -->
+      <article>
+        <section id="heading2" class="mb-8">
+          <h2 class="text-2xl font-bold mb-4">Heading 2</h2>
+          <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus.</p>
+          <figure class="mb-4">
+            <img src="https://placehold.co/600x400/EEE/31343C" alt="Placeholder Image" class="w-full rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+            <figcaption class="text-sm text-gray-600 mt-2">Caption for the image.</figcaption>
+          </figure>
+          <blockquote class="border-l-4 border-blue-500 pl-4 italic text-gray-700">This is a standout quote that emphasizes a key point.</blockquote>
+        </section>
+
+        <section id="heading3" class="mb-8">
+          <h3 class="text-xl font-semibold mb-4">Heading 3</h3>
+          <p class="mb-4">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          <video class="w-full rounded-lg shadow-md transition-shadow duration-300 hover:shadow-xl" controls>
+            <source src="https://videos.pexels.com/video-files/6768212/6768212-uhd_1440_2732_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </section>
+
+        <section id="heading4" class="mb-8">
+          <h4 class="text-lg font-semibold mb-4">Heading 4</h4>
+          <p class="mb-4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </section>
+
+        <section id="heading5" class="mb-8">
+          <h5 class="text-base font-semibold mb-4">Heading 5</h5>
+          <p class="mb-4">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
+
+        <section id="heading6" class="mb-8">
+          <h6 class="text-sm font-medium mb-4">Heading 6</h6>
+          <p class="mb-4">Short description under heading 6.</p>
+        </section>
+      </article>
+    </main>
+  </section>
+
+  <script>
+    document.getElementById('toc').addEventListener('change', function() {
+      const value = this.value;
+      if (value) {
+        window.location.href = value;
+      }
+    });
+  </script>
+</body>
+</html>

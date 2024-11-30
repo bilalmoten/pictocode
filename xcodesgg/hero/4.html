@@ -1,0 +1,30 @@
+<section class="flex flex-col md:flex-row items-center justify-between p-8 bg-white">
+    <!-- Text Section -->
+    <div class="md:w-1/2 mb-8 md:mb-0" aria-labelledby="hero-heading">
+        <h1 id="hero-heading" class="text-4xl md:text-5xl font-extrabold mb-6 transition transform hover:scale-105 duration-500">
+            Medium length hero headline goes here
+        </h1>
+        <p class="text-lg mb-6 text-gray-700">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+        </p>
+        <form class="flex flex-col sm:flex-row items-center mb-4 w-full" action="#" method="POST" aria-label="Subscribe">
+            <label for="email" class="sr-only">Email address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required
+                class="border border-gray-300 p-3 rounded w-full sm:w-auto mb-4 sm:mb-0 sm:mr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+            <button type="submit"
+                class="bg-black text-white p-3 rounded w-full sm:w-auto hover:bg-gray-800 transition duration-300">
+                Sign Up
+            </button>
+        </form>
+        <p class="text-sm text-gray-600">
+            By clicking Sign Up you're confirming that you agree with our <a href="#" class="underline text-blue-600 hover:text-blue-800">Terms and Conditions</a>.
+        </p>
+    </div>
+    <!-- Video Section -->
+    <div class="md:w-1/2">
+        <video autoplay muted loop class="w-full rounded shadow-lg transition-transform duration-500 hover:scale-105" aria-label="Promotional video">
+            <source src="path-to-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>

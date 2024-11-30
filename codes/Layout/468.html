@@ -1,0 +1,42 @@
+<section class="bg-gray-700 text-white p-8 md:flex md:justify-between md:items-start animate-fade-in">
+  <div class="md:w-1/2">
+    <p class="uppercase text-sm tracking-wide">Tagline</p>
+    <h2 class="text-4xl font-bold mt-2 transition-transform duration-500 transform hover:scale-105">Medium length section heading goes here</h2>
+    <p class="mt-4 text-base">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+    </p>
+    <div class="mt-6 flex space-x-4">
+      <button type="button" class="px-4 py-2 border border-white rounded transition-colors duration-300 hover:bg-white hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-white">Button</button>
+      <button type="button" class="px-4 py-2 border border-white rounded transition-colors duration-300 hover:bg-white hover:text-gray-700 flex items-center focus:outline-none focus:ring-2 focus:ring-white">
+        Button <i class="fas fa-arrow-right ml-2 transition-transform duration-300 transform group-hover:translate-x-1"></i>
+      </button>
+    </div>
+  </div>
+  <div class="md:w-1/2 md:pl-8 mt-8 md:mt-0">
+    <figure class="flex items-center justify-center h-48 bg-gray-600 overflow-hidden rounded transition-transform duration-500 hover:scale-105">
+      <img src="https://placehold.co/600x400/EEE/31343C" alt="Placeholder Image" class="h-full w-full object-cover">
+    </figure>
+    <div class="mt-8">
+      <h3 class="font-bold text-xl">Subheading One</h3>
+      <p class="mt-2 text-base">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+      </p>
+    </div>
+    <div class="mt-6">
+      <h3 class="font-bold text-xl">Subheading Two</h3>
+      <p class="mt-2 text-base">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fade-in 1s ease-in-out;
+}
+</style>

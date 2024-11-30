@@ -1,0 +1,35 @@
+<section class="flex flex-col lg:flex-row items-center justify-between p-8 lg:p-16 bg-white">
+    <!-- Text Content -->
+    <article class="lg:w-1/2 space-y-6 animate-fade-in">
+        <h1 class="text-3xl lg:text-5xl font-extrabold text-gray-900 transition-transform duration-500 hover:scale-105">Long heading is what you see here in this header section</h1>
+        <p class="text-lg lg:text-xl text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+        <div class="flex space-x-4">
+            <button class="flex items-center px-6 py-3 border border-black bg-transparent text-black font-medium rounded transition ease-in-out duration-300 hover:bg-black hover:text-white">
+                <i class="fas fa-arrow-right mr-2"></i> Button
+            </button>
+            <button class="flex items-center px-6 py-3 border border-black bg-black text-white font-medium rounded transition ease-in-out duration-300 hover:bg-transparent hover:text-black">
+                <i class="fas fa-play mr-2"></i> Button
+            </button>
+        </div>
+    </article>
+    <!-- Image Grid -->
+    <figure class="relative mt-12 lg:mt-0 lg:w-1/2 flex justify-center animate-fade-in">
+        <div class="relative w-72 h-72 lg:w-96 lg:h-96">
+            <img src="https://placehold.co/600x400/EEE/31343C" alt="Main Image" class="absolute top-0 left-0 w-full h-full object-cover rounded shadow-lg transition-transform duration-500 hover:scale-105">
+            <img src="https://placehold.co/400x300/EEE/31343C" alt="Overlay Image 1" class="absolute -top-6 -left-6 w-40 h-40 object-cover rounded shadow-lg transition-transform duration-500 hover:scale-105">
+            <img src="https://placehold.co/400x300/EEE/31343C" alt="Overlay Image 2" class="absolute -bottom-6 -right-6 w-40 h-40 object-cover rounded shadow-lg transition-transform duration-500 hover:scale-105">
+        </div>
+    </figure>
+</section>
+
+<style>
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+}
+</style>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

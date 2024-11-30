@@ -1,0 +1,36 @@
+<section class="bg-gray-200 p-8">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start">
+    <!-- Text Block -->
+    <article class="lg:w-1/2 space-y-6">
+      <img src="https://placehold.co/600x400/EEE/31343C" alt="Icon representation" class="w-12 h-12">
+      <h1 class="text-4xl font-extrabold text-gray-800 transition-transform duration-500 transform hover:scale-105">
+        Medium length hero heading goes here
+      </h1>
+      <p class="text-gray-600 text-lg">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+      <div class="flex space-x-4">
+        <button class="bg-blue-600 text-white px-6 py-3 border border-transparent rounded shadow hover:bg-blue-700 transition duration-300" aria-label="Get Started">
+          Get Started
+        </button>
+        <button class="text-blue-600 px-6 py-3 border border-blue-600 rounded hover:bg-blue-50 transition duration-300" aria-label="Learn More">
+          Learn More
+        </button>
+      </div>
+    </article>
+    <!-- Video Placeholder -->
+    <div class="lg:w-1/2 mt-8 lg:mt-0 flex justify-center relative group">
+      <video id="hero-video" class="w-full max-w-md rounded-lg shadow-lg transition-transform duration-500 transform group-hover:scale-105" aria-label="Hero video" tabindex="0">
+        <source src="https://videos.pexels.com/video-files/6768212/6768212-uhd_1440_2732_30fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <button 
+        class="absolute inset-0 flex justify-center items-center bg-gray-700 bg-opacity-50 text-white p-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        aria-label="Play Video"
+        onclick="document.getElementById('hero-video').play(); this.style.display='none';"
+      >
+        <i class="fas fa-play text-2xl"></i>
+      </button>
+    </div>
+  </div>
+</section>

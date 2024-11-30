@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enhanced Content Section</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body class="bg-white text-gray-800">
+  <div class="container mx-auto px-4 py-8">
+    <div class="flex flex-col lg:flex-row bg-white shadow-lg rounded-lg overflow-hidden">
+      <!-- Sidebar -->
+      <aside class="lg:w-1/4 p-6 border-r transition-transform duration-300 hover:translate-y-0.5">
+        <div class="mb-8">
+          <h2 class="text-xl font-bold mb-4">Contributors</h2>
+          <ul class="space-y-6">
+            <li class="flex items-center transition-transform duration-300 hover:scale-105">
+              <div class="w-16 h-16 bg-gray-200 rounded-full overflow-hidden">
+                <img src="https://placehold.co/600x400/EEE/31343C" alt="Contributor" class="w-full h-full object-cover">
+              </div>
+              <div class="ml-4">
+                <p class="font-semibold text-lg">Full Name</p>
+                <p class="text-sm text-gray-600">Job title, Company name</p>
+              </div>
+            </li>
+            <li class="flex items-center transition-transform duration-300 hover:scale-105">
+              <div class="w-16 h-16 bg-gray-200 rounded-full overflow-hidden">
+                <img src="https://placehold.co/600x400/EEE/31343C" alt="Contributor" class="w-full h-full object-cover">
+              </div>
+              <div class="ml-4">
+                <p class="font-semibold text-lg">Full Name</p>
+                <p class="text-sm text-gray-600">Job title, Company name</p>
+              </div>
+            </li>
+            <!-- Repeat for other contributors -->
+          </ul>
+        </div>
+        <div class="mb-8">
+          <h2 class="text-xl font-bold mb-4">Subscribe to Newsletter</h2>
+          <form class="mt-4" action="#" method="POST">
+            <label for="email" class="sr-only">Email address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required
+              class="w-full p-3 border border-gray-300 rounded mb-4 focus:outline-none focus:ring-2 focus:ring-black transition duration-300">
+            <button type="submit"
+              class="w-full bg-black text-white p-3 rounded hover:bg-gray-800 transition-colors duration-300">
+              Subscribe
+            </button>
+          </form>
+          <p class="text-xs text-gray-600 mt-3">By subscribing you agree with our <a href="#" class="underline hover:text-gray-800">Privacy Policy</a></p>
+        </div>
+        <div>
+          <h2 class="text-xl font-bold mb-4">Share</h2>
+          <div class="flex space-x-4">
+            <a href="#" aria-label="Share on Facebook" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">
+              <i class="fab fa-facebook-f fa-lg"></i>
+            </a>
+            <a href="#" aria-label="Share on Twitter" class="text-gray-600 hover:text-blue-400 transition-colors duration-300">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a href="#" aria-label="Share on LinkedIn" class="text-gray-600 hover:text-blue-700 transition-colors duration-300">
+              <i class="fab fa-linkedin-in fa-lg"></i>
+            </a>
+            <a href="#" aria-label="Share via Email" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">
+              <i class="fas fa-envelope fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </aside>
+      
+      <!-- Main Content -->
+      <main class="lg:w-3/4 p-6">
+        <section class="mb-12">
+          <h1 class="text-3xl font-bold mb-4 transition-colors duration-300 hover:text-gray-700">Introduction</h1>
+          <div class="relative">
+            <img src="https://placehold.co/600x400/EEE/31343C" alt="Introduction Image" class="w-full h-auto rounded-lg transition-transform duration-300 hover:scale-105">
+            <p class="mt-2 text-sm text-center text-gray-500">Figure 1: Placeholder Image Caption</p>
+          </div>
+          <p class="mt-6 text-base leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus. 
+            Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex, condimentum dapibus congue et, vulputate ut ligula.
+          </p>
+        </section>
+        
+        <section class="mb-12">
+          <h2 class="text-2xl font-semibold mb-4 transition-colors duration-300 hover:text-gray-700">Main Content</h2>
+          <p class="mb-4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+          <blockquote class="border-l-4 border-gray-300 pl-4 italic text-gray-600 mb-4 transition-colors duration-300 hover:border-gray-500">
+            “This is a standout blockquote to highlight important information.”
+          </blockquote>
+          <p class="mb-4">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.</p>
+          <div class="mt-6">
+            <video controls class="w-full rounded-lg">
+              <source src="https://videos.pexels.com/video-files/6768212/6768212-uhd_1440_2732_30fps.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="mt-2 text-sm text-center text-gray-500">Video Placeholder</p>
+          </div>
+        </section>
+        
+        <section class="mb-12">
+          <h2 class="text-2xl font-semibold mb-4 transition-colors duration-300 hover:text-gray-700">Conclusion</h2>
+          <p class="mb-4">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.</p>
+          <ul class="list-disc list-inside">
+            <li class="mb-2">First key point highlighted.</li>
+            <li class="mb-2">Second important aspect discussed.</li>
+            <li class="mb-2">Final takeaway for the reader.</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

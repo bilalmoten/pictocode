@@ -1,0 +1,60 @@
+<section class="max-w-4xl mx-auto p-8">
+  <div class="lg:flex lg:space-x-16">
+    <!-- Contact Form -->
+    <article class="flex-1 animate-fadeIn">
+      <p class="text-sm uppercase text-gray-600 mb-2">Tagline</p>
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Contact us</h2>
+      <p class="mb-8 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <form class="space-y-6" action="#" method="POST">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+          <input type="text" id="name" name="name" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black transition duration-300" placeholder="Your Name" required>
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" name="email" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black transition duration-300" placeholder="Your Email" required>
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea id="message" name="message" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black transition duration-300" rows="4" placeholder="Type your message..." required></textarea>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" id="terms" name="terms" class="h-4 w-4 text-black border-gray-300 rounded focus:ring-black transition duration-300" required>
+          <label for="terms" class="ml-2 text-sm text-gray-700">
+            I accept the <a href="#" class="underline text-black hover:text-gray-800 transition duration-300">Terms</a>
+          </label>
+        </div>
+        <button type="submit" class="w-full bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition duration-300 focus:outline-none focus:ring-2 focus:ring-black">
+          Submit
+        </button>
+      </form>
+    </article>
+    <!-- Contact Details -->
+    <aside class="flex-1 mt-8 lg:mt-0 animate-fadeIn">
+      <div class="space-y-6">
+        <div class="flex items-start">
+          <i class="fas fa-envelope text-xl text-black mr-3 mt-1"></i>
+          <div>
+            <p class="text-sm font-medium text-gray-700">Email</p>
+            <a href="mailto:hello@relume.io" class="underline text-black hover:text-gray-800 transition duration-300">hello@relume.io</a>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <i class="fas fa-phone text-xl text-black mr-3 mt-1"></i>
+          <div>
+            <p class="text-sm font-medium text-gray-700">Phone</p>
+            <a href="tel:+15550000000" class="underline text-black hover:text-gray-800 transition duration-300">+1 (555) 000-0000</a>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <i class="fas fa-map-marker-alt text-xl text-black mr-3 mt-1"></i>
+          <div>
+            <p class="text-sm font-medium text-gray-700">Office</p>
+            <p class="text-gray-600">123 Sample St, Sydney NSW 2000 AU</p>
+            <a href="#" class="underline text-black hover:text-gray-800 transition duration-300">Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>

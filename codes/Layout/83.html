@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enhanced Layout</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+  <section class="max-w-screen-lg mx-auto p-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Left Column -->
+      <header>
+        <p class="text-sm uppercase font-semibold text-gray-600">Tagline</p>
+        <h2 class="text-3xl font-bold mt-2 transition-transform duration-300 transform hover:scale-105">Medium length section heading goes here</h2>
+      </header>
+      <!-- Right Column -->
+      <article>
+        <p class="mt-4 md:mt-0 text-gray-700 transition-opacity duration-300 hover:opacity-90">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+        </p>
+        <div class="flex md:flex-row flex-col mt-6 space-y-4 md:space-y-0 md:space-x-8">
+          <div class="flex-1 p-4 bg-gray-50 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105">
+            <p class="text-2xl font-bold text-indigo-600">50%</p>
+            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="flex-1 p-4 bg-gray-50 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105">
+            <p class="text-2xl font-bold text-indigo-600">50%</p>
+            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <div class="flex mt-6 space-x-4">
+          <button class="border border-indigo-600 text-indigo-600 px-4 py-2 rounded transition-colors duration-300 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Button
+          </button>
+          <button class="flex items-center text-indigo-600 px-4 py-2 rounded transition-colors duration-300 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Button <i class="fas fa-arrow-right ml-2 transition-transform duration-300 transform hover:translate-x-1"></i>
+          </button>
+        </div>
+      </article>
+    </div>
+  </section>
+</body>
+</html>

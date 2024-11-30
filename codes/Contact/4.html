@@ -1,0 +1,105 @@
+<section class="max-w-4xl mx-auto p-6 bg-white">
+    <h2 class="text-xl font-bold text-gray-700 transition-opacity duration-300">Tagline</h2>
+    <h1 id="contact-heading" class="text-4xl font-bold mt-2 text-gray-900 transition-transform duration-300">Contact us</h1>
+    <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    
+    <form class="mt-6 space-y-6" action="#" method="POST">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="relative">
+                <label for="first-name" class="block text-sm font-medium text-gray-700">First name</label>
+                <div class="mt-1 relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-user text-gray-400"></i>
+                    </div>
+                    <input type="text" id="first-name" name="first-name" required class="w-full border border-gray-300 rounded-md pl-10 p-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 ease-in-out" placeholder="John">
+                </div>
+            </div>
+            <div class="relative">
+                <label for="last-name" class="block text-sm font-medium text-gray-700">Last name</label>
+                <div class="mt-1 relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-user text-gray-400"></i>
+                    </div>
+                    <input type="text" id="last-name" name="last-name" required class="w-full border border-gray-300 rounded-md pl-10 p-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 ease-in-out" placeholder="Doe">
+                </div>
+            </div>
+            <div class="relative">
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <div class="mt-1 relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-envelope text-gray-400"></i>
+                    </div>
+                    <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-md pl-10 p-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 ease-in-out" placeholder="john.doe@example.com">
+                </div>
+            </div>
+            <div class="relative">
+                <label for="phone" class="block text-sm font-medium text-gray-700">Phone number</label>
+                <div class="mt-1 relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-phone text-gray-400"></i>
+                    </div>
+                    <input type="tel" id="phone" name="phone" class="w-full border border-gray-300 rounded-md pl-10 p-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 ease-in-out" placeholder="(123) 456-7890">
+                </div>
+            </div>
+            <div class="col-span-1 md:col-span-2 relative">
+                <label for="topic" class="block text-sm font-medium text-gray-700">Choose a topic</label>
+                <div class="mt-1 relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-list text-gray-400"></i>
+                    </div>
+                    <select id="topic" name="topic" required class="block w-full border border-gray-300 bg-white rounded-md pl-10 pr-3 py-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500 transition duration-200 ease-in-out">
+                        <option>Select one...</option>
+                        <option>Support</option>
+                        <option>Sales</option>
+                        <option>Feedback</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <fieldset class="mt-6">
+            <legend class="block text-sm font-medium text-gray-700 mb-2">Which best describes you?</legend>
+            <div class="flex flex-wrap gap-4">
+                <label class="flex items-center text-sm text-gray-600 hover:text-gray-800 transition-colors duration-200">
+                    <input type="radio" name="description" class="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300" required/>
+                    First choice
+                </label>
+                <label class="flex items-center text-sm text-gray-600 hover:text-gray-800 transition-colors duration-200">
+                    <input type="radio" name="description" class="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300" />
+                    Second choice
+                </label>
+                <label class="flex items-center text-sm text-gray-600 hover:text-gray-800 transition-colors duration-200">
+                    <input type="radio" name="description" class="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300" />
+                    Third choice
+                </label>
+                <label class="flex items-center text-sm text-gray-600 hover:text-gray-800 transition-colors duration-200">
+                    <input type="radio" name="description" class="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300" />
+                    Fourth choice
+                </label>
+                <label class="flex items-center text-sm text-gray-600 hover:text-gray-800 transition-colors duration-200">
+                    <input type="radio" name="description" class="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300" />
+                    Fifth choice
+                </label>
+                <label class="flex items-center text-sm text-gray-600 hover:text-gray-800 transition-colors duration-200">
+                    <input type="radio" name="description" class="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300" />
+                    Other
+                </label>
+            </div>
+        </fieldset>
+
+        <div class="mt-6">
+            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+            <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 ease-in-out" placeholder="Type your message..."></textarea>
+        </div>
+
+        <div class="mt-6 flex items-center">
+            <input type="checkbox" id="terms" name="terms" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" required/>
+            <label for="terms" class="ml-2 block text-sm text-gray-600 hover:text-gray-800 transition-colors duration-200">I accept the <a href="#" class="text-blue-600 underline">Terms</a></label>
+        </div>
+
+        <div class="mt-8">
+            <button type="submit" class="w-full md:w-auto bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-transform duration-200 transform hover:-translate-y-0.5">Submit</button>
+        </div>
+    </form>
+</section>

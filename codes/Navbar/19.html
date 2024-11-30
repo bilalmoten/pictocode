@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Navbar</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="relative bg-white shadow-lg">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center p-6 md:p-8">
+            <div class="flex flex-col md:flex-row md:space-x-16">
+                <div class="flex flex-col space-y-4">
+                    <div class="text-2xl font-bold transition transform hover:scale-105">Logo</div>
+                    <nav aria-label="Primary Navigation" class="flex flex-col space-y-2">
+                        <a href="#" class="text-lg font-semibold text-gray-700 hover:text-blue-600 transition-colors duration-300">Link One</a>
+                        <a href="#" class="text-lg font-semibold text-gray-700 hover:text-blue-600 transition-colors duration-300">Link Three</a>
+                        <a href="#" class="text-lg font-semibold text-gray-700 hover:text-blue-600 transition-colors duration-300">Link Five</a>
+                        <a href="#" class="text-lg font-semibold text-gray-700 hover:text-blue-600 transition-colors duration-300">Link Seven</a>
+                    </nav>
+                    <address class="mt-8 space-y-2 not-italic text-gray-600">
+                        <div>1800 123 4567</div>
+                        <div><a href="mailto:info@relume.io" class="hover:text-blue-600 transition-colors duration-300">info@relume.io</a></div>
+                        <div>Level 1, 12 Sample St, Sydney NSW 2000</div>
+                    </address>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" aria-label="Facebook" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="text-gray-600 hover:text-pink-600 transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Xing" class="text-gray-600 hover:text-orange-600 transition-colors duration-300">
+                            <i class="fab fa-xing"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="text-gray-600 hover:text-blue-700 transition-colors duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube" class="text-gray-600 hover:text-red-600 transition-colors duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row md:space-x-16 mt-8 md:mt-0">
+                    <div class="flex flex-col space-y-2">
+                        <h2 class="font-bold text-gray-800">Column One</h2>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link One</a>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Two</a>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Three</a>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Four</a>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Five</a>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <h2 class="font-bold text-gray-800">Column Two</h2>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Six</a>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Seven</a>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Eight</a>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Nine</a>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Ten</a>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <h2 class="font-bold text-gray-800">Column Three</h2>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Eleven</a>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Twelve</a>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Thirteen</a>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Fourteen</a>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Fifteen</a>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <h2 class="font-bold text-gray-800">Column Four</h2>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Sixteen</a>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Seventeen</a>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Eighteen</a>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Nineteen</a>
+                        <a href="#" class="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300">Link Twenty</a>
+                    </div>
+                </div>
+            </div>
+            <button aria-label="Close Menu" class="absolute top-4 right-4 md:static text-xl text-gray-600 hover:text-red-600 transition-colors duration-300 focus:outline-none">
+                &times;
+            </button>
+        </div>
+    </header>
+</body>
+</html>

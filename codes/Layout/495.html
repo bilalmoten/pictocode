@@ -1,0 +1,61 @@
+<section class="max-w-4xl mx-auto p-6">
+  <header class="text-center mb-8 animate-fade-in">
+    <p class="text-sm uppercase text-gray-500">Tagline</p>
+    <h2 class="text-3xl font-bold mt-2 text-gray-800">Medium length section heading goes here</h2>
+    <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+    <button class="mt-6 px-5 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center">
+      Button <i class="fas fa-arrow-right ml-2"></i>
+    </button>
+  </header>
+  <div class="flex flex-col lg:flex-row lg:space-x-12 animate-slide-in">
+    <div class="flex-1 space-y-6">
+      <article class="flex items-start hover:bg-gray-50 p-4 rounded-md transition-shadow duration-300">
+        <i class="fas fa-circle text-blue-500 mt-1 mr-4 text-xl flex-shrink-0"></i>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">Short heading goes here</h3>
+          <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+        </div>
+      </article>
+      <article class="flex items-start hover:bg-gray-50 p-4 rounded-md transition-shadow duration-300">
+        <i class="fas fa-circle text-blue-500 mt-1 mr-4 text-xl flex-shrink-0"></i>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">Short heading goes here</h3>
+          <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+        </div>
+      </article>
+      <article class="flex items-start hover:bg-gray-50 p-4 rounded-md transition-shadow duration-300">
+        <i class="fas fa-circle text-blue-500 mt-1 mr-4 text-xl flex-shrink-0"></i>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">Short heading goes here</h3>
+          <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+        </div>
+      </article>
+    </div>
+    <div class="flex-1 mt-8 lg:mt-0">
+      <img src="https://placehold.co/600x400/EEE/31343C" alt="Placeholder Image" class="w-full h-auto rounded-md shadow-lg hover:scale-105 transition-transform duration-300">
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+@keyframes slide-in {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.animate-slide-in {
+  animation: slide-in 1s ease-out forwards;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Essential JavaScript for any interactive elements if needed
+});
+</script>

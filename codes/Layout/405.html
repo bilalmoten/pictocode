@@ -1,0 +1,57 @@
+<section class="max-w-screen-lg mx-auto p-4">
+  <!-- Tabs -->
+  <nav class="flex justify-center space-x-4 mb-6" role="tablist" aria-label="Sample Tabs">
+    <button class="uppercase text-sm font-medium text-gray-700 hover:text-gray-900 focus:outline-none transition-colors duration-300" role="tab" aria-selected="true" aria-controls="tab1" id="tab1-button">Tab one</button>
+    <button class="uppercase text-sm font-medium text-gray-700 hover:text-gray-900 focus:outline-none transition-colors duration-300" role="tab" aria-selected="false" aria-controls="tab2" id="tab2-button">Tab two</button>
+    <button class="uppercase text-sm font-medium text-gray-700 hover:text-gray-900 focus:outline-none transition-colors duration-300" role="tab" aria-selected="false" aria-controls="tab3" id="tab3-button">Tab three</button>
+  </nav>
+
+  <!-- Image Placeholder -->
+  <div class="mb-8">
+    <img src="https://placehold.co/600x400/EEE/31343C" alt="Placeholder Image" class="w-full h-auto rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105">
+  </div>
+
+  <!-- Text Content -->
+  <div class="text-center">
+    <p class="text-sm font-light text-gray-500 mb-2">Tagline</p>
+    <h2 class="text-3xl font-bold text-gray-800 mb-4 transition-transform duration-300 hover:scale-105">Medium length section heading goes here</h2>
+    <p class="text-base text-gray-600 mb-6">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+    </p>
+
+    <!-- Buttons -->
+    <div class="flex justify-center space-x-4">
+      <button class="flex items-center border border-black px-4 py-2 rounded hover:bg-gray-100 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-black">
+        <i class="fas fa-arrow-right mr-2"></i> Button
+      </button>
+      <button class="flex items-center border border-black px-4 py-2 rounded hover:bg-gray-100 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-black">
+        <i class="fas fa-download mr-2"></i> Button
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('[role="tab"]');
+    const tabPanels = document.querySelectorAll('[role="tabpanel"]');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Deselect all tabs
+        tabs.forEach(t => {
+          t.setAttribute('aria-selected', 'false');
+        });
+        // Hide all tab panels
+        tabPanels.forEach(panel => {
+          panel.hidden = true;
+        });
+        // Select the clicked tab
+        tab.setAttribute('aria-selected', 'true');
+        // Show the associated panel
+        const panel = document.getElementById(tab.getAttribute('aria-controls'));
+        if (panel) {
+          panel.hidden = false;
+        }
+      });
+    });
+  </script>
+</section>

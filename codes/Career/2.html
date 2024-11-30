@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Career Section</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.3.2/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <div class="max-w-4xl mx-auto p-6">
+    <header class="mb-8">
+      <p class="uppercase text-sm font-semibold text-gray-700">Tagline</p>
+      <h1 class="text-4xl font-bold text-gray-900 mb-2">Job Openings</h1>
+      <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+    </header>
+    
+    <section class="space-y-8">
+      <article class="bg-white rounded-lg shadow-md overflow-hidden transition transform hover:shadow-xl">
+        <header class="flex justify-between items-center p-4 cursor-pointer md:cursor-default" aria-expanded="false" onclick="toggleSection('dept1')">
+          <h2 class="text-2xl font-bold text-gray-800 flex items-center">
+            <i class="fas fa-briefcase mr-2 text-blue-500"></i>Job Department
+          </h2>
+          <button class="md:hidden focus:outline-none" aria-controls="dept1" aria-expanded="false">
+            <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+          </button>
+        </header>
+        <div id="dept1" class="px-4 pb-4 space-y-6 hidden md:block transition-max-height duration-500 overflow-hidden">
+          <div class="border rounded p-4 hover:shadow-lg transition duration-300">
+            <h3 class="text-xl font-semibold text-gray-700 flex items-center">
+              <i class="fas fa-user-tie mr-2 text-green-500"></i>Job Title
+            </h3>
+            <p class="text-sm text-gray-500 flex items-center">
+              <i class="fas fa-map-marker-alt mr-2"></i>Location
+            </p>
+            <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+            <button class="mt-4 px-5 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 flex items-center transition">
+              <i class="fas fa-paper-plane mr-2"></i>Apply Now
+            </button>
+          </div>
+          
+          <div class="border rounded p-4 hover:shadow-lg transition duration-300">
+            <h3 class="text-xl font-semibold text-gray-700 flex items-center">
+              <i class="fas fa-user-tie mr-2 text-green-500"></i>Another Job Title
+            </h3>
+            <p class="text-sm text-gray-500 flex items-center">
+              <i class="fas fa-map-marker-alt mr-2"></i>Another Location
+            </p>
+            <p class="mt-2 text-gray-600">Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+            <button class="mt-4 px-5 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 flex items-center transition">
+              <i class="fas fa-paper-plane mr-2"></i>Apply Now
+            </button>
+          </div>
+        </div>
+      </article>
+      
+      <article class="bg-white rounded-lg shadow-md overflow-hidden transition transform hover:shadow-xl">
+        <header class="flex justify-between items-center p-4 cursor-pointer md:cursor-default" aria-expanded="false" onclick="toggleSection('dept2')">
+          <h2 class="text-2xl font-bold text-gray-800 flex items-center">
+            <i class="fas fa-cogs mr-2 text-blue-500"></i>Engineering Department
+          </h2>
+          <button class="md:hidden focus:outline-none" aria-controls="dept2" aria-expanded="false">
+            <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+          </button>
+        </header>
+        <div id="dept2" class="px-4 pb-4 space-y-6 hidden md:block transition-max-height duration-500 overflow-hidden">
+          <div class="border rounded p-4 hover:shadow-lg transition duration-300">
+            <h3 class="text-xl font-semibold text-gray-700 flex items-center">
+              <i class="fas fa-tools mr-2 text-green-500"></i>Senior Engineer
+            </h3>
+            <p class="text-sm text-gray-500 flex items-center">
+              <i class="fas fa-map-marker-alt mr-2"></i>New York, NY
+            </p>
+            <p class="mt-2 text-gray-600">Join our dynamic engineering team to work on cutting-edge technologies and innovative projects that make a difference.</p>
+            <button class="mt-4 px-5 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 flex items-center transition">
+              <i class="fas fa-paper-plane mr-2"></i>Apply Now
+            </button>
+          </div>
+          
+          <div class="border rounded p-4 hover:shadow-lg transition duration-300">
+            <h3 class="text-xl font-semibold text-gray-700 flex items-center">
+              <i class="fas fa-tools mr-2 text-green-500"></i>Junior Developer
+            </h3>
+            <p class="text-sm text-gray-500 flex items-center">
+              <i class="fas fa-map-marker-alt mr-2"></i>San Francisco, CA
+            </p>
+            <p class="mt-2 text-gray-600">Kickstart your career with us by developing high-quality software solutions in a collaborative environment.</p>
+            <button class="mt-4 px-5 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 flex items-center transition">
+              <i class="fas fa-paper-plane mr-2"></i>Apply Now
+            </button>
+          </div>
+        </div>
+      </article>
+      
+      <!-- Add more departments as needed -->
+    </section>
+  </div>
+  
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      const btn = section.previousElementSibling.querySelector('button');
+      const icon = btn.querySelector('i');
+      const expanded = section.classList.contains('hidden');
+      
+      if (expanded) {
+        section.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-chevron-up');
+      } else {
+        section.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        icon.classList.remove('fa-chevron-up');
+        icon.classList.add('fa-chevron-down');
+      }
+    }
+  </script>
+</body>
+</html>

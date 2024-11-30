@@ -1,0 +1,47 @@
+<header class="bg-gray-800 text-white p-8 md:flex md:justify-between md:items-center transition duration-500 ease-in-out transform hover:bg-gray-700">
+    <div class="md:w-1/2">
+        <p class="uppercase text-sm mb-2 animate-fadeIn">Tagline</p>
+        <h1 class="text-4xl font-bold mb-4 animate-slideIn">Short heading here</h1>
+    </div>
+    <div class="md:w-1/2">
+        <p class="mb-4 animate-fadeIn delay-200">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+        </p>
+        <form class="flex flex-col md:flex-row items-center md:items-start animate-fadeIn delay-400">
+            <label for="email" class="sr-only">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" class="p-2 mb-4 md:mb-0 md:mr-4 border border-gray-400 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:scale-105" required />
+            <button type="submit" class="flex items-center bg-white text-gray-800 py-2 px-4 rounded hover:bg-gray-200 transition duration-300 ease-in-out transform hover:scale-105">
+                <i class="fas fa-paper-plane mr-2"></i> Sign up
+            </button>
+        </form>
+        <p class="text-xs mt-2 animate-fadeIn delay-600">
+            By clicking Sign Up you're confirming that you agree with our <a href="#" class="underline hover:text-gray-300 transition duration-300">Terms and Conditions</a>.
+        </p>
+    </div>
+</header>
+
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.animate-fadeIn {
+  animation: fadeIn 1s forwards;
+}
+.animate-slideIn {
+  animation: slideIn 1s forwards;
+}
+.animate-fadeIn.delay-200 {
+  animation: fadeIn 1s 0.2s forwards;
+}
+.animate-fadeIn.delay-400 {
+  animation: fadeIn 1s 0.4s forwards;
+}
+.animate-fadeIn.delay-600 {
+  animation: fadeIn 1s 0.6s forwards;
+}
+</style>

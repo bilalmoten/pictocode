@@ -1,0 +1,46 @@
+<section class="flex flex-col lg:flex-row items-center justify-between p-8 lg:p-16 bg-white animate-fade-in">
+    <div class="w-full lg:w-1/2 mb-8 lg:mb-0 transition-transform duration-500 transform hover:scale-105">
+        <h1 class="text-2xl lg:text-4xl font-bold mb-4 text-gray-800">Medium length hero headline goes here</h1>
+        <p class="text-base lg:text-lg mb-6 text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+        </p>
+        <form class="flex flex-col sm:flex-row items-center mb-4" action="#" method="POST">
+            <label for="email" class="sr-only">Email address</label>
+            <div class="relative w-full sm:w-auto">
+                <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500">
+                    <i class="fas fa-envelope"></i>
+                </span>
+                <input type="email" id="email" name="email" required class="w-full sm:w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" placeholder="Enter your email">
+            </div>
+            <button type="submit" class="mt-4 sm:mt-0 sm:ml-4 bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+                Sign Up
+            </button>
+        </form>
+        <p class="text-sm text-gray-500">
+            By signing up, you agree to our <a href="#" class="text-blue-600 hover:underline">Terms and Conditions</a>.
+        </p>
+    </div>
+    <div class="w-full lg:w-1/2 flex justify-center items-center bg-gray-100 p-4 rounded-md transition-opacity duration-500 opacity-0 animate-fade-in-up">
+        <video class="w-full h-auto rounded-md" controls>
+            <source src="https://videos.pexels.com/video-files/6768212/6768212-uhd_1440_2732_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+<style>
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+}
+.animate-fade-in-up {
+    animation: fade-in-up 1s ease-out forwards;
+}
+</style>

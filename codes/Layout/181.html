@@ -1,0 +1,40 @@
+<section class="bg-gray-800 text-white py-12 px-6 md:px-0">
+  <div class="max-w-2xl mx-auto text-center">
+    <header>
+      <p class="text-sm uppercase mb-4 animate-fade-in">Tagline</p>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 animate-slide-in">Medium length section heading goes here</h2>
+    </header>
+    <article>
+      <p class="text-base md:text-lg mb-8 animate-fade-in delay-200">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+    </article>
+    <div class="flex justify-center space-x-4">
+      <button class="border border-white py-2 px-6 transition duration-300 ease-in-out transform hover:bg-white hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 hover:scale-105">Button</button>
+      <button class="flex items-center space-x-2 transition duration-300 ease-in-out transform hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 hover:scale-105">
+        <span>Button</span>
+        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slide-in {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .animate-fade-in {
+    animation: fade-in 1s ease-in-out forwards;
+  }
+  .animate-slide-in {
+    animation: slide-in 1s ease-out forwards;
+  }
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+</style>

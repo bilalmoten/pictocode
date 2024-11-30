@@ -1,0 +1,46 @@
+<section class="bg-gray-800 text-white min-h-screen flex items-center justify-center p-4">
+  <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12">
+    <article class="flex flex-col justify-center animate-fade-in">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-6 transition-transform duration-500 hover:scale-105">
+        Medium length hero heading goes here
+      </h1>
+      <p class="mb-8 text-lg leading-relaxed">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+      <form class="flex flex-col md:flex-row items-center gap-4">
+        <div class="relative w-full md:w-auto flex-grow">
+          <input type="email" aria-label="Email address" placeholder="Enter your email" class="p-3 border border-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" />
+          <span class="absolute inset-y-0 right-3 flex items-center text-gray-400">
+            <i class="fas fa-envelope"></i>
+          </span>
+        </div>
+        <button type="submit" class="bg-white text-gray-800 font-semibold py-3 px-6 rounded hover:bg-gray-200 transition transform duration-300 hover:scale-105">
+          Sign up
+        </button>
+      </form>
+      <p class="text-sm mt-6">
+        By clicking Sign Up you're confirming that you agree with our <a href="#" class="underline hover:text-blue-400 transition-colors duration-300">Terms and Conditions</a>.
+      </p>
+    </article>
+    <div class="flex items-center justify-center">
+      <video class="w-full h-auto rounded shadow-lg animate-fade-in" controls>
+        <source src="https://videos.pexels.com/video-files/6768212/6768212-uhd_1440_2732_30fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <!-- Alternatively, for image use the below line -->
+      <!-- <img src="https://placehold.co/600x400/EEE/31343C" alt="Placeholder Image" class="w-full h-auto rounded shadow-lg animate-fade-in" /> -->
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+  }
+</style>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

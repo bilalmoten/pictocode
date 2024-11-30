@@ -1,0 +1,42 @@
+<section class="flex items-center justify-center min-h-screen bg-gray-700 animate-fade-in">
+  <div class="max-w-md mx-auto p-8 bg-gray-800 text-center space-y-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+    <h1 class="text-4xl font-extrabold text-white animate-slide-in">
+      Medium length hero heading goes here
+    </h1>
+    <p class="text-gray-300">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+    </p>
+    <form class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4" aria-label="Sign up form">
+      <div class="relative w-full">
+        <label for="email" class="sr-only">Email address</label>
+        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+          <i class="fas fa-envelope text-gray-400"></i>
+        </div>
+        <input type="email" id="email" placeholder="Enter your email" class="w-full pl-10 px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300" required />
+      </div>
+      <button type="submit" class="flex items-center justify-center px-4 py-2 font-semibold text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300">
+        <i class="fas fa-paper-plane mr-2"></i> Sign up
+      </button>
+    </form>
+    <p class="text-sm text-gray-400">
+      By clicking Sign Up you're confirming that you agree with our <a href="#" class="underline text-blue-400 hover:text-blue-300 transition-colors duration-300">Terms and Conditions</a>.
+    </p>
+  </div>
+</section>
+
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .animate-fade-in {
+    animation: fade-in 1s ease-in-out;
+  }
+  @keyframes slide-in {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .animate-slide-in {
+    animation: slide-in 1s ease-out;
+  }
+</style>

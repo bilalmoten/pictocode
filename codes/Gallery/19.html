@@ -1,0 +1,65 @@
+<section class="max-w-screen-lg mx-auto py-12 px-4">
+    <header class="text-center">
+        <h2 class="text-4xl font-extrabold mb-3">Image Gallery</h2>
+        <p class="text-gray-700">Explore our collection of beautiful images.</p>
+    </header>
+    <div class="relative mt-10">
+        <button id="prevBtn" class="hidden md:flex absolute left-0 top-1/2 transform -translate-y-1/2 bg-white border border-gray-300 rounded-full p-3 shadow-md hover:bg-gray-100 transition">
+            <i class="fas fa-chevron-left text-gray-600"></i>
+            <span class="sr-only">Previous</span>
+        </button>
+        <div class="flex overflow-x-auto scroll-smooth space-x-6 snap-x snap-mandatory">
+            <figure class="flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://placehold.co/600x400/EEE/31343C" alt="Gallery Image 1" class="w-full h-full object-cover">
+            </figure>
+            <figure class="flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://placehold.co/600x400/EEE/31343C" alt="Gallery Image 2" class="w-full h-full object-cover">
+            </figure>
+            <figure class="flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://placehold.co/600x400/EEE/31343C" alt="Gallery Image 3" class="w-full h-full object-cover">
+            </figure>
+            <figure class="flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://placehold.co/600x400/EEE/31343C" alt="Gallery Image 4" class="w-full h-full object-cover">
+            </figure>
+        </div>
+        <button id="nextBtn" class="hidden md:flex absolute right-0 top-1/2 transform -translate-y-1/2 bg-white border border-gray-300 rounded-full p-3 shadow-md hover:bg-gray-100 transition">
+            <i class="fas fa-chevron-right text-gray-600"></i>
+            <span class="sr-only">Next</span>
+        </button>
+    </div>
+    <nav class="flex justify-center mt-6 space-x-3">
+        <button class="w-3 h-3 bg-blue-600 rounded-full focus:outline-none" aria-label="Slide 1"></button>
+        <button class="w-3 h-3 bg-gray-300 rounded-full focus:outline-none" aria-label="Slide 2"></button>
+        <button class="w-3 h-3 bg-gray-300 rounded-full focus:outline-none" aria-label="Slide 3"></button>
+        <button class="w-3 h-3 bg-gray-300 rounded-full focus:outline-none" aria-label="Slide 4"></button>
+    </nav>
+    <script>
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const gallery = document.querySelector('.flex.overflow-x-auto');
+
+        prevBtn.addEventListener('click', () => {
+            gallery.scrollBy({
+                left: -300,
+                behavior: 'smooth'
+            });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            gallery.scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth < 768) {
+                prevBtn.classList.remove('hidden');
+                nextBtn.classList.remove('hidden');
+            } else {
+                prevBtn.classList.add('hidden');
+                nextBtn.classList.add('hidden');
+            }
+        });
+    </script>
+</section>

@@ -1,0 +1,48 @@
+<section class="flex flex-col lg:flex-row items-center justify-center min-h-screen bg-white px-4">
+    <div class="w-full lg:w-1/2 p-4 transform transition-transform duration-500 hover:scale-105">
+        <img src="https://placehold.co/600x400/EEE/31343C" alt="Contact Placeholder Image" class="w-full h-auto rounded-lg shadow-lg">
+    </div>
+    <div class="w-full lg:w-1/2 p-8">
+        <p class="text-sm text-gray-600 mb-2">Get in Touch</p>
+        <h1 class="text-4xl font-bold mb-4 text-gray-800">Contact Us</h1>
+        <p class="text-gray-700 mb-6">We're here to help and answer any question you might have. We look forward to hearing from you.</p>
+        <form class="space-y-6" action="#" method="POST">
+            <div class="relative">
+                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <div class="mt-1 flex">
+                    <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                        <i class="fas fa-user"></i>
+                    </span>
+                    <input type="text" id="name" name="name" class="flex-1 block w-full border border-gray-300 rounded-r-md shadow-sm focus:ring-black focus:border-black p-2 transition duration-200 ease-in-out" placeholder="Your name" required>
+                </div>
+            </div>
+            <div class="relative">
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <div class="mt-1 flex">
+                    <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <input type="email" id="email" name="email" class="flex-1 block w-full border border-gray-300 rounded-r-md shadow-sm focus:ring-black focus:border-black p-2 transition duration-200 ease-in-out" placeholder="Your email" required>
+                </div>
+            </div>
+            <div class="relative">
+                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                <div class="mt-1 flex">
+                    <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                        <i class="fas fa-comment-alt"></i>
+                    </span>
+                    <textarea id="message" name="message" rows="4" class="flex-1 block w-full border border-gray-300 rounded-r-md shadow-sm focus:ring-black focus:border-black p-2 transition duration-200 ease-in-out" placeholder="Type your message..." required></textarea>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <input type="checkbox" id="terms" name="terms" class="h-4 w-4 text-black border-gray-300 rounded focus:ring-black" required>
+                <label for="terms" class="ml-2 block text-sm text-gray-700">
+                    I accept the <a href="#" class="text-blue-500 underline hover:text-blue-700 transition-colors duration-200">Terms</a>
+                </label>
+            </div>
+            <button type="submit" class="w-full bg-black text-white py-2 px-4 rounded-md shadow-sm hover:bg-gray-800 transition-colors duration-200">
+                Submit
+            </button>
+        </form>
+    </div>
+</section>

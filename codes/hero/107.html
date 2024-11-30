@@ -1,0 +1,45 @@
+<section class="flex flex-col md:flex-row items-center justify-between p-8 md:p-16 bg-white animate-fade-in">
+    <!-- Text Content -->
+    <article class="md:w-1/2 space-y-6 transition-transform duration-500 transform hover:scale-105">
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-800">
+            Long heading is what you see here in this header section
+        </h1>
+        <p class="text-lg text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+        </p>
+        <div class="flex space-x-4">
+            <button class="flex items-center px-6 py-3 bg-black text-white rounded hover:bg-gray-800 transition-colors duration-300">
+                <i class="fas fa-arrow-right mr-2"></i> Get Started
+            </button>
+            <button class="flex items-center px-6 py-3 border border-black text-black rounded hover:bg-gray-100 transition-colors duration-300">
+                <i class="fas fa-info-circle mr-2"></i> Learn More
+            </button>
+        </div>
+    </article>
+    <!-- Image Grid -->
+    <div class="md:w-1/2 mt-8 md:mt-0 grid grid-cols-3 gap-4 animate-slide-in">
+        <img src="https://placehold.co/600x400/EEE/31343C" alt="Creative workspace" class="col-span-1 rounded shadow-lg transition-transform duration-300 transform hover:scale-105">
+        <img src="https://placehold.co/600x400/EEE/31343C" alt="Team collaboration" class="col-span-1 rounded shadow-lg transition-transform duration-300 transform hover:scale-105">
+        <img src="https://placehold.co/600x400/EEE/31343C" alt="Project planning" class="col-span-1 rounded shadow-lg transition-transform duration-300 transform hover:scale-105">
+        <img src="https://placehold.co/600x400/EEE/31343C" alt="Client meeting" class="col-span-2 rounded shadow-lg transition-transform duration-300 transform hover:scale-105">
+        <img src="https://placehold.co/600x400/EEE/31343C" alt="Design mockups" class="col-span-1 rounded shadow-lg transition-transform duration-300 transform hover:scale-105">
+    </div>
+</section>
+
+<style>
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slide-in {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+}
+.animate-slide-in {
+    animation: slide-in 1s ease-out forwards;
+}
+</style>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

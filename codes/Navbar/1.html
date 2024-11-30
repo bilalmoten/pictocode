@@ -1,0 +1,117 @@
+<header class="bg-white shadow-md">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <!-- Logo -->
+    <div class="text-2xl font-bold italic transition-transform duration-300 transform hover:scale-105">
+      <a href="#" aria-label="Home">Logo</a>
+    </div>
+    <!-- Navigation Links -->
+    <nav class="hidden md:flex space-x-6">
+      <ul class="flex space-x-6">
+        <li>
+          <a href="#" class="text-gray-800 hover:text-gray-600 transition-colors duration-200">Link One</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-800 hover:text-gray-600 transition-colors duration-200">Link Two</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-800 hover:text-gray-600 transition-colors duration-200">Link Three</a>
+        </li>
+        <li class="relative group">
+          <button class="flex items-center text-gray-800 hover:text-gray-600 transition-colors duration-200 focus:outline-none" aria-haspopup="true" aria-expanded="false">
+            Link Four <i class="fas fa-chevron-down ml-1 transition-transform duration-200 transform group-hover:rotate-180"></i>
+          </button>
+          <ul class="absolute left-0 mt-2 w-40 bg-black text-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-700 transition-colors duration-200">Link Five</a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-700 transition-colors duration-200">Link Six</a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-700 transition-colors duration-200">Link Seven</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!-- Buttons -->
+    <div class="hidden md:flex space-x-3">
+      <button class="border border-gray-800 text-gray-800 px-4 py-2 rounded hover:bg-gray-800 hover:text-white transition-colors duration-200">Button</button>
+      <button class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-colors duration-200">Button</button>
+    </div>
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-gray-800 focus:outline-none" aria-label="Open Menu">
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Sidebar -->
+  <aside id="mobile-menu" class="fixed inset-0 z-50 hidden md:hidden bg-black text-white p-4 transition-transform duration-300 transform translate-x-full">
+    <div class="flex flex-col h-full">
+      <div class="flex justify-between items-center mb-8">
+        <div class="text-2xl font-bold italic">
+          <a href="#" aria-label="Home">Logo</a>
+        </div>
+        <button id="menu-close" class="text-white focus:outline-none" aria-label="Close Menu">
+          <i class="fas fa-times fa-lg"></i>
+        </button>
+      </div>
+      <nav class="flex-1">
+        <ul class="space-y-4">
+          <li>
+            <a href="#" class="block text-white hover:text-gray-300 transition-colors duration-200">Link One</a>
+          </li>
+          <li>
+            <a href="#" class="block text-white hover:text-gray-300 transition-colors duration-200">Link Two</a>
+          </li>
+          <li>
+            <a href="#" class="block text-white hover:text-gray-300 transition-colors duration-200">Link Three</a>
+          </li>
+          <li>
+            <details class="group">
+              <summary class="flex items-center justify-between text-white cursor-pointer hover:text-gray-300 transition-colors duration-200">
+                Link Four
+                <i class="fas fa-chevron-down transition-transform duration-200 group-open:rotate-180"></i>
+              </summary>
+              <ul class="mt-2 space-y-2 pl-4">
+                <li>
+                  <a href="#" class="block text-white hover:text-gray-300 transition-colors duration-200">Link Five</a>
+                </li>
+                <li>
+                  <a href="#" class="block text-white hover:text-gray-300 transition-colors duration-200">Link Six</a>
+                </li>
+                <li>
+                  <a href="#" class="block text-white hover:text-gray-300 transition-colors duration-200">Link Seven</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav>
+      <div class="mt-8 space-y-4">
+        <button class="border border-white text-white w-full py-2 rounded hover:bg-white hover:text-black transition-colors duration-200">Button</button>
+        <button class="bg-white text-black w-full py-2 rounded hover:bg-gray-200 transition-colors duration-200">Button</button>
+      </div>
+    </div>
+  </aside>
+</header>
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuClose = document.getElementById('menu-close');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.remove('translate-x-full');
+    mobileMenu.classList.add('translate-x-0');
+    mobileMenu.classList.remove('hidden');
+  });
+
+  menuClose.addEventListener('click', () => {
+    mobileMenu.classList.add('translate-x-full');
+    setTimeout(() => {
+      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('translate-x-0');
+    }, 300);
+  });
+</script>

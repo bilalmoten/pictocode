@@ -1,0 +1,50 @@
+<section class="bg-gray-800 text-white py-12">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+      <!-- Left Section -->
+      <div class="md:w-1/2 mb-8 md:mb-0 animate-fadeIn">
+        <p class="text-sm uppercase mb-2">Tagline</p>
+        <h2 class="text-4xl font-bold mb-4 transition-transform transform hover:scale-105">Medium length section heading goes here</h2>
+        <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
+        <button type="button" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 flex items-center transition-colors duration-300 rounded">
+          Button
+          <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+        </button>
+      </div>
+      <!-- Right Section -->
+      <div class="md:w-1/2 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article class="flex flex-col items-center text-center p-4 bg-gray-700 rounded-lg transition-transform transform hover:scale-105 animate-fadeIn">
+          <i class="fas fa-cube text-3xl mb-4" aria-hidden="true"></i>
+          <h3 class="text-xl font-bold mb-2">Medium length section heading goes here</h3>
+          <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+        </article>
+        <article class="flex flex-col items-center text-center p-4 bg-gray-700 rounded-lg transition-transform transform hover:scale-105 animate-fadeIn delay-200">
+          <i class="fas fa-cube text-3xl mb-4" aria-hidden="true"></i>
+          <h3 class="text-xl font-bold mb-2">Medium length section heading goes here</h3>
+          <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+        </article>
+        <article class="flex flex-col items-center text-center p-4 bg-gray-700 rounded-lg transition-transform transform hover:scale-105 animate-fadeIn delay-400">
+          <i class="fas fa-cube text-3xl mb-4" aria-hidden="true"></i>
+          <h3 class="text-xl font-bold mb-2">Medium length section heading goes here</h3>
+          <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.delay-400 {
+  animation-delay: 0.4s;
+}
+</style>

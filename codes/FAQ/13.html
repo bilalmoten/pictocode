@@ -1,0 +1,92 @@
+<section class="max-w-7xl mx-auto p-8">
+  <header class="mb-12">
+    <h1 class="text-4xl font-bold mb-4">FAQs</h1>
+    <p class="text-lg text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+  </header>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+    <article class="border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+      <button class="w-full flex justify-between items-center p-4 focus:outline-none focus:ring-2 focus:ring-gray-500" aria-expanded="false" aria-controls="faq1">
+        <span class="font-semibold text-gray-800">Question text goes here</span>
+        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+      </button>
+      <div id="faq1" class="hidden p-4 text-gray-700 transition-all duration-300">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </div>
+    </article>
+    <article class="border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+      <button class="w-full flex justify-between items-center p-4 focus:outline-none focus:ring-2 focus:ring-gray-500" aria-expanded="false" aria-controls="faq2">
+        <span class="font-semibold text-gray-800">Question text goes here</span>
+        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+      </button>
+      <div id="faq2" class="hidden p-4 text-gray-700 transition-all duration-300">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </div>
+    </article>
+    <article class="border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+      <button class="w-full flex justify-between items-center p-4 focus:outline-none focus:ring-2 focus:ring-gray-500" aria-expanded="false" aria-controls="faq3">
+        <span class="font-semibold text-gray-800">Question text goes here</span>
+        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+      </button>
+      <div id="faq3" class="hidden p-4 text-gray-700 transition-all duration-300">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </div>
+    </article>
+    <article class="border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+      <button class="w-full flex justify-between items-center p-4 focus:outline-none focus:ring-2 focus:ring-gray-500" aria-expanded="false" aria-controls="faq4">
+        <span class="font-semibold text-gray-800">Question text goes here</span>
+        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+      </button>
+      <div id="faq4" class="hidden p-4 text-gray-700 transition-all duration-300">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </div>
+    </article>
+    <article class="border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+      <button class="w-full flex justify-between items-center p-4 focus:outline-none focus:ring-2 focus:ring-gray-500" aria-expanded="false" aria-controls="faq5">
+        <span class="font-semibold text-gray-800">Question text goes here</span>
+        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+      </button>
+      <div id="faq5" class="hidden p-4 text-gray-700 transition-all duration-300">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </div>
+    </article>
+    <article class="border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+      <button class="w-full flex justify-between items-center p-4 focus:outline-none focus:ring-2 focus:ring-gray-500" aria-expanded="false" aria-controls="faq6">
+        <span class="font-semibold text-gray-800">Question text goes here</span>
+        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+      </button>
+      <div id="faq6" class="hidden p-4 text-gray-700 transition-all duration-300">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </div>
+    </article>
+  </div>
+  <div class="border-t pt-8">
+    <h3 class="text-2xl font-semibold mb-4">Still have questions?</h3>
+    <p class="text-lg text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <button class="flex items-center px-4 py-2 border border-gray-700 text-gray-700 hover:bg-gray-100 transition-colors duration-300">
+      <i class="fas fa-envelope mr-2"></i>
+      Contact
+    </button>
+  </div>
+  <script>
+    document.querySelectorAll('button[aria-expanded]').forEach(button => {
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !expanded);
+        const icon = button.querySelector('i');
+        if (!expanded) {
+          icon.classList.add('rotate-180');
+        } else {
+          icon.classList.remove('rotate-180');
+        }
+        const content = document.getElementById(button.getAttribute('aria-controls'));
+        if (!expanded) {
+          content.classList.remove('hidden');
+          content.classList.add('block');
+        } else {
+          content.classList.add('hidden');
+          content.classList.remove('block');
+        }
+      });
+    });
+  </script>
+</section>

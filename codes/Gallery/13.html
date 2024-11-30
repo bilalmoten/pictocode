@@ -1,0 +1,56 @@
+<section class="bg-gray-100 py-12" aria-labelledby="gallery-title">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 id="gallery-title" class="text-3xl font-bold mb-2">Image Gallery</h2>
+        <p class="text-gray-600 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="relative group">
+            <img src="https://placehold.co/600x400/EEE/31343C" alt="Gallery Image" class="w-full h-auto rounded-lg transition-transform duration-500 ease-in-out transform group-hover:scale-105">
+            <button aria-label="Previous Image" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white border border-gray-300 rounded-full p-2 shadow-md hover:bg-gray-200 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-400">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <button aria-label="Next Image" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white border border-gray-300 rounded-full p-2 shadow-md hover:bg-gray-200 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-400">
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="flex justify-center mt-4 space-x-2">
+            <span class="h-2 w-2 bg-gray-800 rounded-full transition-all duration-300"></span>
+            <span class="h-2 w-2 bg-gray-400 rounded-full transition-all duration-300"></span>
+            <span class="h-2 w-2 bg-gray-400 rounded-full transition-all duration-300"></span>
+        </div>
+    </div>
+</section>
+
+<script>
+    const images = [
+        'https://placehold.co/600x400/EEE/31343C',
+        'https://placehold.co/600x400/CCC/31343C',
+        'https://placehold.co/600x400/BBB/31343C'
+    ];
+    let currentIndex = 0;
+    const imgElement = document.querySelector('img');
+    const prevButton = document.querySelector('button[aria-label="Previous Image"]');
+    const nextButton = document.querySelector('button[aria-label="Next Image"]');
+    const dots = document.querySelectorAll('.flex span');
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        imgElement.src = images[currentIndex];
+        updateDots();
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        imgElement.src = images[currentIndex];
+        updateDots();
+    });
+
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            dot.classList.remove('bg-gray-800');
+            dot.classList.add('bg-gray-400');
+            if(index === currentIndex) {
+                dot.classList.remove('bg-gray-400');
+                dot.classList.add('bg-gray-800');
+            }
+        });
+    }
+</script>

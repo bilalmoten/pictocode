@@ -1,0 +1,69 @@
+<section class="container mx-auto px-4 py-8">
+    <div class="flex flex-col lg:flex-row items-center lg:items-start">
+        <!-- Left Column -->
+        <article class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-8 animate-fadeIn">
+            <h1 class="text-4xl font-bold mb-2 text-gray-900">Medium length section heading goes here</h1>
+            <p class="text-sm text-gray-600 mb-4">Tagline</p>
+            <p class="text-base text-gray-800 mb-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+            </p>
+            <div class="flex space-x-4">
+                <button class="flex items-center bg-blue-500 text-white px-4 py-2 rounded transition transform hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <i class="fas fa-arrow-right mr-2"></i>Primary Action
+                </button>
+                <button class="flex items-center bg-gray-200 text-gray-800 px-4 py-2 rounded transition transform hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400">
+                    <i class="fas fa-info-circle mr-2"></i>Secondary Action
+                </button>
+            </div>
+        </article>
+        <!-- Right Column -->
+        <div class="lg:w-1/2 grid grid-cols-1 gap-8">
+            <!-- Image and Text Block 1 -->
+            <article class="flex flex-col lg:flex-row items-start bg-white p-4 rounded shadow transition transform hover:shadow-lg animate-fadeIn">
+                <img src="https://placehold.co/600x400/EEE/31343C" alt="Placeholder Image 1" class="w-full lg:w-1/3 mb-4 lg:mb-0 lg:mr-4 rounded">
+                <div>
+                    <h2 class="text-xl font-semibold mb-2 text-gray-900">Medium length section heading goes here</h2>
+                    <p class="text-base text-gray-800">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+                    </p>
+                </div>
+            </article>
+            <!-- Image and Text Block 2 -->
+            <article class="flex flex-col lg:flex-row items-start bg-white p-4 rounded shadow transition transform hover:shadow-lg animate-fadeIn delay-150">
+                <img src="https://placehold.co/600x400/EEE/31343C" alt="Placeholder Image 2" class="w-full lg:w-1/3 mb-4 lg:mb-0 lg:mr-4 rounded">
+                <div>
+                    <h2 class="text-xl font-semibold mb-2 text-gray-900">Medium length section heading goes here</h2>
+                    <p class="text-base text-gray-800">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+                    </p>
+                </div>
+            </article>
+            <!-- Image and Text Block 3 -->
+            <article class="flex flex-col lg:flex-row items-start bg-white p-4 rounded shadow transition transform hover:shadow-lg animate-fadeIn delay-300">
+                <img src="https://placehold.co/600x400/EEE/31343C" alt="Placeholder Image 3" class="w-full lg:w-1/3 mb-4 lg:mb-0 lg:mr-4 rounded">
+                <div>
+                    <h2 class="text-xl font-semibold mb-2 text-gray-900">Medium length section heading goes here</h2>
+                    <p class="text-base text-gray-800">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-pO8U9jVhN6xRdZdfZk6eRUVqn5Uv7c9uGKlK3B+WzWv+0kQfyt0w3GJyI7B3HbfKmYGgH6e7f7lxe72z7SWNFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+.delay-150 {
+    animation-delay: 0.15s;
+}
+.delay-300 {
+    animation-delay: 0.3s;
+}
+</style>

@@ -1,0 +1,6 @@
+{
+  "Blog Header": {
+    "14": "Centered layout with a single-column header featuring a prominent heading and supporting text. Below, a centered navigation bar with hoverable buttons featuring color transitions and focus rings. The main section uses a responsive grid, displaying one column on mobile and two on larger screens. Each blog card incorporates hover-scale animations, shadows, and smooth text/link transitions. Visual hierarchy prioritizes the main heading, navigation, then blog posts. Special features include header text fade-in animations and accessible interactive states.",
+    "8": "The Blog Header employs a vertical stack layout featuring a prominent header, a responsive two-column flex section for the featured post (image left, content right on desktop), horizontal category navigation, and a responsive three-column grid for blog post cards. It establishes visual hierarchy with a large main heading, emphasized featured post titles, and smaller titles in the grid. Interactive elements include hover scale animations on headings and images, shadow effects on featured posts, and underlined links with icons. The design is responsive, stacking vertically on mobile and transitioning to multi-column layouts on larger screens. Special features include smooth transition animations and integrated icons to enhance user interaction."
+  }
+}

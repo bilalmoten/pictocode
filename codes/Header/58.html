@@ -1,0 +1,44 @@
+<section class="bg-gray-700 text-white p-8">
+    <div class="max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-between">
+        <!-- Left Section -->
+        <div class="lg:w-1/2 mb-8 lg:mb-0">
+            <p class="text-sm font-light mb-2 animate-fadeIn">Tagline</p>
+            <h1 class="text-4xl font-bold mb-4 animate-fadeIn">Short heading here</h1>
+        </div>
+        <!-- Right Section -->
+        <div class="lg:w-1/2 flex flex-col items-start">
+            <div class="flex items-start mb-6 animate-fadeIn">
+                <img src="https://placehold.co/600x400/EEE/31343C" alt="Descriptive Placeholder Image" class="w-24 h-24 mr-4 rounded-lg transition-transform duration-300 transform hover:scale-105">
+                <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+            </div>
+            <form class="flex flex-col lg:flex-row items-stretch lg:items-center w-full" action="#" method="POST">
+                <label for="email" class="sr-only">Email address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required class="p-2 mb-4 lg:mb-0 lg:mr-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+                <button type="submit" class="bg-white text-gray-700 px-4 py-2 rounded flex items-center justify-center hover:bg-gray-100 transition duration-300">
+                    <i class="fas fa-paper-plane mr-2"></i> Sign up
+                </button>
+            </form>
+            <p class="text-xs mt-4">By clicking Sign Up you're confirming that you agree with our <a href="#" class="underline hover:text-gray-300 transition duration-300">Terms and Conditions</a>.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+    animation: fadeIn 1s ease-out forwards;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Essential functionality can be added here
+    });
+});
+</script>

@@ -1,0 +1,30 @@
+<section class="bg-white">
+  <div class="max-w-screen-xl mx-auto">
+    <!-- Video Section -->
+    <div class="relative group">
+      <video class="w-full rounded-lg transition-transform duration-500 transform group-hover:scale-105" controls>
+        <source src="https://videos.pexels.com/video-files/6768212/6768212-uhd_1440_2732_30fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <button aria-label="Play Video" class="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-50 rounded-full p-4 transition-opacity duration-300 opacity-0 group-hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-white">
+        <i class="fas fa-play text-white text-2xl"></i>
+      </button>
+    </div>
+    
+    <!-- Content Section -->
+    <div class="px-4 py-8 lg:flex lg:space-x-8">
+      <div class="lg:w-1/2 mb-6 lg:mb-0">
+        <h1 class="text-4xl font-extrabold mb-4 transition-transform duration-500 transform hover:scale-105">Medium length hero heading goes here</h1>
+      </div>
+      <div class="lg:w-1/2">
+        <p class="mb-6 text-lg transition-opacity duration-700 opacity-100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+        <form class="flex flex-col space-y-4" action="#" method="POST">
+          <label for="email" class="sr-only">Email address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow duration-300">
+          <button type="submit" class="bg-black text-white py-2 rounded-md hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-black">Sign up</button>
+        </form>
+        <p class="text-sm mt-4">By clicking Sign Up you're confirming that you agree with our <a href="#" class="underline hover:text-blue-600 transition-colors duration-300">Terms and Conditions</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>

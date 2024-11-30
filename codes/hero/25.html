@@ -1,0 +1,43 @@
+<section class="flex items-center justify-center min-h-screen bg-white px-4">
+    <div class="text-center">
+        <h1 class="text-3xl md:text-5xl font-bold mb-4 animate-fadeInUp transition-transform duration-700 ease-in-out">
+            Medium length hero heading goes here
+        </h1>
+        <p class="text-base md:text-lg mb-8 animate-fadeInUp delay-200 transition-opacity duration-700 ease-in-out">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+        </p>
+        <form class="flex justify-center items-center animate-fadeInUp delay-400 transition-transform duration-700 ease-in-out" role="search">
+            <div class="flex border border-gray-300 rounded shadow-sm transition-shadow duration-300 hover:shadow-md">
+                <span class="flex items-center px-3">
+                    <i class="fas fa-search text-gray-500"></i>
+                </span>
+                <input type="text" id="search" name="search" placeholder="Search" class="py-2 px-4 focus:outline-none focus:ring-2 focus:ring-black transition-colors duration-300" aria-label="Search">
+            </div>
+            <button type="submit" class="ml-2 py-2 px-4 bg-black text-white rounded hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-black" aria-label="Submit Search">
+                Search
+            </button>
+        </form>
+    </div>
+</section>
+
+<style>
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fadeInUp {
+  animation: fadeInUp 0.7s forwards;
+}
+.animate-fadeInUp.delay-200 {
+  animation-delay: 0.2s;
+}
+.animate-fadeInUp.delay-400 {
+  animation-delay: 0.4s;
+}
+</style>

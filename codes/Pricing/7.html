@@ -1,0 +1,76 @@
+<section class="flex flex-col items-center justify-center min-h-screen bg-white p-6">
+    <header class="text-center mb-8">
+        <p class="text-sm font-medium text-gray-500">Tagline</p>
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Pricing Plan</h1>
+        <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </header>
+    <div class="flex space-x-4 mb-8">
+        <button id="monthly-button" aria-pressed="true" class="px-4 py-2 bg-black text-white font-medium rounded transition duration-300 ease-in-out hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400">Monthly</button>
+        <button id="yearly-button" aria-pressed="false" class="px-4 py-2 bg-white text-black font-medium border rounded transition duration-300 ease-in-out hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400">Yearly</button>
+    </div>
+    <article class="w-full max-w-md p-6 border rounded-lg shadow-md transform transition duration-500 ease-in-out hover:scale-105">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl md:text-2xl font-medium text-gray-900">Basic Plan</h2>
+            <i class="fas fa-cube text-2xl text-gray-500"></i>
+        </div>
+        <div class="mb-4">
+            <span id="price" class="text-4xl md:text-5xl font-bold text-gray-900 transition duration-300">19</span>
+            <span id="billing" class="text-lg md:text-xl text-gray-600">/mo</span>
+        </div>
+        <hr class="my-4">
+        <div class="mb-4">
+            <p class="text-sm font-medium text-gray-900 mb-2">Includes:</p>
+            <ul class="space-y-2">
+                <li class="flex items-center">
+                    <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+                    <span>Feature one description</span>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+                    <span>Feature two description</span>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+                    <span>Feature three description</span>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+                    <span>Feature four description</span>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+                    <span>Feature five description</span>
+                </li>
+            </ul>
+        </div>
+        <button class="w-full py-3 bg-black text-white font-medium rounded transition duration-300 ease-in-out hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400">Get Started</button>
+    </article>
+    <script>
+        const monthlyButton = document.getElementById('monthly-button');
+        const yearlyButton = document.getElementById('yearly-button');
+        const price = document.getElementById('price');
+        const billing = document.getElementById('billing');
+
+        monthlyButton.addEventListener('click', () => {
+            price.textContent = '19';
+            billing.textContent = '/mo';
+            monthlyButton.classList.add('bg-black', 'text-white');
+            monthlyButton.classList.remove('bg-gray-800');
+            monthlyButton.setAttribute('aria-pressed', 'true');
+            yearlyButton.classList.remove('bg-black', 'text-white');
+            yearlyButton.classList.add('bg-white', 'text-black');
+            yearlyButton.setAttribute('aria-pressed', 'false');
+        });
+
+        yearlyButton.addEventListener('click', () => {
+            price.textContent = '199';
+            billing.textContent = '/yr';
+            yearlyButton.classList.add('bg-black', 'text-white');
+            yearlyButton.classList.remove('bg-gray-800');
+            yearlyButton.setAttribute('aria-pressed', 'true');
+            monthlyButton.classList.remove('bg-black', 'text-white');
+            monthlyButton.classList.add('bg-white', 'text-black');
+            monthlyButton.setAttribute('aria-pressed', 'false');
+        });
+    </script>
+</section>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Pages</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+    <header class="border-b">
+        <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="text-lg font-bold">
+                <a href="#" class="transition-transform transform hover:scale-105">Logo</a>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-blue-500 transition-colors">Link One</a>
+                <a href="#" class="hover:text-blue-500 transition-colors">Link Two</a>
+                <a href="#" class="hover:text-blue-500 transition-colors">Link Three</a>
+                <a href="#" class="hover:text-blue-500 transition-colors">Link Four</a>
+                <a href="#" class="hover:text-blue-500 transition-colors">Link Five</a>
+                <a href="#" class="hover:text-blue-500 transition-colors">Link Six</a>
+                <a href="#" class="hover:text-blue-500 transition-colors">Link Seven</a>
+            </div>
+            <div class="hidden md:flex space-x-4">
+                <button class="border border-gray-300 px-4 py-2 rounded transition-colors hover:bg-gray-100">Log In</button>
+                <button class="bg-black text-white px-4 py-2 rounded transition-transform transform hover:scale-105">Get Started</button>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-black focus:outline-none" aria-label="Toggle navigation">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="flex flex-col space-y-2 p-4">
+                <a href="#" class="hover:text-blue-500 transition-colors">Link One</a>
+                <a href="#" class="hover:text-blue-500 transition-colors">Link Two</a>
+                <a href="#" class="hover:text-blue-500 transition-colors">Link Three</a>
+                <a href="#" class="hover:text-blue-500 transition-colors">Link Four</a>
+                <a href="#" class="hover:text-blue-500 transition-colors">Link Five</a>
+                <a href="#" class="hover:text-blue-500 transition-colors">Link Six</a>
+                <a href="#" class="hover:text-blue-500 transition-colors">Link Seven</a>
+                <div class="mt-4 flex space-x-4">
+                    <button class="border border-gray-300 px-4 py-2 rounded transition-colors hover:bg-gray-100">Log In</button>
+                    <button class="bg-black text-white px-4 py-2 rounded transition-transform transform hover:scale-105">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-12 px-6">
+        <h1 class="text-3xl font-bold mb-4">Terms of Service</h1>
+        <p class="mb-8">Effective date: April 3, 2023</p>
+
+        <h2 class="text-2xl font-semibold mb-2">Heading 2</h2>
+        <p class="mb-4">Dolor enim eu tortor urna sed dui</p>
+    </main>
+
+    <footer class="bg-gray-100">
+        <div class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Company</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-blue-500 transition-colors">About Us</a></li>
+                    <li><a href="#" class="hover:text-blue-500 transition-colors">Careers</a></li>
+                    <li><a href="#" class="hover:text-blue-500 transition-colors">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Legal</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-blue-500 transition-colors">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-blue-500 transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-blue-500 transition-colors">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Support</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-blue-500 transition-colors">Help Center</a></li>
+                    <li><a href="#" class="hover:text-blue-500 transition-colors">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-blue-500 transition-colors">Status</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                <form class="flex flex-col space-y-2">
+                    <input type="email" placeholder="Your email" class="px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Email address">
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">Subscribe</button>
+                </form>
+                <div class="mt-4 flex space-x-4">
+                    <a href="#" class="text-gray-600 hover:text-blue-500 transition-colors"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-blue-500 transition-colors"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-blue-500 transition-colors"><i class="fab fa-linkedin fa-lg"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-blue-500 transition-colors"><i class="fab fa-instagram fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-200">
+            <div class="container mx-auto px-6 py-4 text-center">
+                <p class="text-sm text-gray-600">&copy; 2023 Company Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('block');
+        });
+    </script>
+</body>
+</html>

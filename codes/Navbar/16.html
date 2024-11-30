@@ -1,0 +1,58 @@
+<nav class="bg-white shadow-md fixed w-full z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+                <span class="text-2xl font-cursive transition-transform duration-300 transform hover:scale-105">Logo</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-lg font-bold transition-colors duration-300 hover:text-gray-600">Link One</a>
+                <a href="#" class="text-lg font-bold transition-colors duration-300 hover:text-gray-600">Link Two</a>
+                <a href="#" class="text-lg font-bold transition-colors duration-300 hover:text-gray-600">Link Three</a>
+                <a href="#" class="text-lg font-bold transition-colors duration-300 hover:text-gray-600">Link Four</a>
+                <a href="#" class="text-lg font-bold transition-colors duration-300 hover:text-gray-600">Link Five</a>
+                <a href="#" class="text-lg font-bold transition-colors duration-300 hover:text-gray-600">Link Six</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#" class="text-sm transition-colors duration-300 hover:text-gray-600">Contact</a>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-xl transition-transform duration-300 transform hover:scale-110" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-xl transition-transform duration-300 transform hover:scale-110" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-xl transition-transform duration-300 transform hover:scale-110" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="text-xl transition-transform duration-300 transform hover:scale-110" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-xl transition-transform duration-300 transform hover:scale-110" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" class="text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-transform duration-300 transform hover:scale-110">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden transition-max-height duration-500 overflow-hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#" class="block text-lg font-bold text-center text-black rounded-md px-3 py-2 transition-colors duration-300 hover:bg-gray-100">Link One</a>
+            <a href="#" class="block text-lg font-bold text-center text-black rounded-md px-3 py-2 transition-colors duration-300 hover:bg-gray-100">Link Two</a>
+            <a href="#" class="block text-lg font-bold text-center text-black rounded-md px-3 py-2 transition-colors duration-300 hover:bg-gray-100">Link Three</a>
+            <a href="#" class="block text-lg font-bold text-center text-black rounded-md px-3 py-2 transition-colors duration-300 hover:bg-gray-100">Link Four</a>
+            <a href="#" class="block text-lg font-bold text-center text-black rounded-md px-3 py-2 transition-colors duration-300 hover:bg-gray-100">Link Five</a>
+            <a href="#" class="block text-lg font-bold text-center text-black rounded-md px-3 py-2 transition-colors duration-300 hover:bg-gray-100">Link Six</a>
+            <a href="#" class="block text-sm text-center text-black rounded-md px-3 py-2 mt-4 transition-colors duration-300 hover:bg-gray-100">Contact</a>
+            <div class="flex justify-center space-x-4 mt-2">
+                <a href="#" class="text-xl transition-transform duration-300 transform hover:scale-110" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-xl transition-transform duration-300 transform hover:scale-110" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-xl transition-transform duration-300 transform hover:scale-110" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" class="text-xl transition-transform duration-300 transform hover:scale-110" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-xl transition-transform duration-300 transform hover:scale-110" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+<script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        menu.classList.toggle('hidden');
+    });
+</script>

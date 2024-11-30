@@ -1,0 +1,45 @@
+<section class="bg-white p-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Left Column -->
+      <header class="animate-fadeIn">
+        <p class="text-sm font-light text-gray-600">Tagline</p>
+        <h1 class="text-3xl font-bold mt-2 text-gray-800">Medium length section heading goes here</h1>
+      </header>
+      <!-- Right Column -->
+      <article class="animate-fadeIn">
+        <p class="mt-4 md:mt-0 text-base text-gray-700">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+        </p>
+        <div class="mt-6">
+          <h2 class="text-lg font-bold text-gray-800">Subheading one</h2>
+          <p class="mt-2 text-base text-gray-700">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+          </p>
+        </div>
+        <div class="mt-6">
+          <h2 class="text-lg font-bold text-gray-800">Subheading two</h2>
+          <p class="mt-2 text-base text-gray-700">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+          </p>
+        </div>
+        <div class="mt-6 flex space-x-4">
+          <button class="px-4 py-2 border border-black text-black rounded transition transform hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black">Button</button>
+          <button class="px-4 py-2 border border-black text-black flex items-center rounded transition transform hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black">
+            Button <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+</style>

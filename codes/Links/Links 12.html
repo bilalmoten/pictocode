@@ -1,0 +1,96 @@
+<section class="flex flex-col items-center p-6 space-y-8 max-w-3xl mx-auto">
+  <!-- Profile Section -->
+  <header class="flex flex-col items-center space-y-4">
+    <img src="https://placehold.co/100x100/EEE/31343C" alt="Profile Picture" class="rounded-full transition-transform duration-300 ease-in-out transform hover:scale-105">
+    <h1 class="text-2xl font-bold">Name Surname</h1>
+    <p class="text-center text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="flex items-center space-x-2">
+      <i class="fas fa-map-marker-alt text-gray-500" aria-hidden="true"></i>
+      <span class="text-gray-500">Location</span>
+    </div>
+  </header>
+
+  <!-- Links Section -->
+  <nav class="w-full space-y-4">
+    <section class="space-y-2">
+      <h2 class="text-xl font-semibold">Category name</h2>
+      <a href="#" class="block p-2 border border-gray-300 rounded transition bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">Link one</a>
+      <a href="#" class="block p-2 border border-gray-300 rounded transition bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">Link two</a>
+      <a href="#" class="block p-2 border border-gray-300 rounded transition bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">Link three</a>
+      <a href="#" class="block p-2 border border-gray-300 rounded transition bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">Link four</a>
+    </section>
+  </nav>
+
+  <!-- Product Carousel Section -->
+  <section class="w-full space-y-4">
+    <h2 class="text-xl font-semibold">Category name</h2>
+    <div class="relative flex items-center space-x-2 overflow-hidden">
+      <button aria-label="Previous" class="absolute left-0 z-10 p-2 bg-white bg-opacity-75 rounded-full shadow hover:bg-opacity-100 transition">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="flex space-x-4 overflow-x-auto scroll-smooth" id="carousel">
+        <div class="flex-shrink-0 w-40 h-52 bg-gray-200 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105">
+          <img src="https://placehold.co/600x400/EEE/31343C" alt="Product Image" class="w-full h-32 object-cover rounded-t-lg">
+          <div class="p-2">
+            <p class="text-center mt-2">Product name</p>
+            <p class="text-center font-bold">$55</p>
+          </div>
+        </div>
+        <div class="flex-shrink-0 w-40 h-52 bg-gray-200 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105">
+          <img src="https://placehold.co/600x400/EEE/31343C" alt="Product Image" class="w-full h-32 object-cover rounded-t-lg">
+          <div class="p-2">
+            <p class="text-center mt-2">Product name</p>
+            <p class="text-center font-bold">$55</p>
+          </div>
+        </div>
+        <!-- Add more product items as needed -->
+      </div>
+      <button aria-label="Next" class="absolute right-0 z-10 p-2 bg-white bg-opacity-75 rounded-full shadow hover:bg-opacity-100 transition">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    <a href="#" class="block text-center p-2 border border-gray-300 rounded transition bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">Go to the store</a>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="w-full p-6 border border-gray-300 rounded-lg bg-gray-50 transition transform hover:shadow-lg">
+    <h3 class="text-lg font-semibold">Join our newsletter</h3>
+    <p class="text-gray-600">Stay updated with our latest news and offers.</p>
+    <form class="mt-4 flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2">
+      <input type="email" aria-label="Email address" placeholder="Enter your email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Social Media Icons -->
+  <footer class="flex space-x-4">
+    <a href="#" aria-label="Facebook" class="text-gray-600 hover:text-blue-600 transition text-xl focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" aria-label="Instagram" class="text-gray-600 hover:text-pink-600 transition text-xl focus:outline-none focus:ring-2 focus:ring-pink-500 rounded">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#" aria-label="YouTube" class="text-gray-600 hover:text-red-600 transition text-xl focus:outline-none focus:ring-2 focus:ring-red-500 rounded">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="#" aria-label="LinkedIn" class="text-gray-600 hover:text-blue-700 transition text-xl focus:outline-none focus:ring-2 focus:ring-blue-700 rounded">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="#" aria-label="TikTok" class="text-gray-600 hover:text-red-400 transition text-xl focus:outline-none focus:ring-2 focus:ring-red-400 rounded">
+      <i class="fab fa-tiktok"></i>
+    </a>
+  </footer>
+</section>
+<script>
+  const carousel = document.getElementById('carousel');
+  const prevButton = document.querySelector('button[aria-label="Previous"]');
+  const nextButton = document.querySelector('button[aria-label="Next"]');
+
+  prevButton.addEventListener('click', () => {
+    carousel.scrollBy({ left: -160, behavior: 'smooth' });
+  });
+
+  nextButton.addEventListener('click', () => {
+    carousel.scrollBy({ left: 160, behavior: 'smooth' });
+  });
+</script>

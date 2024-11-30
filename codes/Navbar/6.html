@@ -1,0 +1,130 @@
+<div class="bg-white shadow-md">
+  <header class="container mx-auto flex justify-between items-center p-4" role="banner">
+    <div class="text-2xl font-bold text-gray-800">Logo</div>
+    <nav class="hidden md:flex space-x-6" aria-label="Primary Navigation">
+      <a href="#" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">Link One</a>
+      <a href="#" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">Link Two</a>
+      <a href="#" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">Link Three</a>
+      <div class="relative group">
+        <button class="flex items-center text-gray-600 hover:text-gray-800 transition-colors duration-300 focus:outline-none" aria-haspopup="true" aria-expanded="false">
+          Link Four <i class="fas fa-chevron-down ml-1"></i>
+        </button>
+        <div class="absolute left-0 mt-2 w-80 bg-gray-100 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible">
+          <div class="grid grid-cols-2 p-6 gap-4">
+            <div>
+              <h4 class="text-lg font-semibold text-gray-800">Page group one</h4>
+              <ul class="mt-2 space-y-2">
+                <li><a href="#" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">Page One</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Two</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Three</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Four</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold text-gray-800">Page group two</h4>
+              <ul class="mt-2 space-y-2">
+                <li><a href="#" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Five</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Six</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Seven</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Eight</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold text-gray-800">Page group three</h4>
+              <ul class="mt-2 space-y-2">
+                <li><a href="#" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Nine</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Ten</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Eleven</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Twelve</a></li>
+              </ul>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-lg">
+              <h4 class="text-lg font-semibold text-gray-800">Featured from Blog</h4>
+              <img src="https://placehold.co/600x400/EEE/31343C" alt="Blog" class="w-full h-auto my-2 rounded-md">
+              <h5 class="text-md font-semibold text-gray-700">Article Title</h5>
+              <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur elit</p>
+              <a href="#" class="text-blue-500 hover:underline transition-colors duration-300">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="hidden md:flex space-x-3">
+      <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded transition-colors duration-300">Button</button>
+      <button class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors duration-300">Button</button>
+    </div>
+    <div class="md:hidden">
+      <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-800 focus:outline-none transition-colors duration-300" aria-label="Toggle menu" aria-expanded="false">
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+    </div>
+  </header>
+  <nav id="mobile-menu" class="hidden md:hidden bg-gray-50 shadow-inner" aria-label="Mobile Navigation">
+    <div class="px-4 pt-4 pb-2 space-y-2">
+      <a href="#" class="block text-gray-600 hover:text-gray-800 transition-colors duration-300">Link One</a>
+      <a href="#" class="block text-gray-600 hover:text-gray-800 transition-colors duration-300">Link Two</a>
+      <a href="#" class="block text-gray-600 hover:text-gray-800 transition-colors duration-300">Link Three</a>
+      <div>
+        <button class="w-full flex justify-between items-center text-gray-600 hover:text-gray-800 transition-colors duration-300 focus:outline-none" aria-haspopup="true" aria-expanded="false">
+          Link Four <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="pl-4 mt-2 space-y-2 hidden">
+          <div>
+            <h4 class="text-md font-semibold text-gray-800">Page group one</h4>
+            <ul class="mt-1 space-y-1">
+              <li><a href="#" class="block text-gray-600 hover:text-gray-800 transition-colors duration-300">Page One</a></li>
+              <li><a href="#" class="block text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Two</a></li>
+              <li><a href="#" class="block text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Three</a></li>
+              <li><a href="#" class="block text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Four</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-md font-semibold text-gray-800">Page group two</h4>
+            <ul class="mt-1 space-y-1">
+              <li><a href="#" class="block text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Five</a></li>
+              <li><a href="#" class="block text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Six</a></li>
+              <li><a href="#" class="block text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Seven</a></li>
+              <li><a href="#" class="block text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Eight</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-md font-semibold text-gray-800">Page group three</h4>
+            <ul class="mt-1 space-y-1">
+              <li><a href="#" class="block text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Nine</a></li>
+              <li><a href="#" class="block text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Ten</a></li>
+              <li><a href="#" class="block text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Eleven</a></li>
+              <li><a href="#" class="block text-gray-600 hover:text-gray-800 transition-colors duration-300">Page Twelve</a></li>
+            </ul>
+          </div>
+          <div class="bg-gray-200 p-4 rounded-lg mt-4">
+            <h4 class="text-lg font-semibold text-gray-800">Featured from Blog</h4>
+            <img src="https://placehold.co/600x400/EEE/31343C" alt="Blog" class="w-full h-auto my-2 rounded-md">
+            <h5 class="text-md font-semibold text-gray-700">Article Title</h5>
+            <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur elit</p>
+            <a href="#" class="text-blue-500 hover:underline transition-colors duration-300">Read more</a>
+          </div>
+        </div>
+      </div>
+      <button class="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded transition-colors duration-300">Button</button>
+      <button class="w-full bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors duration-300">Button</button>
+    </div>
+  </nav>
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('hidden');
+    });
+
+    const dropdownButtons = document.querySelectorAll('nav button[aria-haspopup="true"]');
+    dropdownButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const dropdown = this.nextElementSibling;
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        dropdown.classList.toggle('hidden');
+      });
+    });
+  </script>
+</div>

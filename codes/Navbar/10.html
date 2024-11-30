@@ -1,0 +1,76 @@
+<section>
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <div class="text-lg font-bold text-gray-800 hover:opacity-90 transition-opacity">
+        <a href="#" aria-label="Homepage">Logo</a>
+      </div>
+      <nav>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="#" class="text-gray-700 hover:text-black transition-colors">Link One</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-black transition-colors">Link Two</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-black transition-colors">Link Three</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-black transition-colors">Link Four</a></li>
+          <li><button class="bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-300 transition-colors">Button</button></li>
+          <li><button class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors">Button</button></li>
+        </ul>
+      </nav>
+      <div class="md:hidden">
+        <button id="menu-button" class="text-black focus:outline-none focus:ring-2 focus:ring-gray-400" aria-label="Toggle menu" aria-expanded="false">
+          <i class="fas fa-bars fa-lg transition-transform duration-200"></i>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-menu" class="hidden md:hidden bg-white p-4 transition-height duration-300 ease-in-out" aria-label="Mobile menu">
+      <ul>
+        <li><a href="#" class="block text-gray-700 py-2 hover:text-black transition-colors">Link One</a></li>
+        <li><a href="#" class="block text-gray-700 py-2 hover:text-black transition-colors">Link Two</a></li>
+        <li><a href="#" class="block text-gray-700 py-2 hover:text-black transition-colors">Link Three</a></li>
+        <li><a href="#" class="block text-gray-700 py-2 hover:text-black transition-colors">Link Four</a></li>
+      </ul>
+      <div class="py-2">
+        <button id="categories-button" class="w-full text-left text-gray-700 py-2 flex justify-between items-center hover:text-black transition-colors" aria-expanded="false" aria-controls="categories-menu">
+          <span>Blog categories</span>
+          <i class="fas fa-chevron-down transition-transform duration-200"></i>
+        </button>
+        <ul id="categories-menu" class="hidden pl-4">
+          <li><a href="#" class="block text-gray-700 py-1 hover:text-black transition-colors">Category One</a></li>
+          <li><a href="#" class="block text-gray-700 py-1 hover:text-black transition-colors">Category Two</a></li>
+          <li><a href="#" class="block text-gray-700 py-1 hover:text-black transition-colors">Category Three</a></li>
+          <li><a href="#" class="block text-gray-700 py-1 hover:text-black transition-colors">Category Four</a></li>
+          <li><a href="#" class="block text-gray-700 py-1 hover:text-black transition-colors">Category Five</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
+    <article class="flex flex-col md:flex-row bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://placehold.co/600x400/EEE/31343C" alt="Article Image" class="w-full md:w-1/3 object-cover">
+      <div class="p-4 flex flex-col justify-between">
+        <div>
+          <h3 class="font-bold text-lg text-gray-800 hover:text-black transition-colors">Article Title</h3>
+          <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <a href="#" class="mt-4 text-blue-500 hover:underline transition-colors">Read more</a>
+      </div>
+    </article>
+    <!-- Repeat the above block for more articles -->
+  </main>
+</section>
+<script>
+  document.getElementById('menu-button').addEventListener('click', function() {
+    const menu = document.getElementById('mobile-menu');
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    menu.classList.toggle('hidden');
+  });
+
+  document.getElementById('categories-button').addEventListener('click', function() {
+    const submenu = document.getElementById('categories-menu');
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    submenu.classList.toggle('hidden');
+    this.querySelector('i').classList.toggle('fa-chevron-up');
+    this.querySelector('i').classList.toggle('fa-chevron-down');
+  });
+</script>

@@ -1,0 +1,40 @@
+<section class="max-w-4xl mx-auto p-6">
+  <h1 class="text-3xl font-bold mb-4">FAQs</h1>
+  <p class="mb-8 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+  
+  <div class="space-y-4">
+    <article class="border rounded-lg overflow-hidden transition-shadow hover:shadow-md">
+      <button class="w-full flex justify-between items-center p-4 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-expanded="false">
+        <span class="font-semibold text-lg">Question text goes here</span>
+        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+      </button>
+      <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-gray-50 p-4">
+        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+      </div>
+    </article>
+    <!-- Repeat above block for more questions -->
+  </div>
+
+  <div class="mt-12 text-center">
+    <h2 class="text-2xl font-bold mb-2">Still have questions?</h2>
+    <p class="mb-4 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <a href="mailto:contact@example.com" class="inline-block bg-blue-500 text-white px-6 py-3 rounded-lg transition bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Contact</a>
+  </div>
+
+  <script>
+    document.querySelectorAll('article button').forEach(button => {
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !expanded);
+        button.querySelector('i').classList.toggle('fa-chevron-up', !expanded);
+        button.querySelector('i').classList.toggle('fa-chevron-down', expanded);
+        const content = button.nextElementSibling;
+        if (!expanded) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+          content.style.maxHeight = null;
+        }
+      });
+    });
+  </script>
+</section>

@@ -1,0 +1,193 @@
+<div class="min-h-screen bg-white text-black">
+    <!-- Header -->
+    <header class="flex justify-between items-center p-4 border-b shadow-md">
+        <div class="text-lg font-bold">Logo</div>
+        <nav class="hidden md:flex space-x-4">
+            <a href="#" class="relative group text-gray-700 hover:text-black transition-colors duration-300">
+                Link One
+                <span class="absolute left-0 -bottom-1 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300"></span>
+            </a>
+            <a href="#" class="relative group text-gray-700 hover:text-black transition-colors duration-300">
+                Link Two
+                <span class="absolute left-0 -bottom-1 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x100 transform transition-transform duration-300"></span>
+            </a>
+            <a href="#" class="relative group text-gray-700 hover:text-black transition-colors duration-300">
+                Link Three
+                <span class="absolute left-0 -bottom-1 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x100 transform transition-transform duration-300"></span>
+            </a>
+            <a href="#" class="relative group text-gray-700 hover:text-black transition-colors duration-300">
+                Link Four
+                <span class="absolute left-0 -bottom-1 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x100 transform transition-transform duration-300"></span>
+            </a>
+            <div class="relative group">
+                <button class="flex items-center text-gray-700 hover:text-black transition-colors duration-300 focus:outline-none" aria-haspopup="true" aria-expanded="false">
+                    Link Five
+                    <i class="fas fa-chevron-down ml-1 transition-transform duration-300 group-hover:rotate-180"></i>
+                </button>
+                <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                    <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors duration-300">Link Six</a>
+                    <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors duration-300">Link Seven</a>
+                </div>
+            </div>
+        </nav>
+        <div class="hidden md:flex space-x-2">
+            <button class="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 transition-colors duration-300">Log in</button>
+            <button class="px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition-colors duration-300">Get started</button>
+        </div>
+        <button class="md:hidden text-2xl text-gray-700 hover:text-black transition-colors duration-300" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden p-4 border-b transition-max-height duration-300 overflow-hidden">
+        <nav class="space-y-2">
+            <a href="#" class="block text-gray-700 hover:text-black transition-colors duration-300">Link One</a>
+            <a href="#" class="block text-gray-700 hover:text-black transition-colors duration-300">Link Two</a>
+            <a href="#" class="block text-gray-700 hover:text-black transition-colors duration-300">Link Three</a>
+            <a href="#" class="block text-gray-700 hover:text-black transition-colors duration-300">Link Four</a>
+            <div class="relative">
+                <button class="flex items-center justify-between w-full text-gray-700 hover:text-black transition-colors duration-300 focus:outline-none" aria-haspopup="true" aria-expanded="false">
+                    Link Five
+                    <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                </button>
+                <div class="mt-2 pl-4 hidden">
+                    <a href="#" class="block text-gray-700 hover:text-black transition-colors duration-300">Link Six</a>
+                    <a href="#" class="block text-gray-700 hover:text-black transition-colors duration-300">Link Seven</a>
+                </div>
+            </div>
+            <select class="w-full border p-2 mt-4 rounded-md">
+                <option>Table of contents</option>
+                <option>Heading 2</option>
+                <option>Heading 3</option>
+                <option>Heading 4</option>
+                <option>Heading 5</option>
+                <option>Heading 6</option>
+            </select>
+            <div class="mt-4 space-y-2">
+                <button class="w-full px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 transition-colors duration-300">Log in</button>
+                <button class="w-full px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition-colors duration-300">Get started</button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Content -->
+    <main class="max-w-4xl mx-auto p-4">
+        <h1 class="text-4xl font-bold mb-4 animate-fade-in">Privacy Policy</h1>
+        <p class="text-sm mb-6">Effective date: April 3, 2023</p>
+        <aside class="bg-gray-100 p-4 mb-6 rounded-md shadow-sm">
+            <h2 class="text-2xl font-semibold mb-3">Table of contents</h2>
+            <ul class="space-y-2">
+                <li><a href="#" class="text-blue-600 hover:underline transition-colors duration-300">Heading 2</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline transition-colors duration-300">Heading 3</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline transition-colors duration-300">Heading 4</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline transition-colors duration-300">Heading 5</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline transition-colors duration-300">Heading 6</a></li>
+            </ul>
+        </aside>
+        <article class="space-y-6">
+            <section>
+                <h2 class="text-2xl font-semibold">Heading 2</h2>
+                <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            </section>
+            <section>
+                <h2 class="text-2xl font-semibold">Heading 3</h2>
+                <p class="text-base">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+            </section>
+            <section>
+                <h2 class="text-2xl font-semibold">Heading 4</h2>
+                <p class="text-base">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            </section>
+            <section>
+                <h2 class="text-2xl font-semibold">Heading 5</h2>
+                <p class="text-base">Duis aute irure dolor in reprehenderit in voluptate velit esse...</p>
+            </section>
+            <section>
+                <h2 class="text-2xl font-semibold">Heading 6</h2>
+                <p class="text-base">Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat...</p>
+            </section>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Newsletter -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Subscribe to our newsletter</h3>
+                <form action="#" method="POST" class="flex flex-col">
+                    <label for="email" class="sr-only">Email address</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required class="p-2 rounded-md text-gray-800 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button type="submit" class="px-4 py-2 bg-blue-600 rounded-md hover:bg-blue-700 transition-colors duration-300">Subscribe</button>
+                </form>
+            </div>
+            <!-- Links -->
+            <div class="md:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div>
+                    <h4 class="text-lg font-semibold mb-2">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">About Us</a></li>
+                        <li><a href="#" class="hover:underline">Careers</a></li>
+                        <li><a href="#" class="hover:underline">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-2">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Blog</a></li>
+                        <li><a href="#" class="hover:underline">Help Center</a></li>
+                        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-2">Social</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-sm text-gray-500">
+            &copy; 2023 Your Company. All rights reserved.
+        </div>
+    </footer>
+</div>
+
+<style>
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.animate-fade-in {
+    animation: fade-in 1s ease-in-out;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuButton = document.querySelector('header button[aria-label="Toggle menu"]');
+    const mobileMenu = document.querySelector('.md:hidden.hidden');
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    const dropdownButtons = document.querySelectorAll('div.relative.group > button');
+    dropdownButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const dropdown = button.nextElementSibling;
+            dropdown.classList.toggle('hidden');
+        });
+    });
+});
+</script>

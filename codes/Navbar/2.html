@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enhanced Navbar</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#" class="text-lg font-bold transition-transform transform hover:scale-105">Logo</a>
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="#" class="text-gray-600 hover:text-gray-800 transition-colors">Link One</a>
+        <a href="#" class="text-gray-600 hover:text-gray-800 transition-colors">Link Two</a>
+        <a href="#" class="text-gray-600 hover:text-gray-800 transition-colors">Link Three</a>
+        <div class="relative group">
+          <button class="flex items-center text-gray-600 hover:text-gray-800 transition-colors focus:outline-none" aria-haspopup="true" aria-expanded="false">
+            Link Four <i class="fas fa-chevron-down ml-1 transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          <div class="absolute left-0 mt-2 w-40 bg-white border border-gray-200 shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible">
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">Link Five</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">Link Six</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">Link Seven</a>
+          </div>
+        </div>
+      </div>
+      <button class="hidden md:block bg-black text-white px-4 py-2 rounded-md shadow-md hover:bg-gray-800 transition-colors">Button</button>
+      <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none" aria-label="Toggle menu">
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden bg-white hidden transition-max-height duration-500 overflow-hidden">
+      <div class="flex flex-col space-y-4 p-4">
+        <a href="#" class="text-gray-600 hover:text-gray-800 transition-colors">Link One</a>
+        <a href="#" class="text-gray-600 hover:text-gray-800 transition-colors">Link Two</a>
+        <a href="#" class="text-gray-600 hover:text-gray-800 transition-colors">Link Three</a>
+        <div class="relative">
+          <button class="flex items-center justify-between w-full text-gray-600 hover:text-gray-800 transition-colors focus:outline-none" id="dropdown-btn" aria-haspopup="true" aria-expanded="false">
+            <span>Link Four</span>
+            <i class="fas fa-chevron-down transition-transform duration-200"></i>
+          </button>
+          <div class="mt-2 w-full bg-white border border-gray-200 shadow-lg rounded-md hidden">
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">Link Five</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">Link Six</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">Link Seven</a>
+          </div>
+        </div>
+        <button class="bg-black text-white px-4 py-2 rounded-md shadow-md hover:bg-gray-800 transition-colors">Button</button>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.innerHTML = mobileMenu.classList.contains('hidden') ? '<i class="fas fa-bars fa-lg"></i>' : '<i class="fas fa-times fa-lg"></i>';
+    });
+
+    const dropdownBtn = document.getElementById('dropdown-btn');
+    const dropdownMenu = dropdownBtn.nextElementSibling;
+
+    dropdownBtn.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('hidden');
+      dropdownBtn.querySelector('i').classList.toggle('rotate-180');
+    });
+  </script>
+</body>
+</html>

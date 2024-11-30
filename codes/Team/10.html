@@ -1,0 +1,91 @@
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" aria-labelledby="team-section-title">
+  <header class="text-center">
+    <p class="text-sm uppercase text-gray-500">Tagline</p>
+    <h2 id="team-section-title" class="text-3xl font-bold text-gray-900 mt-2">Our team</h2>
+    <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </header>
+  
+  <!-- Grid for desktop -->
+  <div class="mt-12 hidden lg:grid gap-8 lg:grid-cols-3">
+    <article class="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+      <img src="https://placehold.co/600x400/EEE/31343C" alt="Full name - Job title" class="w-full">
+      <div class="p-6">
+        <h3 class="text-lg font-bold text-gray-900">Full name</h3>
+        <p class="text-sm text-gray-500">Job title</p>
+        <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+        <div class="mt-4 flex space-x-3">
+          <a href="#" class="text-gray-500 hover:text-gray-900 transition duration-300" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 transition duration-300" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 transition duration-300" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </article>
+    <!-- Repeat for other team members -->
+  </div>
+  
+  <!-- Carousel for mobile -->
+  <div class="mt-12 lg:hidden relative">
+    <div class="overflow-hidden">
+      <div class="flex transition-transform duration-500" id="carousel">
+        <article class="bg-white shadow-lg rounded-lg overflow-hidden flex-shrink-0 w-full transform transition duration-300 hover:scale-105">
+          <img src="https://placehold.co/600x400/EEE/31343C" alt="Full name - Job title" class="w-full">
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900">Full name</h3>
+            <p class="text-sm text-gray-500">Job title</p>
+            <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+            <div class="mt-4 flex space-x-3">
+              <a href="#" class="text-gray-500 hover:text-gray-900 transition duration-300" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="text-gray-500 hover:text-gray-900 transition duration-300" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-gray-500 hover:text-gray-900 transition duration-300" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </article>
+        <!-- Repeat for other team members -->
+      </div>
+    </div>
+    <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-900 transition duration-300" aria-label="Previous">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-900 transition duration-300" aria-label="Next">
+      <i class="fas fa-arrow-right"></i>
+    </button>
+    <div class="mt-4 flex justify-center space-x-2">
+      <span class="h-2 w-2 bg-gray-500 rounded-full"></span>
+      <span class="h-2 w-2 bg-gray-300 rounded-full"></span>
+      <span class="h-2 w-2 bg-gray-300 rounded-full"></span>
+    </div>
+  </div>
+  
+  <div class="mt-12 text-center">
+    <h3 class="text-xl font-bold text-gray-900">We're hiring!</h3>
+    <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <button class="mt-4 px-4 py-2 bg-white border border-gray-300 rounded-md text-gray-900 hover:bg-gray-100 transition duration-300">Open positions</button>
+  </div>
+  
+  <script>
+    const carousel = document.getElementById('carousel');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    let currentIndex = 0;
+    const totalSlides = carousel.children.length;
+
+    prev.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    });
+
+    next.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateCarousel();
+    });
+
+    function updateCarousel() {
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+      const dots = document.querySelectorAll('.flex.mt-4 .h-2');
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('bg-gray-500', idx === currentIndex);
+        dot.classList.toggle('bg-gray-300', idx !== currentIndex);
+      });
+    }
+  </script>
+</section>

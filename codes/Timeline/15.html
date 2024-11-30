@@ -1,0 +1,73 @@
+<section class="container mx-auto px-4 py-8">
+  <div class="flex flex-col md:flex-row items-center md:items-start">
+    <!-- Text Content -->
+    <article class="md:w-1/2 mb-8 md:mb-0 md:pr-8 animate-fade-in">
+      <p class="text-lg font-bold text-gray-800">Date</p>
+      <h2 class="text-3xl font-bold mt-2 text-gray-900">Long heading is what you see here in this feature section</h2>
+      <p class="mt-4 text-gray-600">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+      <div class="mt-6 flex items-center space-x-4">
+        <button class="border border-gray-800 text-gray-800 py-2 px-4 rounded transition transform hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-800">
+          <i class="fas fa-info-circle mr-2"></i>Button
+        </button>
+        <button class="flex items-center text-gray-800 transition transform hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-800">
+          Button <i class="fas fa-arrow-right ml-2 transition-transform transform hover:translate-x-1"></i>
+        </button>
+      </div>
+    </article>
+    <!-- Image Placeholder -->
+    <figure class="md:w-1/2">
+      <img src="https://placehold.co/600x400/EEE/31343C" alt="Placeholder Image" class="w-full h-auto rounded shadow-lg transition transform hover:scale-105">
+    </figure>
+  </div>
+  <!-- Timeline -->
+  <nav aria-label="Timeline" class="flex justify-between items-center mt-8 overflow-x-auto">
+    <ul class="flex space-x-4">
+      <li class="flex items-center">
+        <button class="w-8 h-8 bg-black rounded-full text-white flex items-center justify-center transition transform hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black" aria-current="step">
+          <i class="fas fa-check"></i>
+        </button>
+        <span class="sr-only">Current step</span>
+      </li>
+      <li class="flex items-center">
+        <div class="h-1 bg-black flex-grow mx-2 transition"></div>
+        <button class="w-8 h-8 bg-gray-400 rounded-full text-white flex items-center justify-center transition transform hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400">
+          <i class="fas fa-circle"></i>
+        </button>
+        <span class="sr-only">Step 2</span>
+      </li>
+      <li class="flex items-center">
+        <div class="h-1 bg-gray-400 flex-grow mx-2 transition"></div>
+        <button class="w-8 h-8 bg-gray-400 rounded-full text-white flex items-center justify-center transition transform hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400">
+          <i class="fas fa-circle"></i>
+        </button>
+        <span class="sr-only">Step 3</span>
+      </li>
+      <li class="flex items-center">
+        <div class="h-1 bg-gray-400 flex-grow mx-2 transition"></div>
+        <button class="w-8 h-8 bg-gray-400 rounded-full text-white flex items-center justify-center transition transform hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400">
+          <i class="fas fa-circle"></i>
+        </button>
+        <span class="sr-only">Step 4</span>
+      </li>
+      <li class="flex items-center">
+        <div class="h-1 bg-gray-400 flex-grow mx-2 transition"></div>
+        <button class="w-8 h-8 bg-gray-400 rounded-full text-white flex items-center justify-center transition transform hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400">
+          <i class="fas fa-circle"></i>
+        </button>
+        <span class="sr-only">Step 5</span>
+      </li>
+    </ul>
+  </nav>
+</section>
+
+<style>
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+</style>

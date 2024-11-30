@@ -1,0 +1,71 @@
+<section class="flex flex-col items-center justify-center min-h-screen bg-white px-4 py-8">
+    <header class="text-center mb-12">
+        <p class="text-sm uppercase text-gray-700">Tagline</p>
+        <h1 class="text-3xl font-bold mt-2 animate-fadeIn">Pricing Plan</h1>
+        <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </header>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
+        <article class="border rounded-lg p-6 max-w-sm mx-auto shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl" aria-labelledby="basic-plan">
+            <h2 id="basic-plan" class="text-xl font-bold mb-2">Basic Plan</h2>
+            <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet</p>
+            <div class="text-4xl font-bold mb-2">$19<span class="text-lg">/mo</span></div>
+            <p class="text-gray-600 mb-6">or $199 yearly</p>
+            <button class="bg-black text-white py-2 px-4 w-full mb-4 rounded transition duration-300 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600" aria-label="Get started with Basic Plan">Get started</button>
+            <ul class="space-y-3">
+                <li class="flex items-center">
+                    <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+                    <span>Feature text goes here</span>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+                    <span>Feature text goes here</span>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+                    <span>Feature text goes here</span>
+                </li>
+            </ul>
+        </article>
+        <article class="border rounded-lg p-6 max-w-sm mx-auto shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl" aria-labelledby="business-plan">
+            <h2 id="business-plan" class="text-xl font-bold mb-2">Business Plan</h2>
+            <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet</p>
+            <div class="text-4xl font-bold mb-2">$29<span class="text-lg">/mo</span></div>
+            <p class="text-gray-600 mb-6">or $299 yearly</p>
+            <button class="bg-black text-white py-2 px-4 w-full mb-4 rounded transition duration-300 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600" aria-label="Get started with Business Plan">Get started</button>
+            <ul class="space-y-3">
+                <li class="flex items-center">
+                    <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+                    <span>Feature text goes here</span>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+                    <span>Feature text goes here</span>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+                    <span>Feature text goes here</span>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>
+                    <span>Feature text goes here</span>
+                </li>
+            </ul>
+        </article>
+    </div>
+</section>
+
+<style>
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+    animation: fadeIn 1s ease-out forwards;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Any essential JavaScript functionality can be added here
+});
+</script>

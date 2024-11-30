@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Navbar</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('opacity-100');
+        }
+    </script>
+</head>
+<body>
+    <header class="bg-white border-b border-gray-200">
+        <div class="container mx-auto flex justify-between items-center p-4 transition-transform duration-300">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold transition-transform duration-300 hover:scale-105">Logo</div>
+                <nav class="hidden md:flex space-x-6 ml-8" aria-label="Primary Navigation">
+                    <a href="#" class="text-black font-semibold hover:text-gray-700 transition-colors duration-300">Link One</a>
+                    <a href="#" class="text-black font-semibold hover:text-gray-700 transition-colors duration-300">Link Two</a>
+                    <a href="#" class="text-black font-semibold hover:text-gray-700 transition-colors duration-300">Link Three</a>
+                    <a href="#" class="text-black font-semibold hover:text-gray-700 transition-colors duration-300">Link Four</a>
+                </nav>
+            </div>
+            <div class="hidden md:flex space-x-3">
+                <button class="px-4 py-2 border border-black rounded transition-transform duration-300 hover:bg-gray-100 focus:outline-none">Button</button>
+                <button class="px-4 py-2 bg-black text-white rounded transition-transform duration-300 hover:bg-gray-800 focus:outline-none">Button</button>
+            </div>
+            <div class="md:hidden">
+                <button onclick="toggleMobileMenu()" aria-label="Toggle Menu" class="text-black focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="hidden md:block bg-white border-t border-gray-200">
+            <div class="container mx-auto grid grid-cols-4 gap-6 p-6 transition-opacity duration-300">
+                <div>
+                    <h2 class="font-semibold text-lg mb-2">Page group one</h2>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page One</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Two</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Three</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Four</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-lg mb-2">Page group two</h2>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Five</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Six</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Seven</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Eight</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-lg mb-2">Page group three</h2>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Nine</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Ten</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Eleven</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Twelve</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-lg mb-2">Page group four</h2>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Thirteen</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Fourteen</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Fifteen</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Sixteen</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-white p-6 z-50 opacity-0 transition-opacity duration-300">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold transition-transform duration-300">Logo</div>
+                <button onclick="toggleMobileMenu()" aria-label="Close Menu" class="text-black focus:outline-none">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <nav class="mt-6 space-y-4" aria-label="Mobile Navigation">
+                <a href="#" class="block text-black font-semibold hover:text-gray-700 transition-colors duration-300">Link One</a>
+                <a href="#" class="block text-black font-semibold hover:text-gray-700 transition-colors duration-300">Link Two</a>
+                <a href="#" class="block text-black font-semibold hover:text-gray-700 transition-colors duration-300">Link Three</a>
+                <a href="#" class="block text-black font-semibold hover:text-gray-700 transition-colors duration-300">Link Four</a>
+                <div class="mt-6">
+                    <h2 class="font-semibold text-lg">Page group one</h2>
+                    <ul class="mt-2 space-y-1">
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page One</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Two</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Three</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Four</a></li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h2 class="font-semibold text-lg">Page group two</h2>
+                    <ul class="mt-2 space-y-1">
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Five</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Six</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Seven</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Eight</a></li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h2 class="font-semibold text-lg">Page group three</h2>
+                    <ul class="mt-2 space-y-1">
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Nine</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Ten</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Eleven</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Twelve</a></li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h2 class="font-semibold text-lg">Page group four</h2>
+                    <ul class="mt-2 space-y-1">
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Thirteen</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Fourteen</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Fifteen</a></li>
+                        <li><a href="#" class="block text-black hover:text-gray-700 transition-colors duration-300">Page Sixteen</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="mt-6">
+                <h2 class="font-semibold text-lg">Ready to get started?</h2>
+                <a href="#" class="text-blue-500 hover:underline transition-colors duration-300">Sign up for free</a>
+                <div class="mt-4 space-y-2">
+                    <button class="w-full px-4 py-2 border border-black rounded transition-transform duration-300 hover:bg-gray-100 focus:outline-none">Button</button>
+                    <button class="w-full px-4 py-2 bg-black text-white rounded transition-transform duration-300 hover:bg-gray-800 focus:outline-none">Button</button>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

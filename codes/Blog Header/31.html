@@ -1,0 +1,55 @@
+<div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="text-center mb-8 animate-fade-in">
+        <p class="text-sm font-medium text-gray-500">Blog</p>
+        <h1 class="text-3xl font-bold mt-2 transition-transform duration-300 hover:scale-105">Short heading goes here</h1>
+        <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="mt-4">
+            <label for="filter" class="sr-only">Filter Posts</label>
+            <select id="filter" class="border border-gray-300 rounded-md p-2 transition-colors duration-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
+                <option>All posts</option>
+                <!-- Other options -->
+            </select>
+        </div>
+    </header>
+    <main class="space-y-8">
+        <article class="flex flex-col md:flex-row items-start md:space-x-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-4">
+            <img src="https://placehold.co/600x400/EEE/31343C" alt="Blog post image" class="w-full md:w-1/4 mb-4 md:mb-0 rounded object-cover transition-transform duration-300 hover:scale-105" loading="lazy">
+            <div>
+                <p class="text-sm text-gray-500">Category</p>
+                <h2 class="text-xl font-bold mt-1 transition-colors duration-300 hover:text-blue-500">Blog title heading will go here</h2>
+                <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim...</p>
+                <div class="flex items-center mt-4 text-sm text-gray-500 space-x-4">
+                    <span class="flex items-center"><i class="fas fa-user-circle mr-1" aria-hidden="true"></i> <span class="sr-only">Author:</span> Full name</span>
+                    <span class="flex items-center"><i class="fas fa-calendar-alt mr-1" aria-hidden="true"></i> <span class="sr-only">Date:</span> 11 Jan 2022</span>
+                    <span class="flex items-center"><i class="fas fa-clock mr-1" aria-hidden="true"></i> <span class="sr-only">Read time:</span> 5 min read</span>
+                </div>
+            </div>
+        </article>
+        <article class="flex flex-col md:flex-row items-start md:space-x-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-4">
+            <img src="https://placehold.co/600x400/EEE/31343C" alt="Blog post image" class="w-full md:w-1/4 mb-4 md:mb-0 rounded object-cover transition-transform duration-300 hover:scale-105" loading="lazy">
+            <div>
+                <p class="text-sm text-gray-500">Category</p>
+                <h2 class="text-xl font-bold mt-1 transition-colors duration-300 hover:text-blue-500">Another blog title heading</h2>
+                <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim...</p>
+                <div class="flex items-center mt-4 text-sm text-gray-500 space-x-4">
+                    <span class="flex items-center"><i class="fas fa-user-circle mr-1" aria-hidden="true"></i> <span class="sr-only">Author:</span> Full name</span>
+                    <span class="flex items-center"><i class="fas fa-calendar-alt mr-1" aria-hidden="true"></i> <span class="sr-only">Date:</span> 11 Jan 2022</span>
+                    <span class="flex items-center"><i class="fas fa-clock mr-1" aria-hidden="true"></i> <span class="sr-only">Read time:</span> 5 min read</span>
+                </div>
+            </div>
+        </article>
+        <!-- Repeat the article block for more posts -->
+    </main>
+</div>
+
+<style>
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.animate-fade-in {
+    animation: fade-in 1s ease-in-out;
+}
+</style>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

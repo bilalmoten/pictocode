@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enhanced Layout</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+  <section class="flex flex-col lg:flex-row items-start lg:items-center justify-between p-8 bg-white">
+    <!-- Text Section -->
+    <article class="lg:w-1/2 space-y-6">
+      <p class="text-sm uppercase font-light tracking-wide text-gray-600">Tagline</p>
+      <h1 class="text-4xl lg:text-5xl font-bold text-gray-800">Medium length section heading goes here</h1>
+      <p class="text-base text-gray-700">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+      <div class="flex space-x-4">
+        <button class="px-6 py-3 border border-black text-black font-medium rounded-md transition transform hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black">Button</button>
+        <button class="px-6 py-3 flex items-center border border-transparent text-black font-medium rounded-md bg-gray-200 transition transform hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400">
+          Button <span class="ml-2 transition-transform transform group-hover:translate-x-1">&rarr;</span>
+        </button>
+      </div>
+    </article>
+    
+    <!-- Card Section -->
+    <div class="lg:w-1/2 mt-8 lg:mt-0 flex justify-center lg:justify-end">
+      <div class="relative space-y-4">
+        <article class="bg-white border border-gray-300 p-6 shadow-lg rounded-md transition transform hover:-translate-y-1 hover:shadow-xl">
+          <div class="flex items-center space-x-4">
+            <i class="fas fa-cube text-2xl text-blue-500" aria-hidden="true"></i>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-800">Subheading one</h3>
+              <p class="text-sm text-gray-700">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+              </p>
+            </div>
+          </div>
+        </article>
+        <article class="bg-white border border-gray-300 p-6 shadow-lg rounded-md transition transform hover:-translate-y-1 hover:shadow-xl">
+          <div class="flex items-center space-x-4">
+            <i class="fas fa-cube text-2xl text-green-500" aria-hidden="true"></i>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-800">Subheading two</h3>
+              <p class="text-sm text-gray-700">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

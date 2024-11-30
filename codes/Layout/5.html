@@ -1,0 +1,47 @@
+<section class="flex flex-col md:flex-row items-start md:items-center justify-between p-8 md:p-16 bg-white animate-fade-in">
+  <article class="md:w-1/2 space-y-4">
+    <p class="text-sm uppercase text-gray-500">Tagline</p>
+    <h2 class="text-3xl font-bold text-gray-900 transition-transform duration-300 hover:scale-105">Medium length section heading goes here</h2>
+    <p class="text-base text-gray-700">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+    </p>
+    <div class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
+      <div>
+        <h3 class="text-lg font-semibold text-gray-800">Subheading one</h3>
+        <p class="text-base text-gray-700">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-gray-800">Subheading two</h3>
+        <p class="text-base text-gray-700">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+        </p>
+      </div>
+    </div>
+    <div class="flex space-x-4">
+      <button class="px-4 py-2 border border-black text-black font-medium rounded transition-colors duration-300 hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black">
+        Button
+      </button>
+      <a href="#" class="flex items-center text-black font-medium transition-colors duration-300 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-black">
+        Button <i class="fas fa-arrow-right ml-2 transition-transform duration-300 hover:translate-x-1"></i>
+      </a>
+    </div>
+  </article>
+  <div class="md:w-1/2 mt-8 md:mt-0">
+    <video class="w-full rounded shadow-lg transition-transform duration-300 hover:scale-105" controls aria-label="Promotional video">
+      <source src="https://videos.pexels.com/video-files/6768212/6768212-uhd_1440_2732_30fps.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .animate-fade-in {
+    animation: fade-in 1s ease-in-out;
+  }
+</style>

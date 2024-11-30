@@ -1,0 +1,43 @@
+<section class="container mx-auto px-4 py-8">
+  <div class="flex flex-col md:flex-row items-start md:space-x-8">
+    <!-- Text Content -->
+    <article class="md:w-1/2 animate-fade-in">
+      <h1 class="text-3xl font-bold mb-4 transition transform hover:scale-105">
+        Long heading is what you see here in this feature section
+      </h1>
+      <p class="mb-6 text-gray-700">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+      <div class="flex flex-col md:flex-row md:space-x-8">
+        <div class="mb-4 md:mb-0 transition transform hover:translate-y-1">
+          <h2 class="text-xl font-semibold mb-2 flex items-center">
+            <i class="fas fa-chevron-right text-blue-500 mr-2" aria-hidden="true"></i>Subheading one
+          </h2>
+          <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+        </div>
+        <div class="transition transform hover:translate-y-1">
+          <h2 class="text-xl font-semibold mb-2 flex items-center">
+            <i class="fas fa-chevron-right text-blue-500 mr-2" aria-hidden="true"></i>Subheading two
+          </h2>
+          <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+        </div>
+      </div>
+    </article>
+    <!-- Image Placeholder -->
+    <figure class="md:w-1/2 mt-6 md:mt-0">
+      <img src="https://placehold.co/600x400/EEE/31343C" alt="Illustrative placeholder image showcasing feature section" class="w-full h-auto rounded-lg shadow-lg transition transform hover:scale-105">
+    </figure>
+  </div>
+</section>
+
+<style>
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fade-in 1s ease-in-out;
+}
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-zX1wZ1+6tF0X6XJ6Tp/T0HL+VJNPHF6MIOU9qw4i1DkquN4Uj2nNXuWvyjadcV0WzXEZh2KXzZa1V0cxHEg8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

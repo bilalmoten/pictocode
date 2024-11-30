@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Section</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.3.2/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('[data-toggle]');
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = document.getElementById(button.getAttribute('aria-controls'));
+                    const expanded = button.getAttribute('aria-expanded') === 'true';
+                    button.setAttribute('aria-expanded', !expanded);
+                    target.classList.toggle('hidden');
+                    const icon = button.querySelector('i');
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                });
+            });
+        });
+    </script>
+</head>
+<body class="bg-white text-gray-800">
+    <section class="container mx-auto p-6">
+        <div class="flex flex-col lg:flex-row">
+            <!-- Left Column -->
+            <header class="lg:w-1/3 mb-6 lg:mb-0">
+                <h2 class="text-4xl font-bold mb-4 transition-transform transform hover:scale-105">Job Openings</h2>
+                <p class="text-lg transition-opacity duration-300 hover:opacity-90">Join our dynamic team and help us build the future. We offer a collaborative environment and opportunities for growth.</p>
+            </header>
+            
+            <!-- Right Column -->
+            <div class="lg:w-2/3 space-y-8">
+                <!-- Job Department Section -->
+                <article class="border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <button class="w-full flex justify-between items-center p-4 focus:outline-none focus:ring-2 focus:ring-blue-500" data-toggle="department-1" aria-expanded="false" aria-controls="department-1">
+                        <h3 class="text-2xl font-semibold">Engineering</h3>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div id="department-1" class="hidden px-4 pb-4">
+                        <!-- Job Listings -->
+                        <div class="space-y-6">
+                            <div class="border-b pb-4">
+                                <h4 class="text-xl font-semibold transition-colors hover:text-blue-600">Senior Software Engineer</h4>
+                                <p class="text-sm text-gray-600">New York, NY</p>
+                                <p class="text-sm mt-2">Lead our development team in creating scalable software solutions. Requires 5+ years of experience in software engineering.</p>
+                                <a href="#" class="mt-2 inline-block px-4 py-2 bg-blue-500 text-white font-bold rounded transition-colors hover:bg-blue-600">Apply Now</a>
+                            </div>
+                            <div class="border-b pb-4">
+                                <h4 class="text-xl font-semibold transition-colors hover:text-blue-600">DevOps Engineer</h4>
+                                <p class="text-sm text-gray-600">San Francisco, CA</p>
+                                <p class="text-sm mt-2">Manage our infrastructure and deployment pipelines. Experience with AWS and Docker is required.</p>
+                                <a href="#" class="mt-2 inline-block px-4 py-2 bg-blue-500 text-white font-bold rounded transition-colors hover:bg-blue-600">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <button class="w-full flex justify-between items-center p-4 focus:outline-none focus:ring-2 focus:ring-blue-500" data-toggle="department-2" aria-expanded="false" aria-controls="department-2">
+                        <h3 class="text-2xl font-semibold">Marketing</h3>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div id="department-2" class="hidden px-4 pb-4">
+                        <!-- Job Listings -->
+                        <div class="space-y-6">
+                            <div class="border-b pb-4">
+                                <h4 class="text-xl font-semibold transition-colors hover:text-blue-600">Marketing Manager</h4>
+                                <p class="text-sm text-gray-600">Chicago, IL</p>
+                                <p class="text-sm mt-2">Develop and oversee marketing strategies to increase brand awareness. 3+ years in marketing preferred.</p>
+                                <a href="#" class="mt-2 inline-block px-4 py-2 bg-blue-500 text-white font-bold rounded transition-colors hover:bg-blue-600">Apply Now</a>
+                            </div>
+                            <div class="border-b pb-4">
+                                <h4 class="text-xl font-semibold transition-colors hover:text-blue-600">Content Strategist</h4>
+                                <p class="text-sm text-gray-600">Remote</p>
+                                <p class="text-sm mt-2">Create and manage content strategies across various platforms. Excellent writing skills required.</p>
+                                <a href="#" class="mt-2 inline-block px-4 py-2 bg-blue-500 text-white font-bold rounded transition-colors hover:bg-blue-600">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Additional Job Department Sections can be added similarly -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>

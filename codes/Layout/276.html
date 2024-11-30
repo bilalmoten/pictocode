@@ -1,0 +1,55 @@
+<section class="bg-gray-800 text-white py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+        <header class="mb-8 text-left">
+            <p class="text-sm mb-2 animate-fadeIn">Tagline</p>
+            <h1 class="text-4xl font-extrabold mb-4 animate-slideInLeft">Medium length section heading goes here</h1>
+            <p class="text-lg mb-8 animate-fadeIn">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
+        </header>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <article class="flex items-start p-4 bg-gray-700 rounded-lg transition transform hover:-translate-y-1 hover:bg-gray-600 animate-fadeIn">
+                <i class="fas fa-cube text-3xl mr-4" aria-hidden="true"></i>
+                <div>
+                    <h2 class="text-2xl font-bold mb-2">Feature One</h2>
+                    <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                </div>
+            </article>
+            <article class="flex items-start p-4 bg-gray-700 rounded-lg transition transform hover:-translate-y-1 hover:bg-gray-600 animate-fadeIn delay-200">
+                <i class="fas fa-cube text-3xl mr-4" aria-hidden="true"></i>
+                <div>
+                    <h2 class="text-2xl font-bold mb-2">Feature Two</h2>
+                    <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                </div>
+            </article>
+            <article class="flex items-start p-4 bg-gray-700 rounded-lg transition transform hover:-translate-y-1 hover:bg-gray-600 animate-fadeIn delay-400">
+                <i class="fas fa-cube text-3xl mr-4" aria-hidden="true"></i>
+                <div>
+                    <h2 class="text-2xl font-bold mb-2">Feature Three</h2>
+                    <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                </div>
+            </article>
+        </div>
+        <div class="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
+            <button class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400">Primary Action</button>
+            <button class="bg-transparent border border-blue-600 hover:bg-blue-600 text-blue-600 hover:text-white font-semibold py-3 px-6 rounded transition flex items-center justify-center transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                Learn More <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<style>
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideInLeft {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+.animate-fadeIn {
+    animation: fadeIn 1s ease-out forwards;
+}
+.animate-slideInLeft {
+    animation: slideInLeft 1s ease-out forwards;
+}
+</style>

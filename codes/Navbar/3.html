@@ -1,0 +1,73 @@
+<nav class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <div class="flex">
+        <div class="flex-shrink-0 flex items-center">
+          <span class="font-cursive text-xl">Logo</span>
+        </div>
+        <nav class="hidden md:flex md:space-x-8 md:ml-10" aria-label="Primary">
+          <ul class="flex space-x-8">
+            <li>
+              <a href="#" class="text-gray-700 hover:text-black transition duration-300">Link One</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-black transition duration-300">Link Two</a>
+            </li>
+            <li class="relative group">
+              <button class="flex items-center text-gray-700 hover:text-black focus:outline-none transition duration-300" aria-haspopup="true" aria-expanded="false">
+                Link Three <i class="fas fa-chevron-down ml-1"></i>
+              </button>
+              <ul class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible" role="menu" aria-label="submenu">
+                <li>
+                  <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-300" role="menuitem">Link Four</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-300" role="menuitem">Link Five</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-300" role="menuitem">Link Six</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="flex items-center">
+        <button class="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">Button</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="md:hidden">
+    <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3" aria-label="Mobile Primary">
+      <ul class="space-y-1">
+        <li>
+          <a href="#" class="block text-gray-700 hover:text-black transition duration-300">Link One</a>
+        </li>
+        <li>
+          <a href="#" class="block text-gray-700 hover:text-black transition duration-300">Link Two</a>
+        </li>
+        <li>
+          <button class="w-full flex items-center justify-between text-gray-700 hover:text-black focus:outline-none transition duration-300" aria-haspopup="true" aria-expanded="false">
+            Link Three <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul class="pl-4 mt-1 space-y-1">
+            <li>
+              <a href="#" class="block text-gray-700 hover:bg-gray-100 transition duration-300">Link Four</a>
+            </li>
+            <li>
+              <a href="#" class="block text-gray-700 hover:bg-gray-100 transition duration-300">Link Five</a>
+            </li>
+            <li>
+              <a href="#" class="block text-gray-700 hover:bg-gray-100 transition duration-300">Link Six</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <button class="w-full bg-black text-white px-4 py-2 rounded-md mt-2 hover:bg-gray-800 transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">Button</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</nav>

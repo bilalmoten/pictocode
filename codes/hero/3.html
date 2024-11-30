@@ -1,0 +1,50 @@
+<section class="flex flex-col md:flex-row items-center justify-between p-8 md:p-16 bg-white">
+  <div class="md:w-1/2 space-y-6">
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 transition-colors duration-300">
+      Medium length hero headline goes here
+    </h1>
+    <p class="text-lg md:text-xl text-gray-600">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+    </p>
+    <div class="flex space-x-4">
+      <button class="bg-black text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-black">
+        Get Started
+      </button>
+      <button class="border border-black text-black px-6 py-3 rounded-md font-semibold hover:bg-black hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-black">
+        Learn More
+      </button>
+    </div>
+  </div>
+  <div class="md:w-1/2 mt-8 md:mt-0 relative">
+    <video class="w-full h-auto rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105" src="https://videos.pexels.com/video-files/6768212/6768212-uhd_1440_2732_30fps.mp4" controls>
+      <source src="https://videos.pexels.com/video-files/6768212/6768212-uhd_1440_2732_30fps.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300 focus:outline-none focus:ring-2 focus:ring-white" aria-label="Play Video" onclick="document.querySelector('video').play()">
+      <i class="fas fa-play text-white text-3xl"></i>
+    </button>
+  </div>
+</section>
+
+<script>
+  const playButton = document.querySelector('button[aria-label="Play Video"]');
+  const video = document.querySelector('video');
+
+  playButton.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+      playButton.classList.add('opacity-0');
+    } else {
+      video.pause();
+      playButton.classList.remove('opacity-0');
+    }
+  });
+
+  video.addEventListener('play', () => {
+    playButton.classList.add('opacity-0');
+  });
+
+  video.addEventListener('pause', () => {
+    playButton.classList.remove('opacity-0');
+  });
+</script>

@@ -1,0 +1,76 @@
+<section class="flex flex-col md:flex-row items-center md:items-start justify-between p-8 md:p-16 bg-white">
+  <div class="flex flex-col md:w-1/2 space-y-6">
+    <span class="text-sm font-medium text-gray-500">Tagline</span>
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 transition-transform duration-300 hover:scale-105">Medium length section heading goes here</h2>
+    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+    <div class="flex space-x-4">
+      <button class="flex items-center px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-300">
+        <i class="fas fa-download mr-2"></i>Download
+      </button>
+      <button class="flex items-center px-6 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition-colors duration-300">
+        <i class="fas fa-info-circle mr-2"></i>Learn More
+      </button>
+    </div>
+    <nav class="mt-6 w-full" aria-label="Tabs">
+      <ul class="flex space-x-4 border-b">
+        <li>
+          <button 
+            class="pb-2 text-gray-800 border-b-2 border-blue-500 focus:outline-none transition-colors duration-300"
+            aria-current="page"
+            onclick="setActiveTab(event, 'tab1')"
+          >
+            Tab One
+          </button>
+        </li>
+        <li>
+          <button 
+            class="pb-2 text-gray-500 hover:text-gray-800 focus:outline-none transition-colors duration-300"
+            onclick="setActiveTab(event, 'tab2')"
+          >
+            Tab Two
+          </button>
+        </li>
+        <li>
+          <button 
+            class="pb-2 text-gray-500 hover:text-gray-800 focus:outline-none transition-colors duration-300"
+            onclick="setActiveTab(event, 'tab3')"
+          >
+            Tab Three
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <figure class="mt-8 md:mt-0 md:ml-8 w-full md:w-1/2">
+    <img src="https://placehold.co/600x400/EEE/31343C" alt="Placeholder Image" class="w-full h-auto rounded shadow-lg transition-transform duration-300 hover:scale-105">
+  </figure>
+  <script>
+    function setActiveTab(event, tabId) {
+      const tabs = event.target.parentElement.parentElement.querySelectorAll('button');
+      tabs.forEach(tab => {
+        tab.classList.remove('border-blue-500', 'text-gray-800');
+        tab.classList.add('border-transparent', 'text-gray-500');
+      });
+      event.target.classList.add('border-blue-500', 'text-gray-800');
+      event.target.classList.remove('border-transparent', 'text-gray-500');
+      
+      const sections = document.querySelectorAll('.tab-content');
+      sections.forEach(section => {
+        section.classList.add('hidden');
+      });
+      document.getElementById(tabId).classList.remove('hidden');
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      setActiveTab({ target: document.querySelector('button[aria-current="page"]') }, 'tab1');
+    });
+  </script>
+  <div id="tab1" class="tab-content hidden">
+    <!-- Content for Tab One -->
+  </div>
+  <div id="tab2" class="tab-content hidden">
+    <!-- Content for Tab Two -->
+  </div>
+  <div id="tab3" class="tab-content hidden">
+    <!-- Content for Tab Three -->
+  </div>
+</section>

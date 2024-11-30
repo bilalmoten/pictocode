@@ -1,0 +1,98 @@
+<div class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+  <section class="max-w-5xl mx-auto">
+    <header class="text-center">
+      <h2 class="text-4xl font-extrabold text-gray-900 transition-transform duration-300 transform hover:scale-105">FAQs</h2>
+      <p class="mt-4 text-lg text-gray-600">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+      </p>
+    </header>
+    <div class="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <article class="border border-gray-200 rounded-lg p-6 transition-shadow duration-300 hover:shadow-lg">
+        <div class="flex justify-center">
+          <i class="fas fa-cube text-4xl text-gray-500"></i>
+        </div>
+        <button class="mt-4 w-full text-left text-xl font-bold text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-expanded="false" aria-controls="faq1">
+          Question text goes here
+        </button>
+        <div id="faq1" class="mt-2 text-gray-600 hidden transition-all duration-300">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+        </div>
+      </article>
+      <article class="border border-gray-200 rounded-lg p-6 transition-shadow duration-300 hover:shadow-lg">
+        <div class="flex justify-center">
+          <i class="fas fa-cube text-4xl text-gray-500"></i>
+        </div>
+        <button class="mt-4 w-full text-left text-xl font-bold text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-expanded="false" aria-controls="faq2">
+          Question text goes here
+        </button>
+        <div id="faq2" class="mt-2 text-gray-600 hidden transition-all duration-300">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+        </div>
+      </article>
+      <article class="border border-gray-200 rounded-lg p-6 transition-shadow duration-300 hover:shadow-lg">
+        <div class="flex justify-center">
+          <i class="fas fa-cube text-4xl text-gray-500"></i>
+        </div>
+        <button class="mt-4 w-full text-left text-xl font-bold text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-expanded="false" aria-controls="faq3">
+          Question text goes here
+        </button>
+        <div id="faq3" class="mt-2 text-gray-600 hidden transition-all duration-300">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+        </div>
+      </article>
+      <article class="border border-gray-200 rounded-lg p-6 transition-shadow duration-300 hover:shadow-lg">
+        <div class="flex justify-center">
+          <i class="fas fa-cube text-4xl text-gray-500"></i>
+        </div>
+        <button class="mt-4 w-full text-left text-xl font-bold text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-expanded="false" aria-controls="faq4">
+          Question text goes here
+        </button>
+        <div id="faq4" class="mt-2 text-gray-600 hidden transition-all duration-300">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+        </div>
+      </article>
+      <article class="border border-gray-200 rounded-lg p-6 transition-shadow duration-300 hover:shadow-lg">
+        <div class="flex justify-center">
+          <i class="fas fa-cube text-4xl text-gray-500"></i>
+        </div>
+        <button class="mt-4 w-full text-left text-xl font-bold text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-expanded="false" aria-controls="faq5">
+          Question text goes here
+        </button>
+        <div id="faq5" class="mt-2 text-gray-600 hidden transition-all duration-300">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+        </div>
+      </article>
+      <article class="border border-gray-200 rounded-lg p-6 transition-shadow duration-300 hover:shadow-lg">
+        <div class="flex justify-center">
+          <i class="fas fa-cube text-4xl text-gray-500"></i>
+        </div>
+        <button class="mt-4 w-full text-left text-xl font-bold text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-expanded="false" aria-controls="faq6">
+          Question text goes here
+        </button>
+        <div id="faq6" class="mt-2 text-gray-600 hidden transition-all duration-300">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+        </div>
+      </article>
+    </div>
+    <div class="mt-16 text-center">
+      <h3 class="text-2xl font-bold text-gray-900">Still have questions?</h3>
+      <p class="mt-4 text-lg text-gray-600">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <button class="mt-6 px-8 py-3 border border-gray-300 text-gray-900 font-medium rounded-md hover:bg-gray-100 transition-colors duration-300">
+        Contact
+      </button>
+    </div>
+  </section>
+</div>
+<script>
+  document.querySelectorAll('button[aria-controls]').forEach(button => {
+    button.addEventListener('click', () => {
+      const controls = button.getAttribute('aria-controls');
+      const content = document.getElementById(controls);
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', !isExpanded);
+      content.classList.toggle('hidden');
+    });
+  });
+</script>

@@ -1,0 +1,33 @@
+<section class="flex flex-col md:flex-row items-center justify-between bg-white p-6 md:p-12">
+    <div class="p-8 md:w-1/2 animate-fade-in">
+        <h1 class="text-2xl md:text-4xl font-bold mb-4 text-gray-800 transition transform hover:scale-105">Medium length hero heading goes here</h1>
+        <p class="text-base mb-6 text-gray-600 transition-opacity duration-700 ease-in-out hover:opacity-90">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+        </p>
+        <div class="flex space-x-4">
+            <button class="bg-black text-white px-6 py-3 rounded-md flex items-center transition transform hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600">
+                <span>Get Started</span>
+                <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+            <button class="border border-black text-black px-6 py-3 rounded-md flex items-center transition transform hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black">
+                <i class="fas fa-info-circle mr-2"></i>
+                <span>Learn More</span>
+            </button>
+        </div>
+    </div>
+    <div class="bg-gray-200 md:w-1/2 h-64 md:h-auto flex items-center justify-center overflow-hidden transition transform hover:scale-105">
+        <img src="https://placehold.co/600x400/EEE/31343C" alt="Hero Image" class="w-full h-full object-cover rounded-md shadow-lg">
+    </div>
+</section>
+
+<style>
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.animate-fade-in {
+    animation: fade-in 1s ease-in-out;
+}
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-p6gnp0V+B3z5O/ebKQjUuY8HJcNmtOv4a3JcLR+aD1kCZHfBZ1iJ6Jrjui9m5qG+H3GtJc+kbKA4J6r5P7XK1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
