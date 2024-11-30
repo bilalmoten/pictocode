@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Header 7 - Enhanced</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .dark {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        .dark .bg-white {
+            background-color: #2d2d2d;
+            color: #ffffff;
+        }
+        .dark .text-gray-600 {
+            color: #a0aec0;
+        }
+        .dark .text-gray-500 {
+            color: #a0aec0;
+        }
+        .featured-post {
+            transition: all 0.3s ease;
+        }
+        .featured-post:hover {
+            transform: translateY(-5px);
+        }
+        .category-btn {
+            transition: all 0.3s ease;
+        }
+        .category-btn.active {
+            background-color: #3b82f6;
+            color: white;
+        }
+        .blog-card {
+            transition: all 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 transition-colors duration-300">
+    <!-- Dark Mode Toggle -->
+    <div class="fixed top-4 right-4 z-50">
+        <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 transition-colors duration-300">
+            <i class="fas fa-moon dark:text-yellow-300"></i>
+        </button>
+    </div>
+
+    <div class="max-w-screen-xl mx-auto p-4">
+        <!-- Header Section with Gradient Background -->
+        <header class="mb-12 p-8 rounded-2xl gradient-bg text-white fade-in">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 transition-transform transform hover:scale-105" tabindex="0">
+                Discover Our Latest Stories
+            </h1>
+            <p class="text-xl text-gray-100 max-w-2xl transition-opacity duration-300 hover:opacity-90" tabindex="0">
+                Explore insightful articles, industry trends, and expert perspectives.
+            </p>
+        </header>
+
+        <!-- Featured Blog Post -->
+        <section class="mb-12">
+            <article class="featured-post flex flex-col md:flex-row bg-white shadow-xl rounded-2xl overflow-hidden">
+                <div class="relative w-full md:w-1/2">
+                    <img class="w-full h-full object-cover" src="https://source.unsplash.com/random/1200x800?technology" alt="Featured Image" loading="lazy">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Featured</span>
+                    </div>
+                </div>
+                <div class="p-8 flex flex-col justify-between w-full md:w-1/2">
+                    <div>
+                        <span class="text-blue-600 font-semibold mb-2 block">Technology</span>
+                        <h2 class="text-3xl font-bold mb-4 transition-colors duration-300 hover:text-blue-600 cursor-pointer" tabindex="0">
+                            The Future of AI in Modern Technology
+                        </h2>
+                        <p class="text-gray-600 mb-6 text-lg" tabindex="0">
+                            Explore how artificial intelligence is reshaping our world and what it means for the future of technology and innovation.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img class="h-12 w-12 rounded-full object-cover" src="https://source.unsplash.com/random/100x100?portrait" alt="Author">
+                            <div class="ml-4">
+                                <p class="font-semibold">David Chen</p>
+                                <p class="text-gray-500 text-sm">Mar 15, 2024 · 8 min read</p>
+                            </div>
+                        </div>
+                        <button class="text-blue-600 hover:text-blue-800 transition-colors duration-300">
+                            <i class="fas fa-bookmark text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Category Filters -->
+        <nav class="flex flex-wrap gap-4 mb-12" aria-label="Category Filters" id="categoryNav">
+            <button class="category-btn active px-6 py-3 rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center">
+                <i class="fas fa-border-all mr-2"></i> All Posts
+            </button>
+            <button class="category-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 transition-all duration-300 flex items-center">
+                <i class="fas fa-laptop-code mr-2"></i> Technology
+            </button>
+            <button class="category-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 transition-all duration-300 flex items-center">
+                <i class="fas fa-chart-line mr-2"></i> Business
+            </button>
+            <button class="category-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 transition-all duration-300 flex items-center">
+                <i class="fas fa-palette mr-2"></i> Design
+            </button>
+        </nav>
+
+        <!-- Blog Post Grid -->
+        <main>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blogGrid">
+                <!-- Blog Post Card 1 -->
+                <article class="blog-card bg-white shadow-lg rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img class="w-full h-48 object-cover" src="https://source.unsplash.com/random/800x600?coding" alt="Blog Image" loading="lazy">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Technology</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 transition-colors duration-300 hover:text-blue-600 cursor-pointer" tabindex="0">
+                            Modern Web Development Trends
+                        </h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2" tabindex="0">
+                            Discover the latest trends and best practices in modern web development.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img class="h-10 w-10 rounded-full object-cover" src="https://source.unsplash.com/random/100x100?man" alt="Author">
+                                <div class="ml-3">
+                                    <p class="font-medium">John Smith</p>
+                                    <p class="text-sm text-gray-500">Mar 14, 2024</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-600 hover:text-blue-800 transition-colors duration-300">
+                                <i class="fas fa-bookmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post Card 2 -->
+                <article class="blog-card bg-white shadow-lg rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img class="w-full h-48 object-cover" src="https://source.unsplash.com/random/800x600?business" alt="Blog Image" loading="lazy">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Business</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 transition-colors duration-300 hover:text-blue-600 cursor-pointer" tabindex="0">
+                            Starting a Successful Startup
+                        </h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2" tabindex="0">
+                            Essential tips and strategies for launching and growing your startup.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img class="h-10 w-10 rounded-full object-cover" src="https://source.unsplash.com/random/100x100?woman" alt="Author">
+                                <div class="ml-3">
+                                    <p class="font-medium">Sarah Johnson</p>
+                                    <p class="text-sm text-gray-500">Mar 13, 2024</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-600 hover:text-blue-800 transition-colors duration-300">
+                                <i class="fas fa-bookmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post Card 3 -->
+                <article class="blog-card bg-white shadow-lg rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img class="w-full h-48 object-cover" src="https://source.unsplash.com/random/800x600?design" alt="Blog Image" loading="lazy">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Design</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 transition-colors duration-300 hover:text-blue-600 cursor-pointer" tabindex="0">
+                            UI/UX Design Principles
+                        </h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2" tabindex="0">
+                            Learn the fundamental principles of creating effective user interfaces.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img class="h-10 w-10 rounded-full object-cover" src="https://source.unsplash.com/random/100x100?designer" alt="Author">
+                                <div class="ml-3">
+                                    <p class="font-medium">Alex Lee</p>
+                                    <p class="text-sm text-gray-500">Mar 12, 2024</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-600 hover:text-blue-800 transition-colors duration-300">
+                                <i class="fas fa-bookmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+        });
+
+        // Category filtering
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Add animation to grid
+                const blogGrid = document.getElementById('blogGrid');
+                blogGrid.style.opacity = '0';
+                setTimeout(() => {
+                    blogGrid.style.opacity = '1';
+                }, 300);
+            });
+        });
+
+        // Lazy loading images with fade-in effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.classList.add('fade-in');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            images.forEach(img => imageObserver.observe(img));
+        });
+    </script>
+</body>
+</html>
